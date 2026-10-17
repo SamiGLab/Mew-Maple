@@ -41,6 +41,12 @@ The AAFP/ISFM environmental guidelines emphasize opportunities for play and pred
 
 There is no universal time quota that fits every cat. If your cat is panting, limping, distressed, or unwilling to participate, stop and seek veterinary advice when warranted.
 
+### Short sessions still count
+
+Do not force a fixed 10- or 20-minute block if your cat loses interest sooner. Cats Protection notes that even one- to two-minute games can be worthwhile and that play frequency varies by age and individual preference [3]. Let the cat choose whether to join in; use gentle floor-level play for an older cat, and stop if the cat seems distressed.
+
+Keep caregiver-controlled wand play separate from toys that remain available unsupervised. Check for worn parts and store anything with string or loose feathers after the session [2][3].
+
 ## A flexible seven-day activity plan
 
 ![Ginger cat resting at a bright window](/images/indoor-cat-play-routine-figure-03.webp)
@@ -119,6 +125,7 @@ If an activity is never chosen, replace it. If the cat repeatedly returns to one
 
 1. AAFP/ISFM, *Feline Environmental Needs Guidelines*: <https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/>
 2. Cornell Feline Health Center, *Safe toys and gifts*: <https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/safe-toys-and-gifts>
+3. Cats Protection, *Cats and Play*: <https://www.cats.org.uk/help-and-advice/cat-behaviour/cats-and-play>
 
 *Editorial note: This is an adaptable activity example, not veterinary exercise or nutrition advice.*
 
