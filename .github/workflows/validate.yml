@@ -17,3 +17,17 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run check:source
       - run: npm run build
+      - name: Verify no draft guide HTML is exported
+        run: |
+          if [ -d dist/guides ] && find dist/guides -type f -name '*.html' | grep -q .; then
+            echo "Unsafe draft guide pages were included in static output"
+            exit 1
+          fi
+      - name: Save private preview-safe site artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mew-maple-private-preview-safe
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
