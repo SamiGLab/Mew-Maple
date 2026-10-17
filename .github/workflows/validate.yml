@@ -17,6 +17,8 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run check:source
       - run: npm run build
+      - name: Check built HTML links, anchors and search leakage
+        run: node scripts/check-static-navigation.mjs
       - name: Verify no draft guide HTML is exported
         run: |
           if [ -d dist/guides ] && find dist/guides -type f -name '*.html' | grep -q .; then
