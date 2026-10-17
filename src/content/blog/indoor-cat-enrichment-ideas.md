@@ -68,9 +68,9 @@ Place a washable bed in a calm corner and another in a higher, secure location i
 
 ### 8. Create a quiet hideaway
 
-![Small pet den, rest area and toys arranged in an indoor cat corner](/images/indoor-cat-enrichment-ideas-figure-05.webp)
+![Compact cat retreat with low cardboard scratcher, covered bed and resting area](/images/indoor-cat-enrichment-ideas-figure-05.webp)
 
-*Give your cat quiet places for retreat as well as active play. AI-generated editorial illustration.*
+*Quiet rest areas and a sturdy scratching surface offer choice. Inspect fabric toys and remove any item that sheds pieces or attracts chewing. AI-generated editorial illustration.*
 
 A covered cat bed, an open carrier with familiar bedding, or a sturdy box gives your cat a place to retreat without being disturbed.
 

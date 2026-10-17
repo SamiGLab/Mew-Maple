@@ -100,8 +100,9 @@
     },
     {
       "file": "diy-cat-toys-figure-06.webp",
-      "status": "replace-required",
-      "note": "Yarn and loose feather crafts visible"
+      "status": "updated-pending-review",
+      "note": "Loose yarn/feathers removed, but paper/cardboard/fabric items still require chewing and ingestion review; text explicitly discourages unattended use.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "diy-cat-toys-hero.webp",
@@ -170,8 +171,9 @@
     },
     {
       "file": "home-for-two-indoor-cats-figure-06.webp",
-      "status": "replace-required",
-      "note": "Wand supervision not visible"
+      "status": "updated-pending-review",
+      "note": "Supervising hand now visibly holds the feather wand. Other woven/plush floor objects still need individual chew/detachment review.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "home-for-two-indoor-cats-hero.webp",
@@ -200,8 +202,9 @@
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-05.webp",
-      "status": "manual-review",
-      "note": "Material resembles twine"
+      "status": "updated-pending-review",
+      "note": "Removed ambiguous woven/twine-like ball. Retains plush objects: check for loose seams, tail, small removable components.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-06.webp",
@@ -230,13 +233,15 @@
     },
     {
       "file": "indoor-cat-play-routine-figure-04.webp",
-      "status": "manual-review",
-      "note": "Wand handler off-frame"
+      "status": "updated-pending-review",
+      "note": "Human hand now visible holding wand. No unattended suggestion; inspect lure/line depiction and review human-cat interaction.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-play-routine-figure-05.webp",
-      "status": "replace-required",
-      "note": "Open toy basket of wand and yarn"
+      "status": "updated-pending-review",
+      "note": "Feather wands and yarn-like strands removed. Basket lid remains partly open; caption states this is a sorting scene, not accessible unattended storage.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-play-routine-figure-06.webp",
@@ -265,13 +270,15 @@
     },
     {
       "file": "window-perch-vs-cat-tree-figure-04.webp",
-      "status": "replace-required",
-      "note": "Unattended wand near cat tree"
+      "status": "updated-pending-review",
+      "note": "Exposed feather wands removed; lidded box introduced. Check tall scratcher anchoring, loose decor and furniture material before approval.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-05.webp",
-      "status": "manual-review",
-      "note": "Hanging pom-pom/accessory could detach"
+      "status": "updated-pending-review",
+      "note": "Detached-looking hanging pom-pom removed. Inspect seams and toy/fabric assumptions; not certified for unattended use.",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-06.webp",
