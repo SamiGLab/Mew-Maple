@@ -4,7 +4,8 @@ description: Compare cat window perches and cat trees by floor space, stability,
   and safety before choosing the right setup.
 category: Gear & Buying Guides
 hero: /images/window-perch-vs-cat-tree-hero.webp
-heroAlt: 'Window Perches vs. Cat Trees: Which Is Better for Your Indoor Cat?'
+heroAlt: "Indoor tabby cat looking out of a closed window while resting on a cushioned perch"
+heroCaption: "A well-positioned viewing spot can make an ordinary room more interesting. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ A window perch and a cat tree may both offer an elevated resting place, but they
 
 The right choice depends less on a universal ranking and more on your cat's habits, your available space, and whether you can install and maintain the product safely.
 
-![Indoor tabby cat looking out of a closed window while resting on a cushioned perch](/images/window-perch-vs-cat-tree-hero.webp)
-*A well-positioned viewing spot can make an ordinary room more interesting. Illustration created for Mew & Maple.*
 
 ## Quick comparison
 

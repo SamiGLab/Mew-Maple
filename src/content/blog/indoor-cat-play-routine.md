@@ -4,7 +4,8 @@ description: Build a simple indoor cat play routine with short supervised sessio
   and a flexible seven-day example plan.
 category: Play & Enrichment
 hero: /images/indoor-cat-play-routine-hero.webp
-heroAlt: An Indoor Cat Play Routine You Can Actually Maintain
+heroAlt: "Ginger tabby cat reaching for a wand toy held by a person during supervised play"
+heroCaption: "Wand play is interactive and should be supervised; store string and feather toys when finished. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ The perfect play schedule is the one you and your cat can repeat without turning
 
 This guide is a flexible planning tool, not a prescribed exercise program. Cats differ by age, health, confidence, and preferred play style. Start small, watch your cat, and adapt the schedule rather than forcing an exact number of minutes.
 
-![Ginger tabby cat reaching for a wand toy held by a person during supervised play](/images/indoor-cat-play-routine-hero.webp)
-*Wand play is interactive and should be supervised; store string and feather toys when finished. Illustration created for Mew & Maple.*
 
 ## What a good play session looks like
 

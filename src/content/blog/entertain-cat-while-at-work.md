@@ -4,7 +4,8 @@ description: Create a safer, more interesting day for your indoor cat while you'
   before-work checklist and low-maintenance activities.
 category: Play & Enrichment
 hero: /images/entertain-cat-while-at-work-hero.webp
-heroAlt: How to Keep Your Indoor Cat Entertained While You're at Work
+heroAlt: "Ginger cat relaxing on a secure window perch in a bright apartment"
+heroCaption: "Give your cat a secure place to watch and rest. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ You do not have to turn your apartment into a pet amusement park before leaving 
 
 Some indoor cats sleep through much of the day; others enjoy exploring or watching the neighborhood. Rather than assuming your cat is lonely every time you leave, build a routine around behavior you have actually observed.
 
-![Ginger cat relaxing on a secure window perch in a bright apartment](/images/entertain-cat-while-at-work-hero.webp)
-*Give your cat a secure place to watch and rest. Illustration created for Mew & Maple.*
 
 ## Start with the essentials, not entertainment
 

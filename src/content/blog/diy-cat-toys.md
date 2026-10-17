@@ -4,7 +4,8 @@ description: Make simple cat enrichment activities with cardboard boxes and hous
   unsafe strings, loose parts, and choking hazards.
 category: Play & Enrichment
 hero: /images/diy-cat-toys-hero.webp
-heroAlt: 'DIY Cat Toys Using Things You Already Have: A Safety-First Guide'
+heroAlt: "Indoor cat investigating a clean cardboard box and paper play items"
+heroCaption: "Start with clean, simple materials and inspect them often. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ The best enrichment ideas are often surprisingly simple. A cardboard box can bec
 
 But “homemade” does not automatically mean “safe.” Cats may bite off pieces, swallow strands, or get stuck in small openings. Use these ideas as **short supervised activities** until you have verified that the materials and construction suit your cat.
 
-![Indoor cat investigating a clean cardboard box and paper play items](/images/diy-cat-toys-hero.webp)
-*Start with clean, simple materials and inspect them often. Illustration created for Mew & Maple.*
 
 ## Your DIY safety checklist
 
