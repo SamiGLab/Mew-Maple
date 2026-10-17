@@ -88,9 +88,9 @@ Use paper and cardboard that are clean, dry, and free of chemicals or food resid
 
 ## What we deliberately leave out
 
-![Basket of craft supplies including loose string and feathers](/images/diy-cat-toys-figure-06.webp)
+![Basket of paper, cardboard and fabric craft materials requiring careful inspection](/images/diy-cat-toys-figure-06.webp)
 
-*Loose strings and craft accessories are not suitable to leave with cats unattended. AI-generated editorial illustration.*
+*Inspect cardboard, paper and fabric for loose pieces and chewing risks; this illustrated craft basket is not an unattended toy station. AI-generated editorial illustration.*
 
 You will see tutorials recommending toilet-paper rolls stuffed with treats, yarn pompoms, dangling ribbons, bottle caps, and toys glued to sticks. Some may be used under careful supervision in specific circumstances, but materials can vary and some create choking or ingestion risks. This guide avoids promoting them as universally safe DIY toys.
 

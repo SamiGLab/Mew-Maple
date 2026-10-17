@@ -57,9 +57,9 @@ Check the footprint, base width, anchoring instructions, platform measurements, 
 
 ## What if you have a small apartment?
 
-![Compact indoor enrichment corner with a scratcher and toy storage](/images/window-perch-vs-cat-tree-figure-04.webp)
+![Small enrichment corner with a scratcher, low activity shelf and a lidded storage box](/images/window-perch-vs-cat-tree-figure-04.webp)
 
-*Combining compact resources can leave more clear floor area. AI-generated editorial illustration.*
+*Stable, uncluttered enrichment zones can save floor area. Keep supervised-play toys in closed, inaccessible storage; decorative baskets alone do not secure loose parts. AI-generated editorial illustration.*
 
 Think about what you already own. If there is a suitable scratcher and hiding spot, an appropriately installed window perch may add the missing viewing feature without occupying floor space. If your cat has no comfortable vertical resting option and scratches furniture, a well-chosen cat tree might provide more functions per square foot.
 
@@ -67,9 +67,9 @@ There is no requirement to own both. Your cat's use of the space matters more th
 
 ## Safety: the most important difference
 
-![Cat investigating a low, soft-sided play tunnel](/images/window-perch-vs-cat-tree-figure-05.webp)
+![Tabby exploring a fabric play tunnel without dangling accessories](/images/window-perch-vs-cat-tree-figure-05.webp)
 
-*Consider safe access and stable construction for all enrichment furniture. AI-generated editorial illustration.*
+*Prefer inspected, low tunnels without detachable dangling toys; remove them if seams or materials become damaged. AI-generated editorial illustration.*
 
 **Window safety:** The ASPCA warns that cats can be seriously injured by falls through open windows and from elevated outdoor spaces [2]. A perch is not a reason to leave a window open, and an insect screen alone may not be a sufficient barrier.
 

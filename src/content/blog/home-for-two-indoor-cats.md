@@ -89,9 +89,9 @@ Do not skip directly to an unsupervised meeting because the cats looked calm thr
 
 ## A practical small-apartment example
 
-![Two cats exploring different enrichment toys in a shared living room](/images/home-for-two-indoor-cats-figure-06.webp)
+![Adult supervising a cat playing with a feather wand while a second cat explores nearby toys](/images/home-for-two-indoor-cats-figure-06.webp)
 
-*Multiple choices for play and rest can support multi-cat households. AI-generated editorial illustration.*
+*Keep wand play directly supervised; provide separate choices and inspect all fabric or woven toys for detachable parts. AI-generated editorial illustration.*
 
 Imagine a living room, bedroom, and hallway. You might place one bed and scratcher in the living room, another quiet retreat in the bedroom, and separate feeding places out of sight of each other. Litter boxes should be distributed across suitable accessible places rather than tightly clustered.
 

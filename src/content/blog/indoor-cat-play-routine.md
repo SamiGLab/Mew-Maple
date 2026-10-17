@@ -66,9 +66,9 @@ Treat this as a menu rather than an obligation. If your cat is older or has a he
 
 ## Adjust the routine to your cat's personality
 
-![Cat pursuing a feather toy during a floor-level game](/images/indoor-cat-play-routine-figure-04.webp)
+![Adult hand holding a feather wand while a tabby cat chases the lure at floor level](/images/indoor-cat-play-routine-figure-04.webp)
 
-*Use play styles that match your cat’s comfort and interest. AI-generated editorial illustration.*
+*This illustrated game includes a supervising adult; allow catches, stop if your cat seems uncomfortable and put the lure away afterward. AI-generated editorial illustration.*
 
 **For a curious explorer:** Rotate observation spots, introduce a safe cardboard box, or use a simple food puzzle.
 
@@ -82,9 +82,9 @@ Treat this as a menu rather than an obligation. If your cat is older or has a he
 
 ## How to avoid common mistakes
 
-![Collection of cat play objects stored together in a woven basket](/images/indoor-cat-play-routine-figure-05.webp)
+![Woven basket containing intact soft cat toys beside a sofa](/images/indoor-cat-play-routine-figure-05.webp)
 
-*Put strings, wands and damaged toys away after supervised sessions. AI-generated editorial illustration.*
+*Sort and inspect toys after supervised play, then put them in storage your cat cannot access. The illustrated partly open basket is not a model for unattended storage. AI-generated editorial illustration.*
 
 **Mistake: Turning every activity into a purchase.** Toy rotation and changing the use of existing space can be useful at little cost.
 
