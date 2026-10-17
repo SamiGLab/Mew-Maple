@@ -9,8 +9,9 @@
     "preview": "astro preview",
     "audit:content": "node scripts/audit-content.mjs",
     "check:launch": "node scripts/check-launch.mjs",
-    "check:source": "npm run audit:content && npm run audit:citations && npm run check:launch && npm run test:gates",
+    "check:source": "npm run audit:content && npm run audit:citations && npm run audit:images && npm run check:launch && npm run test:gates",
     "test:gates": "node scripts/test-release-gates.mjs",
+    "audit:images": "node scripts/audit-visual-assets.mjs",
     "audit:citations": "node scripts/audit-citations.mjs"
   },
   "dependencies": {
