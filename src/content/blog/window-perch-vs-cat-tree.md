@@ -59,7 +59,7 @@ Check the footprint, base width, anchoring instructions, platform measurements, 
 
 ![Small enrichment corner with a scratcher, low activity shelf and a lidded storage box](/images/window-perch-vs-cat-tree-figure-04.webp)
 
-*Stable, uncluttered enrichment zones can save floor area. Keep supervised-play toys in closed, inaccessible storage; decorative baskets alone do not secure loose parts. AI-generated editorial illustration.*
+*This picture shows exposed toy baskets, which are not secure storage for items requiring supervision. Keep such toys closed away and inaccessible. Image replacement required before publication. AI-generated editorial illustration.*
 
 Think about what you already own. If there is a suitable scratcher and hiding spot, an appropriately installed window perch may add the missing viewing feature without occupying floor space. If your cat has no comfortable vertical resting option and scratches furniture, a well-chosen cat tree might provide more functions per square foot.
 
@@ -97,7 +97,7 @@ Instead of starting with a brand or a top-ten list, compare your actual constrai
 
 ![Padded rest area near scratching surfaces and a sheltered cat bed](/images/window-perch-vs-cat-tree-figure-06.webp)
 
-*Choose furniture to suit your cat’s habits rather than a universal ranking. AI-generated editorial illustration.*
+*The loose feather toy in this illustrated rest area should be stored after supervised play; do not copy that detail. Image replacement required before publication. AI-generated editorial illustration.*
 
 1. Observe whether your cat prefers looking outside, climbing, scratching, or hiding.
 2. Measure the space and the platform your cat would actually lie on.
