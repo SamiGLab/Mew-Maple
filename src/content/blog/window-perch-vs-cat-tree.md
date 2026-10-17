@@ -65,6 +65,22 @@ Think about what you already own. If there is a suitable scratcher and hiding sp
 
 There is no requirement to own both. Your cat's use of the space matters more than the number of accessories.
 
+## Match the purchase to the cat and the room
+
+Instead of starting with a brand or a top-ten list, compare your actual constraints. These are practical screening questions, not product ratings or guarantees of safety.
+
+| Situation | Start by comparing | Avoid assuming |
+| --- | --- | --- |
+| Very limited floor space | A sill-mounted perch or a compact tree with a measured footprint | Every window can support a perch |
+| Cat that enjoys scratching | A stable tree with an appropriate scratching surface, or a separate scratcher beside a perch | A window perch replaces scratching opportunities |
+| Older cat or limited mobility | Lower, broad resting platforms and reachable steps | More height automatically means more enrichment |
+| Heavy or large-framed cat | Usable platform dimensions, manufacturer load guidance, fasteners and installation compatibility | A photographed cat of similar size proves suitability |
+| Rental home with no drilling permitted | Freestanding, properly stable furniture or a no-drill solution expressly approved for the surface | A suction mount will be compatible with any pane |
+
+**Before checkout:** Measure the usable resting surface rather than the product's outside dimensions. Record your cat's current weight, then check the manufacturer's stated limits and installation instructions. Confirm whether the unit needs drilling or anchoring, whether your specific window or wall is compatible, and whether replacement covers or mount components are available. If the seller cannot provide essential load or mounting information, do not treat attractive photos or review averages as a substitute.
+
+**After installation:** Test the empty unit exactly as the manufacturer instructs before inviting your cat to use it. Observe the first uses, check for shifting or wobbling, and inspect fittings after cleaning or moving the furniture. Do not place a perch beside an open or unsecured window. A cat should always be able to choose another safe resting place.
+
 ## Safety: the most important difference
 
 ![Tabby exploring a fabric play tunnel without dangling accessories](/images/window-perch-vs-cat-tree-figure-05.webp)
