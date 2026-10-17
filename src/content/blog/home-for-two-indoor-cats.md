@@ -74,7 +74,7 @@ Water should also be available at more than one location. A single fountain is c
 
 *Watch for subtle avoidance and blocking, not only obvious fighting. AI-generated editorial illustration.*
 
-Conflict is not always dramatic. Cats Protection lists signs that may include persistent staring, blocking doorways or litter access, one cat repeatedly taking resting places, hiding, avoidance, or fighting [3].
+Conflict is not always dramatic. Cats Protection lists signs that may include persistent staring, blocking doorways or litter access, one cat repeatedly taking resting places, hiding, avoidance, or fighting [3][4].
 
 One cat may appear calm while quietly avoiding an area controlled by the other. Look at where each cat chooses to spend time and whether both use resources freely.
 
