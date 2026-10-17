@@ -106,6 +106,20 @@ For one week, write down only three observations: what activity you offered, whe
 
 If an activity is never chosen, replace it. If the cat repeatedly returns to one scratcher, hideout, or observation post, keep it accessible. The goal is a predictable home with meaningful options.
 
+## A realistic routine for unpredictable days
+
+When your schedule changes, keep the activity flexible rather than trying to meet a rigid play quota. A familiar, short supervised game may be more appropriate than a longer session when your cat is tired, hesitant or recovering from a stressful event. Never force participation.
+
+| What you observe | Practical next step |
+| --- | --- |
+| Cat watches but does not chase | Offer the toy more slowly, or stop and try at a different time |
+| Cat enjoys stalking but loses interest quickly | Let it catch the toy, then finish rather than extending the session |
+| Cat chews the wand, feathers or cord | Stop, remove damaged items and supervise all future use |
+| Cat refuses a new puzzle feeder | Return to a familiar food routine; avoid withholding meals to encourage play |
+| Sudden reluctance to move or other behavior change | Contact a veterinarian rather than treating it as a training issue |
+
+Use food from the normal daily allowance for feeding activities when appropriate. Cats with prescribed diets or medical conditions may need individualized guidance before dietary routines change. The seven-day example is an observation aid, not a fixed exercise prescription.
+
 ## Frequently asked questions
 
 **Do cats need play every day?** Regular opportunities for activity and interaction are valuable, but the type and duration should be individualized. Offer choices rather than a rigid quota.
