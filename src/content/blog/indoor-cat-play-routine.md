@@ -24,7 +24,7 @@ This guide is a flexible planning tool, not a prescribed exercise program. Cats 
 
 Many cats respond to a pattern that resembles hunting: notice movement, approach, stalk, chase, pounce, and catch. Use a suitable toy to move unpredictably but within reach. Give the cat opportunities to succeed, not a frustrating chase that never ends.
 
-The AAFP/ISFM environmental guidelines emphasize opportunities for play and predatory behavior, along with positive, predictable interactions [1]. They also advise putting away string-containing toys and items with swallowable parts after play.
+The 2013 AAFP/ISFM environmental guidelines emphasize opportunities for play and predatory behavior, along with positive, predictable interactions [1]. Separately, Cornell's Feline Health Center advises avoiding toys with small, detachable, or strand-like parts that could be ingested [2]; do not leave wand toys or loose strings accessible between supervised play sessions.
 
 ## A simple daily framework
 
