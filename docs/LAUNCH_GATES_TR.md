@@ -12,5 +12,5 @@
 - [ ] GSC property ve sitemap; GA4 gerçek trafik ve privacy onayı test edildi.
 
 ## İşletim
-Plan kodu GitHub'da, statik hosting Cloudflare Pages. PUBLISH READY env var atanmadan sitede noindex/nofollow uygulanır ve robots taramayı engeller. Gerçek domain yokken canonical çıkarılmaz ve sitemap boş döner.
+Plan kodu GitHub'da, hedef statik hosting Cloudflare Pages. `PUBLIC_SITE_READY=false` iken sayfalarda `noindex,nofollow` uygulanır, sitemap boş kalır ve taslak makaleler üretim derlemesine alınmaz. `robots.txt` taramayı engellemez; aksi hâlde arama motoru `noindex` yönergesini göremeyebilir. `robots.txt` ve meta robots tarama/indeksleme kontrolleridir, erişim koruması değildir; özel önizleme ortamında ayrıca erişim kısıtı gerekir. Yayın için `PUBLIC_SITE_READY=true`, `PUBLISH_APPROVED=YES`, doğrulanmış `SITE_URL` ve editoryal/hukuki kontroller birlikte sağlanmalıdır. Gerçek domain doğrulanmadan canonical ve yayına alma kararları verilmez.
 Değişiklikler GitHub pull request üzerinden gözden geçirilmeli; yayın sonrası geri dönüş commit revert ile yapılmalı.
