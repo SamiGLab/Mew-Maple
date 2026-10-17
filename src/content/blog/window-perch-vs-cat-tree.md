@@ -34,9 +34,9 @@ The right choice depends less on a universal ranking and more on your cat's habi
 
 ## Choose a window perch if your cat loves watching outside
 
-![Ginger indoor cat looking out from a secure window platform](/images/window-perch-vs-cat-tree-figure-02.webp)
+![Owner inspects a bracket-mounted padded window perch while a tabby cat watches from the floor](/images/window-perch-vs-cat-tree-figure-02.webp)
 
-*Check weight limits and mounts and keep windows properly secured. AI-generated editorial illustration.*
+*Inspect installation, weight limits, fasteners and a fully closed window before use. AI-generated editorial illustration, not manufacturer installation instructions.*
 
 Many cats enjoy observing movement through a window. A perch can put a comfortable resting surface where your cat already chooses to sit. It is particularly useful in compact rooms where there is little spare floor space.
 

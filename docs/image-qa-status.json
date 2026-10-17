@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "editorialReviewedAt": "2026-10-17",
+  "scope": "Prepublication visual QA, not safety certification",
+  "images": [
+    {
+      "file": "cat-friendly-apartment-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-figure-05.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-friendly-apartment-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-05.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "cat-trees-small-apartments-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-05.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "diy-cat-toys-figure-06.webp",
+      "status": "replace-required",
+      "note": "Yarn and loose feather crafts visible"
+    },
+    {
+      "file": "diy-cat-toys-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-05.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "entertain-cat-while-at-work-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-05.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "home-for-two-indoor-cats-figure-06.webp",
+      "status": "replace-required",
+      "note": "Wand supervision not visible"
+    },
+    {
+      "file": "home-for-two-indoor-cats-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-04.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-05.webp",
+      "status": "manual-review",
+      "note": "Material resembles twine"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-enrichment-ideas-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-02.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-04.webp",
+      "status": "manual-review",
+      "note": "Wand handler off-frame"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-05.webp",
+      "status": "replace-required",
+      "note": "Open toy basket of wand and yarn"
+    },
+    {
+      "file": "indoor-cat-play-routine-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "indoor-cat-play-routine-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-01.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-02.webp",
+      "status": "updated-pending-review",
+      "note": "Replacement candidate still requires image sign-off"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-03.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-04.webp",
+      "status": "replace-required",
+      "note": "Unattended wand near cat tree"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-05.webp",
+      "status": "manual-review",
+      "note": "Hanging pom-pom/accessory could detach"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-figure-06.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    },
+    {
+      "file": "window-perch-vs-cat-tree-hero.webp",
+      "status": "pending-final-review",
+      "note": "First contact-sheet scan only"
+    }
+  ]
+}
