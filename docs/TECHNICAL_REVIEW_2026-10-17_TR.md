@@ -20,3 +20,22 @@
 3. Hatalar varsa düzelt. npm lockfile'ı commit et; CI'yı npm ci + cache'e geçir.
 4. Cloudflare Pages preview URL için erişim kontrolü ayarla; yayın öncesi noindex teyit et.
 5. İçerik, logo ve hukuki sayfa incelemesi bitince yayın bayrağını aç.
+
+
+---
+
+## GÜNCEL DURUM — 17 Ekim 2026 (önceki notların yerine geçer)
+
+Üstteki "GitHub yok / npm derlenmedi" maddeleri, ilk yerel hazırlığın tarihsel anlık görüntüsüdür. **Artık geçerli engel değiller:**
+
+- Ayrı PRIVATE GitHub deposu: https://github.com/SamiGLab/Mew-Maple
+- 8 makale, 56 görsel ve tüm Astro kodu `main` dalında.
+- `package-lock.json` ile tekrarlanabilir `npm ci` kurulumu, yedi release-gate testi ve gerçek Astro statik build GitHub Actions üzerinde geçmiştir: https://github.com/SamiGLab/Mew-Maple/actions/runs/39061445609
+- Kaynakça yapısı için ek CI koruması ve ilk araştırma notu bir PR üzerinden aktarıldı: https://github.com/SamiGLab/Mew-Maple/pull/5
+- Bütün yazılar hâlâ `status: review`. **Yayın izni VERİLMEDİ.**
+
+**Güncel açık işler:** sekiz makalenin tek tek doğrulanan kaynak-iddia incelemesi, 56 AI görselin görsel güvenlik kontrolü, gerçek editör/yayıncı bilgisi, ticari isim ve domain kararı, hukuki sayfalar, Cloudflare Access ile korunan staging ve son yayın öncesi gerçek cihaz testleri.
+
+**Cloudflare güvenlik düzeltmesi:** preview URL'lerine Access açmak tek başına ana `pages.dev` adresini korumaz. `noindex` asla erişim koruması değildir. Ayrıntı: `docs/GITHUB_AND_CLOUDFLARE_SETUP_TR.md`.
+
+**Kaftan Angelo** deposu, domaini, DNS'i ve hostingi bu projeden bağımsızdır; burada hiçbir değişiklik yapılmadı.
