@@ -107,6 +107,12 @@ Not every enrichment activity has to involve you. A calm, accessible perch with 
 
 Use a short play session followed by the cat's usual meal or settling routine. A predictable pattern is easier to maintain than an elaborate schedule that lasts only a week.
 
+## Adapt enrichment for senior cats and limited mobility
+
+Older cats can still enjoy exploration and play, but the arrangement may need to change. Rather than relying on high jumps, provide a secure low resting place, non-slip routes, reachable food and water, and gentle toys that can be investigated from the floor. Cats Protection recommends adapting play and access to a senior cat's mobility, with short sessions and steps or ramps where appropriate [4].
+
+Offer easy puzzle feeders without restricting access to normal meals. Avoid expecting a cat with stiffness or reduced vision to navigate unfamiliar obstacles on its own. If reduced movement, reluctance to jump, or changed appetite is new, consult a veterinarian instead of treating it as boredom.
+
 ## Build a routine that fits your cat
 
 Choose one activity from three groups: **movement** (chasing or climbing), **investigation** (puzzles or boxes), and **comfort** (resting spots or hiding). A simple starting routine could be a short interactive play session before work, an inspected independent activity during the day, and another session when you return.
@@ -136,6 +142,7 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 1. Cornell Feline Health Center, *Safe toys and gifts*: <https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/safe-toys-and-gifts>
 2. Ohio State University Indoor Pet Initiative, *Scratching*: <https://indoorpet.osu.edu/node/449>
 3. AAFP/ISFM, *Feline Environmental Needs Guidelines*: <https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/>
+4. Cats Protection, *Elderly Cats: Care Guide for Older Cats*: <https://www.cats.org.uk/help-and-advice/caring-for-your-cat/elderly-cats>
 
 *Editorial note: This article provides general environmental-enrichment information, not a diagnosis or individualized veterinary advice.*
 
