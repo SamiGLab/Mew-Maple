@@ -136,6 +136,20 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 - [An Indoor Cat Play Routine You Can Actually Maintain](/guides/indoor-cat-play-routine/)
 - [How to Create a Cat-Friendly Apartment](/guides/cat-friendly-apartment/)
 
+## Choose the next activity based on what your cat already does
+
+You do not need to try all 15 ideas. Start with an observed preference and one low-risk change:
+
+| Your cat already enjoys | Try first | Watch for |
+| --- | --- | --- |
+| Looking outside | A secure resting spot by a fully closed or properly protected window | Unstable supports or access to an unsecured opening |
+| Scratching | A stable scratcher in the location your cat already uses | Wobble, loose fibers or damaged covering |
+| Hiding | A clean, open cardboard hideaway without tape or staples | Chewing or blocked exit routes |
+| Stalking and chasing | A brief, directly supervised wand game | Chewing cords or loose components; store the toy afterward |
+| Food exploration | A familiar, inspectable puzzle using part of the normal food allowance when suitable | Frustration, broken pieces or a diet that requires veterinary guidance |
+
+After a few days, note whether the cat approached voluntarily, used the option repeatedly, or avoided it. Keep useful activities and stop those that cause fear or create chewing hazards. Sudden reductions in activity, appetite, or mobility should prompt veterinary advice rather than a more elaborate enrichment schedule.
+
 ## Sources and further reading
 
 1. Cornell Feline Health Center, *Safe toys and gifts*: <https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/safe-toys-and-gifts>
