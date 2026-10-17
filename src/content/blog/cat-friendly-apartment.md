@@ -42,7 +42,7 @@ Provide at least one private resting spot—a covered bed, a clean box, or a qui
 
 ![Cat resting in a sheltered fabric tunnel and soft bed](/images/cat-friendly-apartment-figure-03.webp)
 
-*A private retreat can help cats relax away from household activity. AI-generated editorial illustration.*
+*The pictured tunnel contains a hanging accessory and a loose feather toy on the floor; do not leave such toys unattended. Image replacement required before publication. AI-generated editorial illustration.*
 
 A familiar blanket, washable bed, or accessible quiet nook can become a reliable retreat. If your cat sleeps in the bedroom, keep pathways clear and avoid unstable bedside towers or open windows next to jumping surfaces.
 
@@ -52,7 +52,7 @@ In homes where doors are closed at night, ensure essential resources remain acce
 
 ![Cat eating at an accessible feeding station in a tidy room](/images/cat-friendly-apartment-figure-04.webp)
 
-*Keep food and water easy to reach and away from litter areas. AI-generated editorial illustration.*
+*Do not copy this illustrated layout: the food bowls are too close to the litter cabinet. Separate food, water and toileting areas. Image replacement required before publication. AI-generated editorial illustration.*
 
 Keep your cat's water accessible and away from areas where cleaning chemicals, heat, or heavy foot traffic create risks. Separate water from the litter box; many households also find it practical to position water and food in distinct places, in line with environmental resource recommendations [1].
 

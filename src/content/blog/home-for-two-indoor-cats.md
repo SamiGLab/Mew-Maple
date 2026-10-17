@@ -61,7 +61,7 @@ Avoid making a single high platform the only appealing resting option. Some cats
 
 ![Two cats using separate bowls at a mealtime station](/images/home-for-two-indoor-cats-figure-04.webp)
 
-*Use separate feeding locations when possible to reduce competition. AI-generated editorial illustration.*
+*This illustration shows bowls placed too close to demonstrate truly separate feeding locations. Provide distinct, separated stations where practical. Image replacement required before publication. AI-generated editorial illustration.*
 
 Set up distinct feeding locations rather than placing bowls close together. Monitor whether one cat finishes quickly and approaches the other's food. If the cats have different diets or medical needs, ask your veterinarian how to manage separate meals.
 

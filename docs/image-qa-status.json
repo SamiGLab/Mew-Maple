@@ -1,294 +1,406 @@
 {
   "schemaVersion": 1,
-  "editorialReviewedAt": "2026-10-17",
-  "scope": "Prepublication visual QA, not safety certification",
+  "editorialReviewedAt": "2026-10-18",
+  "scope": "AI-assisted visual QA of all 56 images against actual article captions; editorial acceptance is not product testing, veterinary approval or installation certification.",
   "images": [
     {
       "file": "cat-friendly-apartment-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Unidentified houseplants near cats; species safety unverified.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Hanging pompom/string attached to scratcher; ingestion risk.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "replace-required",
+      "note": "Visual QA finding: Hanging tunnel toy and unattached feather toy on carpet contradict safe, unattended-retreat concept.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "replace-required",
+      "note": "Visual QA finding: Food and water immediately adjacent to litter cabinet, contradicting resource separation guidance.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-figure-05.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Perch mounting and overhanging fabric cannot be established as safe.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-friendly-apartment-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Two dangling pompom/string accessories.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling pompom attached to tree.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling pompom beside window.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling pompom and tall tower with unverified anchoring.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-05.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling pompom on scratching tree.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling pompom; elevated tree installation unverified.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "cat-trees-small-apartments-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Tall multi-level tree is not product-tested; require additional installation review.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-05.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Fabric toy tied/knotted end accessible to cat chewing.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-figure-06.webp",
-      "status": "updated-pending-review",
-      "note": "Loose yarn/feathers removed, but paper/cardboard/fabric items still require chewing and ingestion review; text explicitly discourages unattended use.",
-      "revisedAt": "2026-10-18"
+      "status": "manual-review",
+      "note": "Visual QA finding: Open craft basket includes chewable materials; caption warns against unattended use.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "diy-cat-toys-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Hanging toy and unidentified plants in unattended-home context.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-05.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "entertain-cat-while-at-work-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Loose woven toy balls visible on floor, chewing risks unknown.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "replace-required",
+      "note": "Visual QA finding: Feeding bowls are side-by-side while article advocates separated feeding stations.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-05.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-figure-06.webp",
-      "status": "updated-pending-review",
-      "note": "Supervising hand now visibly holds the feather wand. Other woven/plush floor objects still need individual chew/detachment review.",
-      "revisedAt": "2026-10-18"
+      "status": "manual-review",
+      "note": "Visual QA finding: Several loose fabric/woven toys around playing cats; review detachability.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "home-for-two-indoor-cats-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-04.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Multiple dangling pompom strings attached to tree.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-05.webp",
-      "status": "updated-pending-review",
-      "note": "Removed ambiguous woven/twine-like ball. Retains plush objects: check for loose seams, tail, small removable components.",
-      "revisedAt": "2026-10-18"
+      "status": "manual-review",
+      "note": "Visual QA finding: Soft toy tail and sewn details might detach; inspect suitability.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-enrichment-ideas-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-02.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-04.webp",
-      "status": "updated-pending-review",
-      "note": "Human hand now visible holding wand. No unattended suggestion; inspect lure/line depiction and review human-cat interaction.",
-      "revisedAt": "2026-10-18"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-05.webp",
-      "status": "updated-pending-review",
-      "note": "Feather wands and yarn-like strands removed. Basket lid remains partly open; caption states this is a sorting scene, not accessible unattended storage.",
-      "revisedAt": "2026-10-18"
+      "status": "manual-review",
+      "note": "Visual QA finding: Partly open basket may appear suitable for unattended storage; caption explicitly warns otherwise.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "indoor-cat-play-routine-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-01.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-02.webp",
-      "status": "updated-pending-review",
-      "note": "Replacement candidate still requires image sign-off"
+      "status": "manual-review",
+      "note": "Visual QA finding: Perch mount load and closed window cannot be verified from image.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-03.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-04.webp",
-      "status": "updated-pending-review",
-      "note": "Exposed feather wands removed; lidded box introduced. Check tall scratcher anchoring, loose decor and furniture material before approval.",
-      "revisedAt": "2026-10-18"
+      "status": "replace-required",
+      "note": "Visual QA finding: Exposed toy baskets accessible to cats conflict with closed, inaccessible supervised-toy storage.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-05.webp",
-      "status": "updated-pending-review",
-      "note": "Detached-looking hanging pom-pom removed. Inspect seams and toy/fabric assumptions; not certified for unattended use.",
-      "revisedAt": "2026-10-18"
+      "status": "approved",
+      "note": "Editorial alignment accepted: actual image broadly matches alt/caption; no conspicuous contradictory hazard. NOT a product safety certification.",
+      "revisedAt": "2026-10-18",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-06.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "replace-required",
+      "note": "Visual QA finding: Loose feather lure left out on floor near resting cat.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
       "file": "window-perch-vs-cat-tree-hero.webp",
-      "status": "pending-final-review",
-      "note": "First contact-sheet scan only"
+      "status": "manual-review",
+      "note": "Visual QA finding: Comparison image contains dangling pompom on cat-tree side.",
+      "visualReviewedAt": "2026-10-18",
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     }
   ]
 }
