@@ -102,6 +102,14 @@ A cat may approach slowly, investigate, bat, hide, walk away, or return later. L
 
 End a session if your cat looks frightened, becomes overwhelmed, or starts eating the materials. Put away temporary projects after play and tidy the area.
 
+## A stop-or-keep decision after each DIY session
+
+Before reusing a homemade activity, check the material in good light. **Discard it immediately** if you find loose fibers, exposed adhesive, soggy cardboard, sharp edges, missing pieces, or evidence of chewing and swallowing. Avoid enclosing cats in boxes or bags that could trap them; use open escape routes and remove bag handles.
+
+If the cat repeatedly bites off material, switch to a different supervised activity rather than making the same object sturdier with extra tape or glue. Keep a note of which simple activities your cat voluntarily enjoyed. A cardboard hiding box and a supervised chase session may be more useful than a complicated craft.
+
+**Possible ingestion is not a wait-and-see DIY problem.** If you suspect your cat swallowed string, ribbon or another object, contact a veterinarian promptly. Do not pull any strand protruding from the mouth or rectum.
+
 ## Frequently asked questions
 
 **Is a cardboard box a cat toy?** It can serve as a hiding and exploration space. Check that it is clean, stable, and free from staples, tape, and unsafe holes.
