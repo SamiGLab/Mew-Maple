@@ -108,6 +108,19 @@ A simple evening pattern might be: check food and water, scoop litter, play brie
 
 Look for continued use of resting and scratching areas, relaxed exploration, normal grooming, and willingness to interact. Keep notes if your cat begins hiding much more than usual, stops playing abruptly, changes eating habits, or starts eliminating outside the litter box. Those changes can have medical or environmental causes; contact your veterinarian rather than assuming boredom.
 
+## Before you leave: unattended versus supervised activities
+
+Use a simple risk screen rather than treating every enrichment suggestion as something to leave out while you are gone.
+
+| Usually suitable to consider after checking the setup | Keep for directly supervised sessions |
+| --- | --- |
+| A stable, familiar scratcher with no loose parts | Wand toys, yarn, ribbons, elastic and dangling strings |
+| A securely installed resting area away from unsecured windows | New cardboard crafts or unfamiliar items your cat may chew |
+| A familiar hiding place with clear entrance and exit | Toys with feathers, bells or detachable components |
+| A previously assessed food puzzle that cannot trap or shed parts, if compatible with the cat's diet | New feeding devices until you have observed their operation |
+
+This is not a certification that any object is safe unattended. Inspect for wear, make sure the cat can reach food, water and litter independently, and remove any item that starts to fray, break or invite chewing. Do not use cameras or automatic feeders as substitutes for daily in-person care. If your cat has a medical diet or unusual eating behavior, discuss feeding changes with your veterinarian.
+
 ## Frequently asked questions
 
 **Should I leave the television on for my cat?** Some cats attend to moving images; others ignore them. It is optional and should not replace essentials or interaction.

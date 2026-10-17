@@ -97,6 +97,14 @@ Older or mobility-limited cats may prefer low stepped furniture, ramps designed 
 
 Work through one room at a time. Your goal is not a picture-perfect showroom; it is a home that works for the cat and the humans living there.
 
+## Audit the apartment from your cat's point of view
+
+Walk the route from the main sleeping place to the litter box, food and water. Can doors close off access? Does the route pass a washing machine, noisy hallway, or a spot where another pet may block the way? Give your cat alternatives before adding decorative furniture.
+
+Then check the room at floor level: loose cords, unstable shelves, reachable medicines, cleaners and plants, or small objects that could be swallowed. Review the window and balcony arrangements separately; ordinary insect screens should not be assumed to prevent falls. If you rent, confirm permissible fixing methods and follow the furniture manufacturer's anchoring instructions instead of improvising mountings.
+
+Finally, assess whether an older or mobility-limited cat can access key resources without jumping. Low-entry litter boxes and reachable resting spots may offer more practical benefit than another high perch. Make one change at a time and observe whether your cat chooses to use it.
+
 ## Frequently asked questions
 
 **Can a cat be happy in a studio apartment?** Apartment size alone does not tell you whether a cat's environmental needs are met. Assess resources, safe places, movement opportunities, play, and the individual cat's behavior.

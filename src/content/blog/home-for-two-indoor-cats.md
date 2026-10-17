@@ -97,6 +97,14 @@ Imagine a living room, bedroom, and hallway. You might place one bed and scratch
 
 The exact positions depend on your floor plan. Avoid putting resources in noisy, dangerous, or easily blocked areas simply to achieve a specific number.
 
+## Watch access, not just the number of resources
+
+An adequate count of bowls or litter boxes does not help if one cat can guard a narrow doorway or stare down the other near a resource. Observe each cat separately: can both reach food, water, litter and resting places without being chased, blocked or forced to pass the other cat?
+
+Try placing essential resources in different locations with more than one route of approach or retreat. Avoid lining several bowls or trays together and counting them as independent options. Provide visually separated retreats and do not force cats to share a high-value perch.
+
+Record persistent hiding, guarding, chasing, litter avoidance and changes in appetite. These signs can reflect conflict or health problems and merit veterinary assessment; avoid assuming the cats will simply work it out.
+
 ## Frequently asked questions
 
 **Do bonded cats need separate bowls?** Yes, it is sensible to provide separate access even when cats appear affectionate. Relationships and preferences can change [1].
