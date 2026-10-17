@@ -4,7 +4,8 @@ description: Find a cat tree that fits a small apartment. Compare footprints, st
   scratching surfaces, and cleaning needs.
 category: Gear & Buying Guides
 hero: /images/cat-trees-small-apartments-hero.webp
-heroAlt: 'Best Cat Trees for Small Apartments: What to Look For Before You Buy'
+heroAlt: "Tabby cat sitting on a tall multi-platform cat tree in a bright apartment"
+heroCaption: "Look for well-supported platforms and a stable base. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ When floor space is limited, a good cat tree earns its place. It gives your cat 
 
 The most useful small-apartment cat tree is **stable, easy to access, appropriately sized for your cat, and located where your cat wants to spend time**. This guide explains how to compare features; it does not pretend that we have hands-on tested models we have not used.
 
-![Tabby cat sitting on a tall multi-platform cat tree in a bright apartment](/images/cat-trees-small-apartments-hero.webp)
-*Look for well-supported platforms and a stable base. Illustration created for Mew & Maple.*
 
 ## Measure the available footprint first
 

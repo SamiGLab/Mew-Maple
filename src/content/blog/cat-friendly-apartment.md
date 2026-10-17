@@ -4,7 +4,8 @@ description: Make your apartment more cat-friendly with safe hiding places, scra
   space, and a room-by-room checklist.
 category: Cat-Friendly Homes
 hero: /images/cat-friendly-apartment-hero.webp
-heroAlt: How to Create a Cat-Friendly Apartment Without Renovating
+heroAlt: "Relaxed tabby cat near a scratching post in a bright, cozy apartment"
+heroCaption: "A calm, uncluttered room can still offer scratching, resting, and observation opportunities. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ A cat-friendly apartment is not measured by square footage or the number of expe
 
 You can improve those things without drilling holes in a rental wall or buying an enormous cat tree. Start with the rooms your cat uses most and solve practical problems before decorating.
 
-![Relaxed tabby cat near a scratching post in a bright, cozy apartment](/images/cat-friendly-apartment-hero.webp)
-*A calm, uncluttered room can still offer scratching, resting, and observation opportunities. Illustration created for Mew & Maple.*
 
 ## Start with the five environmental needs
 

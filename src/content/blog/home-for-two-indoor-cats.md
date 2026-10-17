@@ -4,7 +4,8 @@ description: Learn how to arrange litter boxes, feeding stations, resting spots,
   for a two-cat indoor household.
 category: Everyday Cat Life
 hero: /images/home-for-two-indoor-cats-hero.webp
-heroAlt: How to Set Up a Home for Two Indoor Cats Without Creating Competition
+heroAlt: "Two indoor cats using separate areas of a bright living room"
+heroCaption: "Provide separate places to eat, rest, and retreat. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 5
 language: en-US
@@ -14,8 +15,6 @@ Two cats sharing a home do not necessarily want to share every bowl, bed, doorwa
 
 The key principle is **choice without confrontation**. Give both cats more than one way to meet basic needs, and arrange those resources so one cat cannot easily control the other's access.
 
-![Two indoor cats using separate areas of a bright living room](/images/home-for-two-indoor-cats-hero.webp)
-*Provide separate places to eat, rest, and retreat. Illustration created for Mew & Maple.*
 
 ## Start with resources, not a shared play area
 

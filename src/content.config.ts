@@ -10,6 +10,7 @@ const blog = defineCollection({
     category: z.string(),
     hero: z.string(),
     heroAlt: z.string(),
+    heroCaption: z.string().min(20),
     status: z.enum(['review', 'published']),
     readingMinutes: z.number().int().positive(),
     language: z.literal('en-US'),

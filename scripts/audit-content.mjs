@@ -30,6 +30,8 @@ for (const file of files) {
   }
   const hero = fm.match(/^hero:\s*(\/images\/\S+)/m)?.[1];
   if (!hero || !existsSync(`public${hero}`)) { console.error(`Missing hero: ${file}`); errors++; }
+  if (hero && refs.some(item => item[1] === hero)) { console.error(`Hero duplicated in article body: ${file}`); errors++; }
+  if (hero && !refs.some(item => item[1] === hero)) images++;
 }
 if (files.length < 8) { console.error('At least eight initial guides expected'); errors++; }
 if (images < 56) { console.error('Expected at least 56 existing image references'); errors++; }

@@ -4,7 +4,8 @@ description: Try 15 practical indoor cat enrichment ideas, from puzzle feeders t
   with tips for adapting activities to your cat.
 category: Play & Enrichment
 hero: /images/indoor-cat-enrichment-ideas-hero.webp
-heroAlt: 15 Indoor Cat Enrichment Ideas That Don't Require a Big Home
+heroAlt: "Tabby cat exploring a wooden puzzle feeder on a cozy living-room rug"
+heroCaption: "An enrichment activity can be as simple as a food puzzle. Illustration created for Mew & Maple."
 status: review
 readingMinutes: 6
 language: en-US
@@ -14,8 +15,6 @@ Indoor cats do not need a giant house or a closet full of gadgets to have intere
 
 The easiest place to begin is not a shopping list. Watch what your cat already enjoys. Does your cat watch birds from a window, race after a rolling ball, hide inside boxes, or sit on the highest shelf? Use those preferences to choose two or three activities, and change one element at a time.
 
-![Tabby cat exploring a wooden puzzle feeder on a cozy living-room rug](/images/indoor-cat-enrichment-ideas-hero.webp)
-*An enrichment activity can be as simple as a food puzzle. Illustration created for Mew & Maple.*
 
 ## A quick safety rule before you start
 
