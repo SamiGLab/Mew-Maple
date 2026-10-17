@@ -83,6 +83,18 @@ Avoid fishing-rod toys, string, ribbon, loose feathers, elastic bands, plastic b
 
 Do not leave open windows on the assumption that a screen will hold an excited or startled cat. A screen designed to exclude insects is not automatically fall protection.
 
+### Quick decision guide: what stays out?
+
+| Environment or activity | While you are away |
+| --- | --- |
+| A securely positioned resting area beside a **closed** window | Generally suitable after checking stability and access |
+| A stable scratcher, safe hideaway, or inspected soft resting mat | Often suitable if your cat uses it safely |
+| A familiar, intact food puzzle | Consider only after supervised trials and without restricting normal food access |
+| Feather wand, string, ribbon, loose elastic, or fragile DIY toy | **Put it away** when no adult can supervise |
+| Elevated perch or cat tree that wobbles or has unsecured fixings | **Do not leave accessible** until corrected |
+
+This is a screening guide, not a guarantee that an object is safe for every cat. Cornell warns that strand-like and detachable toy components may be swallowed [3]; the ASPCA warns about falls through unsecured windows [2]. Inspect your individual cat's behavior and the manufacturer's instructions before leaving equipment available.
+
 ## When you get home
 
 ![Ginger cat quietly resting at a sunny apartment window](/images/entertain-cat-while-at-work-figure-06.webp)
