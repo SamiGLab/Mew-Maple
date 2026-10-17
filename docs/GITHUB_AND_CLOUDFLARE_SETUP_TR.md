@@ -1,45 +1,35 @@
-# GitHub + Cloudflare Pages | Kurulum sırası (Mew & Maple)
+# Mew & Maple — GitHub ve Cloudflare test ortamı
+**Güncellendi:** 17 Ekim 2026  |  **Durum:** GitHub hazır, Cloudflare henüz BAĞLI DEĞİL
 
-## Ön koşullar
-- Özel GitHub deposu: `mew-and-maple-blog` (ayrı repo; Kaftan Angelo ile ilişkisi yok).
-- GitHub hesabının depo sahibi tarafından oluşturulması gerekir. Bu iş **henüz yapılmadı**.
-- GitHub Actions'da doğrulanmış `npm run build` başarılı olmadan Cloudflare kurulumuna geçme.
+## Gerçek durum
+- GitHub deposu **PRIVATE**: https://github.com/SamiGLab/Mew-Maple
+- Astro v0.3'ün 8 taslak rehberi, 56 WebP görseli ve kaynakları taşındı.
+- `package-lock.json` eklendi; GitHub Actions `npm ci`, `npm run check:source`, `npm run build` testlerinde başarılı.
+- Son doğrulanan örnek: https://github.com/SamiGLab/Mew-Maple/actions/runs/39061445609
+- Kaynakça yapısal denetimi: https://github.com/SamiGLab/Mew-Maple/pull/5
+- **Mew & Maple sitesi henüz canlı değil**. Domain satın alınmadı, Cloudflare Pages projesi açılmadı; taslak içerik `review` statüsünde.
+- **Kritik kapsam sınırı:** `SamiGLab/kaftan-angelo`, kaftanangelo.com, ilgili DNS ve hosting kaynakları tamamen dokunulmaz.
 
-## GitHub'a ilk aktarım
-1. https://github.com/new adresinde **private** `mew-and-maple-blog` adında boş depo aç. README/.gitignore ekleme (bu ZIP'de var).
-2. Bu ZIP'i bilgisayarında bir klasöre çıkart. ZIP içindeki `Mew_Maple_Astro_Starter` içindekiler doğrudan depo kökünde olmalı.
-3. Terminalde ilgili klasörde:
+## Cloudflare önizlemesine geçiş için yayın öncesi kontrol kapısı
+Cloudflare'nin `*.pages.dev` temel adresi, repo PRIVATE olsa bile varsayılan olarak herkesin erişimine açık olabilir. Preview deployment'lar da varsayılan olarak herkese açıktır. `noindex` ve `robots` erişim kontrolü değildir.
 
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initialize Mew & Maple draft-safe Astro blog"
-git remote add origin https://github.com/SamiGLab/mew-and-maple-blog.git
-git push -u origin main
-```
+1. Kullanıcı ayrı bir **Cloudflare Pages** projesi oluşturmayı onayladığında Dashboard → Workers & Pages üzerinden sadece `SamiGLab/Mew-Maple` reposunu bağla. Mevcut işletme projelerini seçme veya değiştirme.
+2. Build command: `npm run build`; output: `dist`; project name: `mew-maple-staging` veya başka bağımsız isim; production branch: `main`.
+3. Her iki ortam için güvenli ilk durum: `PUBLIC_SITE_READY=false`, `PUBLISH_APPROVED=NO`, `SITE_URL=https://preview.invalid`. Gerçek alan adı olmadan yayın modunu etkinleştirme.
+4. Settings → General → **Enable access policy** ile *preview deployments* için Cloudflare Access aç. **Bu, ana `<project>.pages.dev` adresini otomatik olarak korumaz.**
+5. Ayrıca `<project>.pages.dev` kök adresini kapsayan, yalnızca yetkili e-posta/kimliklerin giriş yapabildiği Cloudflare Access uygulaması/politikası yapılandır. Cloudflare'nin Pages Known Issues rehberinde ana `pages.dev` ve preview'lar için gereken iki aşamalı yapı anlatılıyor.
+6. Yetkisi olmayan bir tarayıcıda hem ana `pages.dev` hem de preview URL'lerinde giriş/engelleme ekranını kontrol et. Yalnızca `x-robots-tag: noindex` görmek yeterli değildir.
+7. İçerik rotalarının statik önizlemede bulunmadığını doğrula. Site bu aşamada sadece **taslak-güvenli iskelet** gösterebilir; editöryel rehber incelemesi local `npm run dev` ile veya ayrı korumalı inceleme ortamıyla yapılır.
+8. Domain bağlama, GA4/çerez, affiliate, reklam ve gerçek `PUBLIC_SITE_READY=true` ayarları yapılmaz. Canlı yayına geçmek için #1 ve #2 P0 işleri, bütün kabul testleri ve sahibin açık son onayı gerekir.
 
-4. GitHub `Actions` sekmesinde `Validate source and build` akışının başarılı olduğunu doğrula.
-5. `npm install` sonrası bir `package-lock.json` oluşursa commit et; GitHub Actions dosyasında `npm install` yerine `npm ci` kullan, `setup-node` içinde `cache: npm` ayarla. Lock dosyası olmadan `npm ci` çalışmaz.
+## Geliştirme iş akışı ve geri dönüş
+- Küçük değişiklikleri yeni dalda uygula; PR aç; `validate` job'unda `npm ci`, kaynak ve Astro build kontrolleri geçmeden `main` dalına alma.
+- `main` dalına doğrudan force-push, tarihçe silme veya gizli çevre değişkeni yazma.
+- Yayın dağıtımı başladıktan sonra problem olursa Cloudflare dashboard üzerinden önceki başarılı deployment'a geri dönmeyi değerlendir; kodun kalıcı geri alınması için `git revert` ile ters commit üreten yeni PR aç. Doğrulamadan prod env ayarı değiştirme.
+- Branch protection/rulesets GitHub hesap planına bağlıdır: private depoda GitHub Pro/Team/Enterprise gerekebilir. Gerçek repo kuralı **henüz uygulanmış veya doğrulanmış değildir**.
+- Bu talimatlar Cloudflare hesabında işlem yapıldığı anlamına gelmez.
 
-## Üretim güvenliği
-- Yerel geliştirmede (`npm run dev`) 8 makale review statüsünde görünür.
-- Üretim/staging derlemesinde `PUBLIC_SITE_READY=false` olursa makale URL'leri hiç oluşturulmaz, sitemap boş olur ve meta robots `noindex,nofollow` olur.
-- `robots.txt` erişimi açık kalır: Arama motorları noindex etiketini okuyabilsin. **noindex bir gizlilik bariyeri değildir**. Yayınlanmamış dosyalar için gerçek erişim kontrolü gerekiyorsa Cloudflare Access gibi koruma sağla.
-- İstenen yayın için kaynak ve veterinerlik güvenliği denetimi, gerçek yazar kimliği, özgün kaynaklar, tamamlanmış hukuki sayfalar ve kullanıcı onayı gerekir.
-- `PUBLIC_SITE_READY=true` tek başına yetersiz; `PUBLISH_APPROVED=YES`, gerçek HTTPS domain, en az bir tarihli yayımlanmış makale ve tamamlanmış açıklama sayfaları da gerekli.
-
-## Cloudflare Pages (CI geçtiğinde)
-1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git → bağımsız GitHub repo.
-2. Production branch: `main`.
-3. Build command: `npm run build`.
-4. Output directory: `dist`.
-5. Ortam değişkenleri ilk etapta `SITE_URL=https://preview.invalid`, `PUBLIC_SITE_READY=false`, `PUBLISH_APPROVED=NO`.
-6. İlk dağıtımda site **taslak/indekssiz** olarak kalmalı. Gerçek yayın onayından önce hiçbir koşulda `PUBLIC_SITE_READY=true` yapma.
-7. Gerçek domain satın alındığında ve doğrulandığında `SITE_URL` değerini gerçek HTTPS domain ile değiştir. Hukuki ve içerik kontrolünden sonra `PUBLIC_SITE_READY=true` + `PUBLISH_APPROVED=YES`.
-8. Domain DNS/HTTPS, canonical, sitemap, indexability, Google Search Console ve Pinterest bağlantı doğrulamasını sonradan test et.
-
-## Şimdiki engeller
-- Bu ortamdan yeni GitHub deposu oluşturulamıyor; GitHub üzerinde depo görünmedi.
-- npm registry DNS hatası (`EAI_AGAIN`) nedeniyle gerçek Astro build testi lokal ortamda henüz yapılmadı.
-- Cloudflare ve domain hesapları henüz doğrulanmadı.
+## Resmi kaynaklar (17 Ekim 2026 inceleme)
+- https://developers.cloudflare.com/pages/configuration/preview-deployments/
+- https://developers.cloudflare.com/pages/platform/known-issues/
+- https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches
