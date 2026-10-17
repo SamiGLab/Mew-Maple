@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Search guides" description="Search practical indoor-cat guides by topic and keyword.">
+  <section class="container prose-page">
+    <p class="eyebrow">GUIDE LIBRARY</p>
+    <h1>Search the guides</h1>
+    <p>Look for indoor play ideas, cat trees, window perches or small-apartment tips.</p>
+    <form id="search-form" role="search">
+      <label for="search-term"><strong>Search term</strong></label>
+      <div class="search-form-row">
+        <input id="search-term" name="q" type="search" required minlength="2" maxlength="120" autocomplete="off" placeholder="Try: cat play routine" />
+        <button type="submit">Find guides</button>
+      </div>
+    </form>
+    <p id="search-status" role="status" aria-live="polite">Enter at least two characters.</p>
+    <ul id="search-results" class="search-results" aria-label="Search results"></ul>
+    <p class="note">Only guides available in this environment appear in search. Editorial drafts are not included in the public search index.</p>
+  </section>
+</BaseLayout>
+<script>
+  type Item = {title: string; description: string; category: string; url: string};
+  const form = document.querySelector<HTMLFormElement>('#search-form');
+  const input = document.querySelector<HTMLInputElement>('#search-term');
+  const status = document.querySelector<HTMLElement>('#search-status');
+  const results = document.querySelector<HTMLUListElement>('#search-results');
+  let posts: Item[] = [];
+  let indexError = false;
+  function runSearch() {
+    if (!input || !status || !results) return;
+    results.replaceChildren();
+    if (indexError) { status.textContent = 'Search is unavailable right now.'; return; }
+    const q = input.value.trim().toLocaleLowerCase('en-US');
+    if (q.length < 2) { status.textContent = 'Enter at least two characters.'; return; }
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = posts.filter(post => {
+      const haystack = [post.title,post.description,post.category].join(' ').toLocaleLowerCase('en-US');
+      return words.every(word => haystack.includes(word));
+    }).slice(0,20);
+    status.textContent = matches.length ? matches.length + ' guide(s) found.' : 'No matching published guides found.';
+    for (const post of matches) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = post.url;
+      link.textContent = post.title;
+      const info = document.createElement('p');
+      info.textContent = post.category + ' — ' + post.description;
+      li.append(link,info);
+      results.append(li);
+    }
+  }
+  form?.addEventListener('submit', event => {event.preventDefault();runSearch();});
+  input?.addEventListener('input', runSearch);
+  async function initialize() {
+    try {
+      const response = await fetch('/search-index.json', {cache:'no-store'});
+      if (!response.ok) throw new Error('Unavailable');
+      const json: unknown = await response.json();
+      if (!Array.isArray(json)) throw new Error('Invalid index');
+      posts = json.filter((p): p is Item =>
+        typeof p === 'object' && p !== null &&
+        typeof p.title === 'string' && typeof p.description === 'string' &&
+        typeof p.category === 'string' && typeof p.url === 'string' &&
+        /^\/guides\/[a-z0-9-]+\/$/.test(p.url));
+    } catch { indexError = true; }
+    const initial = new URL(window.location.href).searchParams.get('q');
+    if (initial && input) input.value = initial.slice(0,120);
+    if (input?.value) runSearch();
+  }
+  void initialize();
+</script>
+<style>
+  .search-form-row{display:flex;gap:.6rem;margin:1rem 0 1.5rem}
+  input{flex:1;min-width:0;padding:.85rem 1rem;border:1px solid #bccdbf;border-radius:.6rem;font:inherit}
+  button{padding:.85rem 1.25rem;background:#263c34;border:0;border-radius:.6rem;color:white;cursor:pointer;font:inherit;font-weight:600}
+  input:focus-visible,button:focus-visible{outline:3px solid #e9aa82;outline-offset:2px}
+  .search-results{list-style:none;padding:0}
+  .search-results li{background:white;border:1px solid #e1e7df;padding:1rem 1.3rem;margin:1rem 0;border-radius:.8rem}
+  .search-results a{font-weight:700}
+  .search-results p{font-size:.88rem;color:#63736a}
+  @media(max-width:600px){.search-form-row{flex-direction:column}}
+</style>
