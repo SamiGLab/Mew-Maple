@@ -1,6 +1,6 @@
 # Mew & Maple — Astro static-blog starter v0.3 (DRAFT)
 
-This is a **local scaffold**, NOT an existing GitHub repository or live website. The eight content entries are intentionally **under review**. The illustrations are AI-generated editorial artwork. Do not claim hands-on product tests or veterinary review.
+This is the **private Mew & Maple GitHub source repository**, NOT a live website. The eight content entries are intentionally **under review**. The illustrations are AI-generated editorial artwork. Do not claim hands-on product tests or veterinary review.
 
 ## Stack
 - Astro 6 static output; TypeScript content schema; no database or SSR adapter
@@ -10,14 +10,14 @@ This is a **local scaffold**, NOT an existing GitHub repository or live website.
 
 ## Local setup
 ```bash
-npm install
+npm ci
 cp .env.example .env
 npm run check:source
 npm run dev
 npm run build
 ```
 
-> This machine could not access the npm registry during packaging. **Astro dependency installation and runtime compilation have NOT been executed or verified yet.** The source/image QA script has been verified with Node 22. Run `npm install` online and commit the generated `package-lock.json` before switching CI to `npm ci`.
+GitHub Actions has now successfully completed **`npm ci`, source checks and `npm run build`** using the committed `package-lock.json`. The content is still editorial draft material and is not approved for publication.
 
 ## Important deployment safeguards
 - Default `PUBLIC_SITE_READY=false` emits `noindex,nofollow`, leaves the sitemap empty, and excludes draft article routes from static production builds. robots.txt allows crawling so Google can see noindex (robots.txt Disallow would conceal it). Draft articles only appear under local `astro dev` for editorial review. This protects indexing but is not access control for a deployed review environment; use private preview access if confidentiality matters. A public build requires `PUBLISH_APPROVED=YES`, a verified custom `SITE_URL`, at least one `published` post and legal/editorial placeholder removal.
@@ -47,4 +47,12 @@ Content imported from the eight previously authored article HTML files and 56 We
 ## Code review notes 17 Oct 2026
 - Fixed syntax error in `robots.txt.ts` and removed lockfile requirement from setup-node until a real package-lock exists.
 - Added `npm run check:launch` build-time publication gate; no public preview output for review drafts.
-- Verified source references and basic TS syntax locally; **real Astro compilation is still blocked by npm registry DNS in this runtime**. GitHub CI must pass first.
+- Verified source references and seven release-gate tests locally. GitHub Actions has since compiled Astro successfully using reproducible `npm ci` (17 Oct 2026).
+
+## Verified private-repository milestone (17 Oct 2026)
+
+- Repository: `SamiGLab/Mew-Maple` (private). No changes were made to `SamiGLab/kaftan-angelo` or any existing business domain.
+- 98 initial source files imported, including 8 articles and 56 illustrations, followed by a committed dependency lockfile.
+- [Source import commit](https://github.com/SamiGLab/Mew-Maple/commit/7f9390519ab876c460b6f6e7c39377c765792d9d).
+- [Passing reproducible CI run](https://github.com/SamiGLab/Mew-Maple/actions/runs/39061370469).
+- Preview-safe build generated 9 static pages; no draft guide was published. Production release is still gated by editorial, legal, domain, accessibility and owner approval.
