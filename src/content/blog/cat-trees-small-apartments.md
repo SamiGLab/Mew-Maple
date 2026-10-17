@@ -90,6 +90,22 @@ Before buying, record: assembled footprint, total height, widest platform, step 
 
 If a seller omits crucial measurements or does not explain how the tree stays stable, consider another product. For a cat that struggles with stairs or jumping, ask your veterinarian about suitable access and activity levels.
 
+## Compare two shortlisted trees without guessing
+
+If two models look similar online, make a simple specification sheet rather than relying on claims such as *heavy duty* or *perfect for apartments*.
+
+| Check | Model A | Model B |
+| --- | --- | --- |
+| Assembled base footprint and any overhang | Record dimensions | Record dimensions |
+| Usable resting-platform size | Record dimensions | Record dimensions |
+| Manufacturer's supported load and usage limits | Record the exact wording | Record the exact wording |
+| Mounting or anchoring required | Record instructions | Record instructions |
+| Access for your cat's mobility | Observe step spacing | Observe step spacing |
+| Washable covers and replacement parts | Check availability | Check availability |
+| Returns and warranty | Verify seller terms | Verify seller terms |
+
+If any essential safety specification is missing, ask the seller before ordering. A photo of a large cat on a product is not a substitute for measured capacity or appropriate installation. When a product arrives, inspect all fittings and assemble it exactly as instructed before allowing use.
+
 ## Frequently asked questions
 
 **Does every indoor cat need a cat tree?** Not necessarily. Cats benefit from suitable scratching, resting, hiding, and elevated options, but these can be provided in different ways [2].
