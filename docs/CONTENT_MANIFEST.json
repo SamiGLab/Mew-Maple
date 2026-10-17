@@ -1,0 +1,62 @@
+{
+  "articles": [
+    {
+      "slug": "indoor-cat-enrichment-ideas",
+      "title": "15 Indoor Cat Enrichment Ideas That Don't Require a Big Home",
+      "category": "Play & Enrichment",
+      "hero": "/images/indoor-cat-enrichment-ideas-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "entertain-cat-while-at-work",
+      "title": "How to Keep Your Indoor Cat Entertained While You're at Work",
+      "category": "Play & Enrichment",
+      "hero": "/images/entertain-cat-while-at-work-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "cat-trees-small-apartments",
+      "title": "Best Cat Trees for Small Apartments: What to Look For Before You Buy",
+      "category": "Gear & Buying Guides",
+      "hero": "/images/cat-trees-small-apartments-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "diy-cat-toys",
+      "title": "DIY Cat Toys Using Things You Already Have: A Safety-First Guide",
+      "category": "Play & Enrichment",
+      "hero": "/images/diy-cat-toys-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "cat-friendly-apartment",
+      "title": "How to Create a Cat-Friendly Apartment Without Renovating",
+      "category": "Cat-Friendly Homes",
+      "hero": "/images/cat-friendly-apartment-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "window-perch-vs-cat-tree",
+      "title": "Window Perches vs. Cat Trees: Which Is Better for Your Indoor Cat?",
+      "category": "Gear & Buying Guides",
+      "hero": "/images/window-perch-vs-cat-tree-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "indoor-cat-play-routine",
+      "title": "An Indoor Cat Play Routine You Can Actually Maintain",
+      "category": "Play & Enrichment",
+      "hero": "/images/indoor-cat-play-routine-hero.webp",
+      "images": 7
+    },
+    {
+      "slug": "home-for-two-indoor-cats",
+      "title": "How to Set Up a Home for Two Indoor Cats Without Creating Competition",
+      "category": "Everyday Cat Life",
+      "hero": "/images/home-for-two-indoor-cats-hero.webp",
+      "images": 7
+    }
+  ],
+  "image_files": 56,
+  "launch_ready": false
+}

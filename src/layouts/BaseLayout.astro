@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import { brand, description as baseDescription, siteReady, validOrigin } from '../lib/site';
+interface Props { title?: string; description?: string; image?: string; type?: 'article' | 'website'; }
+const { title, description = baseDescription, image = '/images/indoor-cat-enrichment-ideas-hero.webp', type = 'website' } = Astro.props;
+const pageTitle = title ? `${title} | ${brand}` : `${brand} | Better days for indoor cats`;
+const canIndex = siteReady && validOrigin;
+const canonical = canIndex ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const ogImage = canIndex ? new URL(image, Astro.site).toString() : undefined;
+---
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={canIndex ? 'index,follow' : 'noindex,nofollow'} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="theme-color" content="#263C34" />
+  </head>
+  <body>
+    {!canIndex && <div class="preview-banner" role="status">Draft preview — not approved for publication or indexing</div>}
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="container header-inner">
+      <a class="logo" href="/" aria-label="Mew and Maple homepage"><span class="logo-symbol">M<span class="maple-star">✳</span>M</span><span class="logo-text">mew <em>&</em> maple</span></a>
+      <nav aria-label="Main navigation"><a href="/">All guides</a><a href="/category/play/">Play</a><a href="/category/homes/">Small spaces</a><a href="/category/gear/">Gear</a><a href="/about/">About</a></nav>
+    </div></header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer"><div class="container footer-inner"><div><strong>Mew & Maple</strong><p>Better days for indoor cats. Illustrations are editorial AI imagery, not evidence of hands-on product testing.</p></div><div class="footer-links"><a href="/about/">About</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div><div class="container legal-bottom">© {new Date().getFullYear()} Mew & Maple · A working-brand editorial project</div></footer>
+  </body>
+</html>

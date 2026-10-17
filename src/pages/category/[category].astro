@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { categorySlug, categories, publishable } from '../../lib/site';
+export async function getStaticPaths() {
+ const posts = (await getCollection('blog')).filter(publishable);
+ return categories.map(cat => ({ params:{category:cat.id},props:{cat,posts:posts.filter(p => categorySlug(p.data.category)===cat.id)} }));
+}
+const { cat, posts } = Astro.props;
+---
+<BaseLayout title={cat.title} description={`Indoor cat guides about ${cat.title.toLowerCase()}.`}>
+<section class="container category-page"><p class="eyebrow">GUIDE COLLECTION</p><h1>{cat.title}</h1><div class="article-grid">{posts.map(p => <ArticleCard post={p} />)}</div></section>
+</BaseLayout>
