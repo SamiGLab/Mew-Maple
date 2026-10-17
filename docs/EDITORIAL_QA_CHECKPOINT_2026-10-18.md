@@ -1,3 +1,5 @@
+> **Historical checkpoint only.** This document records the state before the full-image visual pass. For the current image statuses, see `docs/image-qa-status.json` and `docs/VISUAL_QA_AND_SOURCE_VERIFICATION_2026-10-18.md`: **28 editorial-aligned, 23 manual-review, 5 replace-required** on 18 Oct 2026. AAFP/ISFM bibliographic identity was subsequently verified via PubMed (PMID 23422366). Do not use the historical 0-approved count as the current status. All eight articles remain under review; the site is not publication-ready.
+
 # Mew & Maple — External-source and visual QA checkpoint (18 Oct 2026)
 
 This is a **partial, evidence-based editorial checkpoint**, not final approval. All eight articles remain `status: review` and publication stays blocked.
