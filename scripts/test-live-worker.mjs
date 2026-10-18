@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { runLiveCheck } from './check-live-worker.mjs';
-const html='<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g" /></head><body>Draft landing</body></html>';
+const html='<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g"></head><body>Draft landing</body></html>';
 const deployedSha='abcdef0123456789abcdef0123456789abcdef01';
 function fixture(opts={}){
   return async (url)=>{
@@ -30,6 +30,16 @@ result=await runLiveCheck(url,async (uri,options)=>{
   return reply;
 });
 assert.ok(result.errors.some(x=>x.includes('ownership verification tag missing')));
+result=await runLiveCheck(url,async (uri,options)=>{
+  const reply=await fixture()(uri,options);
+  if(new URL(uri).pathname==='/')
+    return new Response(html.replace(
+      '<meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g">',
+      '<meta content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g" name="google-site-verification">'
+    ),{status:200,headers:{'x-robots-tag':'noindex, nofollow, noarchive'}});
+  return reply;
+});
+assert.equal(result.errors.length,0,'Reordered GSC HTML attributes must also pass');
 
 assert.equal(result.deployedCommit,deployedSha);
 result=await runLiveCheck(url,fixture(),deployedSha);
