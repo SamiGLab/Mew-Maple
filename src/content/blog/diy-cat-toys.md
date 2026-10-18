@@ -74,7 +74,7 @@ Use paper and cardboard that are clean, dry, and free of chemicals or food resid
 
 ![Cat playing with a soft cloth toy in a cozy room](/images/diy-cat-toys-figure-05.webp)
 
-*Watch how your cat handles fabric and stop if it chews or removes pieces. AI-generated editorial illustration.*
+*The illustrated fabric toy has a tied end that may fray. Supervise this activity and remove the toy if your cat chews off threads or pieces; never leave improvised fabric toys unattended. AI-generated editorial illustration, not a safety-tested toy.*
 
 **Materials:** One intact, cat-safe toy and a large open box.
 
@@ -90,7 +90,7 @@ Use paper and cardboard that are clean, dry, and free of chemicals or food resid
 
 ![Basket of paper, cardboard and fabric craft materials requiring careful inspection](/images/diy-cat-toys-figure-06.webp)
 
-*Inspect cardboard, paper and fabric for loose pieces and chewing risks; this illustrated craft basket is not an unattended toy station. AI-generated editorial illustration.*
+*This open basket contains craft materials, not unattended cat toys. Store fabric, cardboard and paper out of reach when play ends; discard anything frayed or chewed. AI-generated editorial illustration.*
 
 You will see tutorials recommending toilet-paper rolls stuffed with treats, yarn pompoms, dangling ribbons, bottle caps, and toys glued to sticks. Some may be used under careful supervision in specific circumstances, but materials can vary and some create choking or ingestion risks. This guide avoids promoting them as universally safe DIY toys.
 
