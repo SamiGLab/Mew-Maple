@@ -1,4 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Privacy notice — draft"><section class="container prose-page"><h1>Privacy notice — draft</h1><p>This is a pre-launch placeholder, not a legal privacy policy. We must document the real hosting provider, analytics configuration, lawful basis and disclosures, geographic coverage, data retention, cookie choices, and a valid contact method before collecting visitor analytics or publishing the site.</p><div class="notice">Do not publish publicly until reviewed against actual services and applicable privacy laws.</div></section></BaseLayout>
+<BaseLayout title="Privacy notice — draft" description="Draft privacy information for Mew & Maple prior to publisher and hosting verification.">
+  <section class="container prose-page">
+    <p class="eyebrow">PRE-LAUNCH INFORMATION</p>
+    <h1>Privacy notice — draft</h1>
+    <div class="notice">This is not a final legal privacy policy. The responsible publisher, applicable jurisdictions, contact details, hosting configuration, lawful bases, retention periods and rights-request procedure must be confirmed before public release.</div>
+
+    <h2>Current website features</h2>
+    <p>The current site source contains no configured Google Analytics, advertising pixel, mailing-list signup or active affiliate tracking. The article search uses a static JSON index; it does not send the entered query to a Mew & Maple application server. These observations describe the reviewed source, not every log or security system operated by the eventual host.</p>
+
+    <h2>Hosting and technical requests</h2>
+    <p>The project is configured to use Cloudflare Workers Static Assets. When someone visits a live website, the hosting and network providers may handle technical details such as IP address, browser or request information for delivery, security and troubleshooting. The actual controller/processor roles, log collection, recipients, storage regions and retention periods must be checked against the account's settings and applicable terms.</p>
+
+    <h2>Cookies and third parties</h2>
+    <p>Remote Google Fonts loading has been removed. The site currently includes no deliberately configured analytics or advertising tracking scripts. We must still inspect the final site and Cloudflare features for cookies, embeds, security controls and third-party requests before deciding whether a consent interface is necessary and describing any optional categories.</p>
+
+    <h2>Your rights and contact</h2>
+    <p>Applicable privacy rights and complaint routes depend on the real publisher, audience, legal bases and jurisdictions. A working contact address and procedures for access, correction, deletion and objection requests will be provided after the publisher's details are verified.</p>
+
+    <h2>Future changes</h2>
+    <p>Analytics, commerce, newsletter subscriptions, affiliate programs or personalized features are not approved for launch merely because they are mentioned here. If enabled later, this notice and any consent controls must be updated before the relevant processing begins.</p>
+
+    <div class="notice">Publication blocker: do not remove this draft status until the accountable publisher and real technical processing inventory have been independently reviewed.</div>
+  </section>
+</BaseLayout>
