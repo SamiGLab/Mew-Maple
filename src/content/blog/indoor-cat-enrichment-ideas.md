@@ -133,6 +133,7 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 
 ## Explore related indoor-cat topics
 
+- [How to Create a Cat-Friendly Apartment Without Renovating](/guides/cat-friendly-apartment/)
 - [Play and enrichment](/category/play/)
 - [Cat-friendly homes](/category/homes/)
 - [Everyday cat life](/category/care/)

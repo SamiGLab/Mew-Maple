@@ -106,8 +106,4 @@ jobs:
           npm run build
           npm run audit:workers
           node scripts/check-static-navigation.mjs
-          test -f dist/guides/indoor-cat-enrichment-ideas/index.html
-          if find dist/guides -mindepth 2 -maxdepth 2 -name 'index.html' | grep -v 'indoor-cat-enrichment-ideas' | grep -q .; then
-            echo "Unapproved review guide was exported in staged production build"
-            exit 1
-          fi
+          node scripts/check-production-output.mjs
