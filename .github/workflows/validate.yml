@@ -48,11 +48,29 @@ jobs:
       - name: Install temporary Chromium browser QA dependencies
         if: github.event_name == 'pull_request'
         run: |
-          npm install --no-save --no-package-lock playwright@1.56.1 @axe-core/playwright@4.11.0
+          npm install --no-save --no-package-lock playwright@1.56.1 @axe-core/playwright@4.11.0 lighthouse@12.8.2
           npx playwright install --with-deps chromium
       - name: Test local draft articles and safe preview in desktop and mobile Chromium
         if: github.event_name == 'pull_request'
         run: node scripts/browser-qa.mjs
+      - name: Measure local draft-safe homepage with mobile Lighthouse
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          npm run preview -- --host 127.0.0.1 --port 4325 > /tmp/mew-maple-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 50); do
+            if curl --silent --fail http://127.0.0.1:4325/ > /dev/null; then break; fi
+            if [ "$attempt" -eq 50 ]; then cat /tmp/mew-maple-preview.log; exit 1; fi
+            sleep 0.3
+          done
+          export CHROME_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
+          npx --no-install lighthouse http://127.0.0.1:4325/ \
+            --only-categories=performance,accessibility,best-practices \
+            --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+            --quiet --output=json --output-path=/tmp/mew-maple-lighthouse-mobile.json
+          node scripts/report-local-lighthouse.mjs /tmp/mew-maple-lighthouse-mobile.json
       - name: Save browser QA screenshots only while repository is private
         if: always() && github.event_name == 'pull_request' && github.event.repository.private == true
         uses: actions/upload-artifact@v4
