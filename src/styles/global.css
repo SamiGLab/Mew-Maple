@@ -29,3 +29,10 @@
   .footer-lockup{width:min(298px,100%)}
   .footer-inner{align-items:flex-start}
 }
+
+/* Comfortable mobile touch targets. */
+@media(max-width:640px){
+.header-inner nav{gap:4px 10px}
+.header-inner nav a,.footer-links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px}
+.article-prose table{display:block;max-width:100%;overflow-x:auto}
+}
