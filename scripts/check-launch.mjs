@@ -71,7 +71,7 @@ for (const [slug, post] of approved) {
 
 for (const page of ['about.astro', 'privacy.astro', 'editorial-policy.astro', 'affiliate-disclosure.astro']) {
   const html = readFileSync(`src/pages/${page}`, 'utf8');
-  if (/Before launch:|placeholder|not publication-ready|Draft: publisher|draft preview|privacy notice — draft|not a legal privacy policy|At the time of this draft preview/i.test(html)) {
+  if (/Before launch:|pre[- ]launch (?:draft|information)|publication blocker|placeholder|not publication-ready|Draft: publisher|draft preview|privacy notice — draft|not a (?:final )?legal privacy policy|At the time of this draft preview/i.test(html)) {
     errors.push(`${page}: still contains editorial/legal draft material.`);
   }
 }
