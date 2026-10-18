@@ -9,11 +9,13 @@
     "preview": "astro preview",
     "audit:content": "node scripts/audit-content.mjs",
     "check:launch": "node scripts/check-launch.mjs",
-    "check:source": "npm run audit:content && npm run audit:citations && npm run audit:images && npm run test:images && npm run check:launch && npm run test:gates",
+    "check:source": "npm run audit:content && npm run audit:seo && npm run audit:citations && npm run audit:images && npm run test:images && npm run check:launch && npm run test:gates",
     "test:gates": "node scripts/test-release-gates.mjs",
     "audit:images": "node scripts/audit-visual-assets.mjs",
     "audit:citations": "node scripts/audit-citations.mjs",
-    "test:images": "node scripts/test-visual-qa.mjs"
+    "test:images": "node scripts/test-visual-qa.mjs",
+    "audit:seo": "node scripts/audit-editorial-seo.mjs",
+    "audit:preview": "node scripts/check-preview-exposure.mjs"
   },
   "dependencies": {
     "astro": "^6.0.0"
