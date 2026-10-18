@@ -12,8 +12,11 @@ export const categories = [
   { id: 'play', title: 'Play & Enrichment' },
   { id: 'homes', title: 'Cat-Friendly Homes' },
   { id: 'gear', title: 'Gear & Buying Guides' },
+  { id: 'care', title: 'Everyday Cat Life' },
 ];
 export function categorySlug(category: string) {
-  const c = category.toLowerCase();
-  return c.includes('gear') ? 'gear' : c.includes('home') ? 'homes' : 'play';
+  const normalized = category.trim().toLocaleLowerCase('en-US');
+  const match = categories.find(item => item.title.toLocaleLowerCase('en-US') === normalized);
+  if (!match) throw new Error(`Unknown guide category: ${category}`);
+  return match.id;
 }
