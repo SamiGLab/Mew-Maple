@@ -30,6 +30,11 @@ for(const [name] of rasterAssets){
     errors.push('Invalid WebP asset: '+path);
   if(buf.length>70000)errors.push('Brand image exceeds 70 KB: '+path);
 }
+// VP8X carries the actual canvas dimensions in three little-endian bytes.
+const catIcon=readFileSync('public/brand/autumn/cat-silhouette.webp');
+if(catIcon.toString('ascii',12,16)!=='VP8X' ||
+  catIcon.readUIntLE(24,3)+1!==144 || catIcon.readUIntLE(27,3)+1!==144)
+  errors.push('Green cat favicon has wrong or unrecognized WebP dimensions (expected exactly 144x144)');
 const html=readFileSync('src/layouts/BaseLayout.astro','utf8');
 const verificationToken='jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g';
 if((html.match(/name="google-site-verification"/g)||[]).length!==1||
