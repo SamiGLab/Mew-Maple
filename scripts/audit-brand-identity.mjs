@@ -35,6 +35,16 @@ const catIcon=readFileSync('public/brand/autumn/cat-silhouette.webp');
 if(catIcon.toString('ascii',12,16)!=='VP8X' ||
   catIcon.readUIntLE(24,3)+1!==144 || catIcon.readUIntLE(27,3)+1!==144)
   errors.push('Green cat favicon has wrong or unrecognized WebP dimensions (expected exactly 144x144)');
+// The browser fallback is losslessly packaged PNG of the same approved artwork.
+const pngPath='public/brand/autumn/favicon-64.png';
+if(!existsSync(pngPath))errors.push('Missing green cat PNG favicon');
+else {
+  const png=readFileSync(pngPath);
+  if(png.toString('hex',0,8)!=='89504e470d0a1a0a' ||
+     png.readUInt32BE(16)!==64 || png.readUInt32BE(20)!==64 ||
+     png.length>15000)
+    errors.push('Green cat PNG favicon is corrupt, oversized or not exactly 64x64');
+}
 const html=readFileSync('src/layouts/BaseLayout.astro','utf8');
 const verificationToken='jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g';
 if((html.match(/name="google-site-verification"/g)||[]).length!==1||
@@ -44,7 +54,7 @@ const css=readFileSync('src/styles/global.css','utf8');
 for(const [pattern,reason] of [
   [/<img class="logo-full" src="\/brand\/autumn\/lockup\.webp"/,'Header must use the approved full horizontal logo image'],
   [/<img class="footer-lockup" src="\/brand\/autumn\/lockup\.webp"/,'Footer must use the same full horizontal logo'],
-  [/rel="icon" href="\/brand\/autumn\/cat-silhouette\.webp" type="image\/webp" sizes="144x144"/,'Brand favicon must use the green cat silhouette'],
+  [/rel="icon" href="\/brand\/autumn\/favicon-64\.png" type="image\/png" sizes="64x64"/,'Browser favicon must use the approved green cat PNG'],
   [/rel="manifest" href="\/site\.webmanifest"/,'Missing brand web manifest']
 ]) if(!pattern.test(html))errors.push(reason);
 const faviconLinks=[...html.matchAll(/<link\s+rel="icon"[^>]*>/g)];
@@ -56,12 +66,15 @@ if(/logo-symbol|maple-star|M\s*<span[^>]*>✳|mew <em>&<\/em> maple/i.test(html+
   errors.push('Temporary M-star-M mark still present');
 const manifest=JSON.parse(readFileSync('public/site.webmanifest','utf8'));
 if(manifest.name!=='Mew & Maple — Indoor Cat Living'||
-   manifest.theme_color!=='#263C34'||
-   manifest.icons?.length!==1 ||
-   manifest.icons[0]?.src!=='/brand/autumn/cat-silhouette.webp' ||
-   manifest.icons[0]?.type!=='image/webp' ||
-   manifest.icons[0]?.sizes!=='144x144')
-   errors.push('Web app manifest must use exactly the approved 144x144 green-cat icon');
+   manifest.theme_color!=='#263C34' ||
+   manifest.icons?.length!==2 ||
+   manifest.icons[0]?.src!=='/brand/autumn/favicon-64.png' ||
+   manifest.icons[0]?.type!=='image/png' ||
+   manifest.icons[0]?.sizes!=='64x64' ||
+   manifest.icons[1]?.src!=='/brand/autumn/cat-silhouette.webp' ||
+   manifest.icons[1]?.type!=='image/webp' ||
+   manifest.icons[1]?.sizes!=='144x144')
+   errors.push('App manifest must use the approved green-cat PNG 64 and WebP 144 icons');
 for(const error of errors)console.error('BRAND ERROR: '+error);
 console.log('Brand identity QA: assets='+required.length+' temporaryMarks=0 errors='+errors.length);
 if(errors.length)process.exitCode=1;
