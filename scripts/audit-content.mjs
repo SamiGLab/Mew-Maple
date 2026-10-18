@@ -26,6 +26,14 @@ for (const file of files) {
       console.error(`Published post missing real publication date: ${file}`); errors++;
     }
   }
+  // Prevent generated explanatory diagrams being relabeled as photographs or tested products.
+  const imageAlts = [...raw.matchAll(/!\[([^\]]*)\]\((\/images\/[^)]+)\)/g)];
+  for (const [, alt, imagePath] of imageAlts) {
+    if (!alt.trim()) { console.error(`Missing image alt text in ${file}: ${imagePath}`); errors++; }
+    if (imagePath.endsWith('.svg') && !/\b(?:diagram|illustration)\b/i.test(alt)) {
+      console.error(`Editorial SVG requires a descriptive diagram/illustration alt in ${file}: ${imagePath}`); errors++;
+    }
+  }
   const refs = [...raw.matchAll(/!\[[^\]]*\]\((\/images\/[^)]+)\)/g)];
   images += refs.length;
   for (const item of refs) {
