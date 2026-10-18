@@ -5,17 +5,21 @@
   "images": [
     {
       "file": "cat-friendly-apartment-figure-01.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Unidentified houseplants near cats; species safety unverified.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Unidentified houseplants near cats; species safety unverified.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-friendly-apartment-figure-02.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Hanging pompom/string attached to scratcher; ingestion risk.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Hanging pompom/string attached to scratcher; ingestion risk.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-friendly-apartment-figure-03.svg",
@@ -37,10 +41,12 @@
     },
     {
       "file": "cat-friendly-apartment-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Perch mounting and overhanging fabric cannot be established as safe.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Perch mounting and overhanging fabric cannot be established as safe.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-friendly-apartment-figure-06.webp",
@@ -135,18 +141,22 @@
     },
     {
       "file": "diy-cat-toys-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Fabric toy tied/knotted end accessible to cat chewing.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Fabric toy tied/knotted end accessible to cat chewing.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "diy-cat-toys-figure-06.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Open craft basket includes chewable materials; caption warns against unattended use.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Open craft basket includes chewable materials; caption warns against unattended use.",
       "revisedAt": "2026-10-18",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "diy-cat-toys-hero.webp",
@@ -157,10 +167,12 @@
     },
     {
       "file": "entertain-cat-while-at-work-figure-01.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Hanging toy and unidentified plants in unattended-home context.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Hanging toy and unidentified plants in unattended-home context.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "entertain-cat-while-at-work-figure-02.webp",
@@ -178,24 +190,30 @@
     },
     {
       "file": "entertain-cat-while-at-work-figure-04.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Dangling toy in an unattended-home guide.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "entertain-cat-while-at-work-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Dangling toy in an unattended-home guide.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "entertain-cat-while-at-work-figure-06.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling toy in an unattended-home guide.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Dangling toy in an unattended-home guide.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "entertain-cat-while-at-work-hero.webp",
@@ -213,10 +231,12 @@
     },
     {
       "file": "home-for-two-indoor-cats-figure-02.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Loose woven toy balls visible on floor, chewing risks unknown.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Loose woven toy balls visible on floor, chewing risks unknown.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "home-for-two-indoor-cats-figure-03.webp",
@@ -243,11 +263,13 @@
     },
     {
       "file": "home-for-two-indoor-cats-figure-06.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Several loose fabric/woven toys around playing cats; review detachability.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Several loose fabric/woven toys around playing cats; review detachability.",
       "revisedAt": "2026-10-18",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "home-for-two-indoor-cats-hero.webp",
@@ -279,18 +301,22 @@
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-04.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Multiple dangling pompom strings attached to tree.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Multiple dangling pompom strings attached to tree.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Soft toy tail and sewn details might detach; inspect suitability.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Soft toy tail and sewn details might detach; inspect suitability.",
       "revisedAt": "2026-10-18",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-enrichment-ideas-figure-06.webp",
@@ -337,11 +363,13 @@
     },
     {
       "file": "indoor-cat-play-routine-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Partly open basket may appear suitable for unattended storage; caption explicitly warns otherwise.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Partly open basket may appear suitable for unattended storage; caption explicitly warns otherwise.",
       "revisedAt": "2026-10-18",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "indoor-cat-play-routine-figure-06.webp",
@@ -366,10 +394,12 @@
     },
     {
       "file": "window-perch-vs-cat-tree-figure-02.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Perch mount load and closed window cannot be verified from image.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Perch mount load and closed window cannot be verified from image.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-03.webp",
@@ -406,10 +436,12 @@
     },
     {
       "file": "window-perch-vs-cat-tree-hero.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Comparison image contains dangling pompom on cat-tree side.",
+      "status": "approved",
+      "note": "Editorial acceptance with an explicit, prominent warning in the linked article about the visible hazard and its limits. Not a toy/plant/mounting safety certification. Previous concern: Visual QA finding: Comparison image contains dangling pompom on cat-tree side.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Accepted only as an educational caution example, not a model of safe unattended pet equipment.",
+      "resolvedAt": "2026-10-18"
     }
   ]
 }

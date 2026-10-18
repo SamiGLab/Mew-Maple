@@ -58,7 +58,7 @@ Use a wand toy while you supervise. Move it away from the cat in short bursts, p
 
 ![Tabby cat using a scratching post on a tall indoor cat tree](/images/indoor-cat-enrichment-ideas-figure-04.webp)
 
-*A sturdy scratcher supports normal scratching behavior. AI-generated editorial illustration.*
+*A stable scratcher supports normal scratching. The hanging pompom toys pictured are potential hazards if they fray, detach or entangle: keep unsuitable ones out of reach, particularly unsupervised. AI-generated editorial illustration.*
 
 Try a stable upright sisal post, a horizontal cardboard scratcher, or both. The Ohio State University Indoor Pet Initiative notes that cats' preferences vary by location, orientation, and surface [2].
 
@@ -70,7 +70,7 @@ Place a washable bed in a calm corner and another in a higher, secure location i
 
 ![Compact cat retreat with low cardboard scratcher, covered bed and resting area](/images/indoor-cat-enrichment-ideas-figure-05.webp)
 
-*Quiet rest areas and a sturdy scratching surface offer choice. Inspect fabric toys and remove any item that sheds pieces or attracts chewing. AI-generated editorial illustration.*
+*A quiet retreat and sturdy scratcher provide choice. The pictured plush toys have details that could detach; inspect for loose seams, tails and small pieces and remove damaged toys. AI-generated editorial illustration, not a toy safety test.*
 
 A covered cat bed, an open carrier with familiar bedding, or a sturdy box gives your cat a place to retreat without being disturbed.
 

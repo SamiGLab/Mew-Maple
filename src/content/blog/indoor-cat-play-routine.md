@@ -84,7 +84,7 @@ Treat this as a menu rather than an obligation. If your cat is older or has a he
 
 ![Woven basket containing intact soft cat toys beside a sofa](/images/indoor-cat-play-routine-figure-05.webp)
 
-*Sort and inspect toys after supervised play, then put them in storage your cat cannot access. The illustrated partly open basket is not a model for unattended storage. AI-generated editorial illustration.*
+*This partly open toy basket is a visual example of storage to avoid for unsupervised play. Inspect toys after play, then close them away where your cat cannot reach loose or detachable parts. AI-generated editorial illustration.*
 
 **Mistake: Turning every activity into a purchase.** Toy rotation and changing the use of existing space can be useful at little cost.
 

@@ -16,11 +16,13 @@ You do not have to turn your apartment into a pet amusement park before leaving 
 Some indoor cats sleep through much of the day; others enjoy exploring or watching the neighborhood. Rather than assuming your cat is lonely every time you leave, build a routine around behavior you have actually observed.
 
 
+> **Important:** Some illustrations show suspended toys and unidentified houseplants to help you recognize possible hazards. Do not leave such accessories accessible during an unattended period unless their safety for your specific cat is established; favor uncomplicated, inspected rest and scratching areas.
+
 ## Start with the essentials, not entertainment
 
 ![Comfortable indoor living room with a cat tree and resting place](/images/entertain-cat-while-at-work-figure-01.webp)
 
-*A calm environment, essentials and safe resting places come before toys. AI-generated editorial illustration.*
+*Caution: the illustrated cat tree includes a hanging toy and the houseplants are unidentified. This is not an approved unattended-room setup: check plant safety and remove or secure dangerous detachable items before leaving. AI-generated editorial illustration.*
 
 Before adding toys, check that your cat has reliable access to fresh water, the appropriate amount of food, a clean litter box, a comfortable resting place, and at least one retreat area. The AAFP/ISFM environmental guidelines recommend access to separated resources, safe places, and opportunities for play and predatory behavior [1].
 
@@ -56,7 +58,7 @@ Set a stable bed or perch by a closed window. A view of birds, people, or moving
 
 ![Tabby scratching an upright sisal-wrapped cat post](/images/entertain-cat-while-at-work-figure-04.webp)
 
-*Place scratching surfaces where your cat already spends time. AI-generated editorial illustration.*
+*The illustrated post includes a dangling toy that may pose entanglement or ingestion risks. For an unattended room choose a stable scratcher without unsafe hanging attachments. AI-generated editorial illustration, not product safety advice.*
 
 If space allows, offer one sturdy vertical post and one horizontal scratcher. Position them where your cat actually spends time, not only where they look attractive to you. Scratching is normal feline behavior, not misbehavior [4].
 
@@ -64,7 +66,7 @@ If space allows, offer one sturdy vertical post and one horizontal scratcher. Po
 
 ![Tabby cat seated on a multi-level tree with a sheltered cubby](/images/entertain-cat-while-at-work-figure-05.webp)
 
-*Familiar resting and hiding choices help create a predictable environment. AI-generated editorial illustration.*
+*The suspended ball on this illustrated tree is not an endorsement for leaving dangling toys accessible while away. Check attachments and favor an uncomplicated, stable resting and scratching area. AI-generated editorial illustration.*
 
 Leave an open carrier with a blanket, an uncluttered space beneath furniture, or a clean box. Your cat should be able to retreat without being disturbed by people, dogs, or loud appliances.
 
@@ -98,7 +100,7 @@ This is a screening guide, not a guarantee that an object is safe for every cat.
 
 ![Ginger cat quietly resting at a sunny apartment window](/images/entertain-cat-while-at-work-figure-06.webp)
 
-*Balance gentle activity and relaxation around your individual cat’s preferences. AI-generated editorial illustration.*
+*This scene depicts a dangling toy on the cat tree. Keep unsafe hanging or detachable accessories out of reach during absences; use the room's calm resting spots rather than leaving interactive toys out. AI-generated editorial illustration.*
 
 Offer interaction rather than trying to make the entire day stimulating without you. Let your cat approach; some want a chase game, some prefer gentle petting, and others want quiet company.
 

@@ -39,7 +39,7 @@ The formula is a helpful starting point, not a guarantee of harmony. Layout and 
 
 ![Open-plan apartment arranged with multiple cat resting and play areas](/images/home-for-two-indoor-cats-figure-02.webp)
 
-*Spread essential resources through the home where practical. AI-generated editorial illustration.*
+*The depicted room offers separate resting places, but loose woven toy balls are visible on the floor. Check for fraying or removable parts and do not assume they are safe when unattended. AI-generated editorial illustration.*
 
 Do not line up three litter boxes directly beside one another and assume they function like separate locations. Spread them out when possible so one cat cannot block all access from a single hallway.
 
@@ -91,7 +91,7 @@ Do not skip directly to an unsupervised meeting because the cats looked calm thr
 
 ![Adult supervising a cat playing with a feather wand while a second cat explores nearby toys](/images/home-for-two-indoor-cats-figure-06.webp)
 
-*Keep wand play directly supervised; provide separate choices and inspect all fabric or woven toys for detachable parts. AI-generated editorial illustration.*
+*The wand is held by a supervising adult. Inspect the pictured woven and plush floor toys for loose fibers or parts and remove any item that a cat chews or damages. AI-generated editorial illustration, not certification of toy safety.*
 
 Imagine a living room, bedroom, and hallway. You might place one bed and scratcher in the living room, another quiet retreat in the bedroom, and separate feeding places out of sight of each other. Litter boxes should be distributed across suitable accessible places rather than tightly clustered.
 

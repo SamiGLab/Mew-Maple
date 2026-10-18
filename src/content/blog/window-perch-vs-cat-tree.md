@@ -5,7 +5,7 @@ description: Compare cat window perches and cat trees by floor space, stability,
 category: Gear & Buying Guides
 hero: /images/window-perch-vs-cat-tree-hero.webp
 heroAlt: "Indoor tabby cat looking out of a closed window while resting on a cushioned perch"
-heroCaption: "A well-positioned viewing spot can make an ordinary room more interesting. Illustration created for Mew & Maple."
+heroCaption: "Comparison illustration only: the hanging pompom visible on the cat tree should not be assumed safe when unattended. Confirm window security, mounting strength and accessory safety independently."
 status: review
 readingMinutes: 5
 language: en-US
@@ -35,7 +35,7 @@ The right choice depends less on a universal ranking and more on your cat's habi
 
 ![Owner inspects a bracket-mounted padded window perch while a tabby cat watches from the floor](/images/window-perch-vs-cat-tree-figure-02.webp)
 
-*Inspect installation, weight limits, fasteners and a fully closed window before use. AI-generated editorial illustration, not manufacturer installation instructions.*
+*This scene shows a person checking a perch, but does not verify the bracket, fasteners, wall, window or weight limit. Use actual manufacturer installation requirements; never replicate the drawing as mounting instructions. AI-generated editorial illustration.*
 
 Many cats enjoy observing movement through a window. A perch can put a comfortable resting surface where your cat already chooses to sit. It is particularly useful in compact rooms where there is little spare floor space.
 
