@@ -274,11 +274,11 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "home-for-two-indoor-cats-figure-04.svg",
+      "file": "home-for-two-indoor-cats-figure-04.webp",
       "status": "approved",
-      "note": "Redesigned as a coordinated cream, sage and warm terracotta editorial series. All five SVGs rendered locally to 1200×760 PNGs and visually inspected; window/title overlap corrected and re-rendered. Labels, objects and concepts match the existing article captions. Not product, veterinary or installation certification.",
+      "note": "AI-generated replacement visually inspected: two cats at separate food bowls, wooden visual divider, open outer approach routes, no plants or loose toys. Text and caption match article concept. Not product or installation certification.",
       "visualReviewedAt": "2026-10-19",
-      "reviewProvenance": "AI visual inspection of local Sharp-rendered PNGs and existing article alt/caption",
+      "reviewProvenance": "AI visual inspection of built-in image generation result and article caption",
       "replacedUnsafeSource": "home-for-two-indoor-cats-figure-04.webp",
       "revisedAt": "2026-10-19",
       "renderedReview": {

@@ -60,9 +60,9 @@ Avoid making a single high platform the only appealing resting option. Some cats
 
 ## Feed with less pressure
 
-![Diagram of two cats at separate feeding stations with a visual divider between their bowls](/images/home-for-two-indoor-cats-figure-04.svg)
+![Diagram of two cats at separate feeding stations with a visual divider between their bowls](/images/home-for-two-indoor-cats-figure-04.webp)
 
-*Provide separated feeding stations with more than one route of access where possible. Diagram illustrates a principle rather than fixed floor-plan measurements. [Open full-size diagram](/images/home-for-two-indoor-cats-figure-04.svg)*
+*Provide separated feeding stations with more than one route of access where possible. Editorial illustration shows a principle rather than fixed floor-plan measurements. [Open full-size illustration](/images/home-for-two-indoor-cats-figure-04.webp)*
 
 Set up distinct feeding locations rather than placing bowls close together. Monitor whether one cat finishes quickly and approaches the other's food. If the cats have different diets or medical needs, ask your veterinarian how to manage separate meals.
 
