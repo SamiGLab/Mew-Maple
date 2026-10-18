@@ -8,6 +8,12 @@
   "theme_color": "#263C34",
   "icons": [
     {
+      "src": "/brand/autumn/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/brand/autumn/cat-silhouette.webp",
       "sizes": "144x144",
       "type": "image/webp",
