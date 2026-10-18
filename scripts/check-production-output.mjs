@@ -40,6 +40,12 @@ for (const slug of publishedSlugs) {
   if (!/<link\b[^>]*\brel=["']canonical["']/i.test(html)) {
     errors.push(`Published guide missing canonical link: ${slug}`);
   }
+  if (!/<meta\b[^>]*\bproperty=["']article:published_time["']/i.test(html)) {
+    errors.push(`Published guide missing article:published_time meta: ${slug}`);
+  }
+  if (!html.includes('"@type":"BreadcrumbList"')) {
+    errors.push(`Published guide missing BreadcrumbList JSON-LD: ${slug}`);
+  }
   if (!sitemap.includes(`/guides/${slug}/</loc>`)) {
     errors.push(`Published guide missing from sitemap.xml: ${slug}`);
   }
@@ -49,6 +55,22 @@ for (const slug of publishedSlugs) {
   if (!searchUrls.has(`/guides/${slug}/`)) {
     errors.push(`Published guide missing from search-index.json: ${slug}`);
   }
+}
+
+const notFoundHtml = existsSync(join(root, '404.html')) ? readFileSync(join(root, '404.html'), 'utf8') : '';
+if (!/<meta\b[^>]*\bname=["']robots["'][^>]*\bcontent=["']noindex,nofollow["']/i.test(notFoundHtml)) {
+  errors.push('404.html must have noindex,nofollow robots meta');
+}
+if (/<link\b[^>]*\brel=["']canonical["']/i.test(notFoundHtml)) {
+  errors.push('404.html must not emit a canonical URL');
+}
+
+const homeHtml = existsSync(join(root, 'index.html')) ? readFileSync(join(root, 'index.html'), 'utf8') : '';
+if (!homeHtml.includes('"@type":"WebSite"') || !homeHtml.includes('"@type":"Organization"')) {
+  errors.push('Homepage missing WebSite/Organization JSON-LD schema');
+}
+if (!sitemap.includes('<lastmod>')) {
+  errors.push('sitemap.xml missing <lastmod> entries');
 }
 
 for (const slug of reviewSlugs) {

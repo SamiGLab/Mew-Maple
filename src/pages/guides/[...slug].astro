@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 import ArticleCard from '../../components/ArticleCard.astro';
 import {guideNotes} from '../../lib/guide-notes';
-import { publishable, siteReady } from '../../lib/site';
+import { categorySlug, publishable, siteReady } from '../../lib/site';
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(publishable);
   return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
@@ -15,21 +15,75 @@ const related=(await getCollection('blog')).filter(publishable).filter(p=>p.id!=
 const takeaways=guideNotes[post.id]??[post.data.description];
 const formatDate=(date:Date)=>date.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
 const publicationDate = post.data.publishedAt?.toISOString();
+const modifiedDate = (post.data.updatedAt ?? post.data.publishedAt)?.toISOString();
+const catSlug = categorySlug(post.data.category);
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const schema = siteReady && post.data.status === 'published' ? {
-  '@context':'https://schema.org', '@type':'BlogPosting',
-  headline:post.data.title,description:post.data.description, inLanguage:'en-US',
-  image:new URL(post.data.hero, Astro.site).toString(),
-  publisher:{'@type':'Organization',name:'Mew & Maple'},
-  author:{'@type':'Organization',name:'Mew & Maple'},
-  mainEntityOfPage:new URL(Astro.url.pathname, Astro.site).toString(),
-  ...(publicationDate ? { datePublished: publicationDate } : {}),
-  ...(post.data.updatedAt ? { dateModified: post.data.updatedAt.toISOString() } : {}),
-}:null;
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: post.data.title,
+      description: post.data.description,
+      inLanguage: 'en-US',
+      articleSection: post.data.category,
+      timeRequired: `PT${post.data.readingMinutes}M`,
+      image: {
+        '@type': 'ImageObject',
+        url: new URL(post.data.hero, Astro.site).toString(),
+        width: 1280,
+        height: 720,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Mew & Maple',
+        url: new URL('/', Astro.site).toString(),
+        logo: {
+          '@type': 'ImageObject',
+          url: new URL('/brand/autumn/lockup.webp', Astro.site).toString(),
+          width: 640,
+          height: 213,
+        },
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Mew & Maple',
+        url: new URL('/about/', Astro.site).toString(),
+      },
+      mainEntityOfPage: pageUrl,
+      ...(publicationDate ? { datePublished: publicationDate } : {}),
+      ...(modifiedDate ? { dateModified: modifiedDate } : {}),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: new URL('/', Astro.site).toString(),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: post.data.category,
+          item: new URL(`/category/${catSlug}/`, Astro.site).toString(),
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.data.title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ],
+} : null;
 ---
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} imageAlt={post.data.heroAlt} type="article" preloadHero>
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} imageAlt={post.data.heroAlt} type="article" publishedTime={publicationDate} modifiedTime={modifiedDate} section={post.data.category} preloadHero>
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <article class="container article-container">
-    <p class="eyebrow"><a href="/">All guides</a> / {post.data.category}</p>
+    <p class="eyebrow"><a href="/">All guides</a> / <a href={`/category/${catSlug}/`}>{post.data.category}</a></p>
     <h1>{post.data.title}</h1>
     <p class="article-byline"><a href="/about/">Mew &amp; Maple</a> · {post.data.readingMinutes} min read {siteReady && post.data.publishedAt && <> · Published <time datetime={post.data.publishedAt.toISOString().slice(0,10)}>{formatDate(post.data.publishedAt)}</time></>}{siteReady && post.data.updatedAt && <> · Updated <time datetime={post.data.updatedAt.toISOString().slice(0,10)}>{formatDate(post.data.updatedAt)}</time></>}</p>
     <section class="quick-answer" aria-labelledby="quick-answer-title"><h2 id="quick-answer-title">At a glance</h2><ul>{takeaways.map(item=><li>{item}</li>)}</ul></section>

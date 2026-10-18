@@ -3,10 +3,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import StarterPaths from '../components/StarterPaths.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
-import { publishable } from '../lib/site';
+import { brand, publishable, siteReady, validOrigin } from '../lib/site';
 const posts = (await getCollection('blog')).filter(publishable);
+const homeDescription = 'Thoughtful indoor-cat enrichment ideas, small-apartment setups, play routines and safety-first home planning guides.';
+const schema = siteReady && validOrigin ? {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': new URL('/#website', Astro.site).toString(),
+      name: brand,
+      url: new URL('/', Astro.site).toString(),
+      description: homeDescription,
+      inLanguage: 'en-US',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: new URL('/search/?q={search_term_string}', Astro.site).toString(),
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': new URL('/#organization', Astro.site).toString(),
+      name: brand,
+      url: new URL('/', Astro.site).toString(),
+      logo: {
+        '@type': 'ImageObject',
+        url: new URL('/brand/autumn/lockup.webp', Astro.site).toString(),
+        width: 640,
+        height: 213,
+      },
+    },
+    ...(posts.length ? [{
+      '@type': 'ItemList',
+      name: 'Indoor Cat Living Guides',
+      itemListElement: posts.map((post, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: post.data.title,
+        url: new URL(`/guides/${post.id}/`, Astro.site).toString(),
+      })),
+    }] : []),
+  ],
+} : null;
 ---
-<BaseLayout preloadHero>
+<BaseLayout description={homeDescription} imageAlt="Illustration of an indoor tabby cat exploring a food puzzle" preloadHero>
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <section class="hero autumn-hero">
     <img class="autumn-leaf" src="/brand/autumn/maple-leaf.webp" alt="" width="128" height="128" decoding="async" loading="lazy" aria-hidden="true" />
     <div class="container hero-grid"><div><p class="eyebrow">INDOOR CAT LIVING</p><h1>Better days for <em>indoor cats.</em></h1><p class="lead">Thoughtful play ideas, small-space solutions, and everyday routines for sharing your home with indoor cats.</p><a class="button" href="/start-here/">Find your starting point <span aria-hidden="true">↗</span></a></div><div class="hero-image"><img src="/images/indoor-cat-enrichment-ideas-hero.webp" alt="Illustration of an indoor tabby cat exploring a food puzzle" width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /></div></div></section>
