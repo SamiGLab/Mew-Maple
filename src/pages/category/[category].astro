@@ -10,5 +10,11 @@ export async function getStaticPaths() {
 const { cat, posts } = Astro.props;
 ---
 <BaseLayout title={cat.title} description={`Indoor cat guides about ${cat.title.toLowerCase()}.`}>
-<section class="container category-page"><p class="eyebrow">GUIDE COLLECTION</p><h1>{cat.title}</h1><div class="article-grid">{posts.map(p => <ArticleCard post={p} />)}</div></section>
+<section class="container category-page">
+  <p class="eyebrow">GUIDE COLLECTION</p>
+  <h1>{cat.title}</h1>
+  {posts.length
+    ? <div class="article-grid">{posts.map(p => <ArticleCard post={p} />)}</div>
+    : <div class="note" role="status"><p>This collection is being prepared. New guides will appear after editorial review.</p><a href="/">Explore the guide library</a></div>}
+</section>
 </BaseLayout>
