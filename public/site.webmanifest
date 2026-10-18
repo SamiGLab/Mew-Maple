@@ -9,7 +9,7 @@
   "icons": [
     {
       "src": "/brand/autumn/cat-silhouette.webp",
-      "sizes": "96x96",
+      "sizes": "144x144",
       "type": "image/webp",
       "purpose": "any"
     }
