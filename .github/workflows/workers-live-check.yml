@@ -1,13 +1,15 @@
 name: Live Workers safety check
 on:
-  pull_request:
-    branches: [main]
   workflow_dispatch:
     inputs:
       base_url:
         description: Public Workers HTTPS origin to verify (no secrets)
         required: false
         default: https://mew-maple.samiayten-hu.workers.dev/
+      expected_commit:
+        description: Expected deployed 40-character main commit SHA (optional)
+        required: false
+        default: ''
 permissions:
   contents: read
 jobs:
@@ -22,4 +24,5 @@ jobs:
       - name: Check actual deployed preview HTTP and indexing behavior
         env:
           LIVE_WORKER_URL: ${{ inputs.base_url || 'https://mew-maple.samiayten-hu.workers.dev/' }}
+          LIVE_WORKER_EXPECTED_SHA: ${{ inputs.expected_commit || '' }}
         run: node scripts/check-live-worker.mjs

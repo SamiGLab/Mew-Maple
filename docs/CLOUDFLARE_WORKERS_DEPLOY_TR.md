@@ -16,6 +16,12 @@ Bu proje **Cloudflare Workers Builds**, Cloudflare Pages değil. Kullanıcının
 
 > **Bağımsız kontrol notu (18 Ekim 2026):** `mew-maple.samiayten-hu.workers.dev` alan adı bu çalışma ortamındaki HTTP istemcisiyle DNS üzerinden çözümlenemedi. Bu bulgu canlı deploy'un başarısını veya hatasını tek başına kanıtlamaz; gerçek Cloudflare Builds logu ve hesabın doğru workers.dev alt alan adı mutlaka doğrulanmalıdır. Herkese açık bir URL üzerinden özel içerik kontrolü yapılmaz.
 
+## Güncel GitHub commit ile çalışan sürümü eşleştirme
+
+Son doğrulanan canlı Worker sürümü `66c9c552` idi; bu, GitHub'daki son commitin dağıtıldığını tek başına göstermiyordu. **Yeni eklenen** derleme izi `/build-info.json` dosyasında çalışan Git commit SHA'sını ve `draft-safe` durumunu bildirir. Workers Builds değişkeni `WORKERS_CI_COMMIT_SHA` kullanılır; token ve kimlik bilgisi dosyaya yazılmaz.
+
+Sıradaki Cloudflare deployment tamamlandıktan sonra **GitHub > Actions > Live Workers safety check > Run workflow** ekranında isteğe bağlı `expected_commit` alanına `main` dalının son 40 karakterlik commit SHA'sını yaz. Test hem 200/404, noindex, boş arama/sitemap durumunu hem de servisin doğru sürümü sunduğunu kontrol eder. `expected_commit` boşsa sürüm raporlanır ancak **son sürüm olduğu kanıtlanmış sayılmaz**. Eski Worker henüz güncellenmediyse yeni endpoint 404 verebilir; çözüm sürüm değişimini Cloudflare Builds'de doğrulamak, kodu rastgele public yapmak değildir.
+
 ## Canlı HTTP kontrolü (Cloudflare hesabı şifresi gerektirmez)
 
 - GitHub > Actions > **Live Workers safety check** > Run workflow yoluyla `https://mew-maple.samiayten-hu.workers.dev/` adresini test edin. URL hesapta farklıysa formdaki `base_url` alanını **gerçek Workers adresiyle** değiştirin.
