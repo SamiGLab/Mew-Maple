@@ -1,13 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import ArticleCard from '../../components/ArticleCard.astro';
+import {guideNotes} from '../../lib/guide-notes';
 import { publishable, siteReady } from '../../lib/site';
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(publishable);
   return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const toc=headings.filter(h=>h.depth===2);
+const related=(await getCollection('blog')).filter(publishable).filter(p=>p.id!==post.id).sort((a,b)=>Number(b.data.category===post.data.category)-Number(a.data.category===post.data.category)).slice(0,3);
+const takeaways=guideNotes[post.id]??[post.data.description];
+const formatDate=(date:Date)=>date.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
 const publicationDate = post.data.publishedAt?.toISOString();
 const schema = siteReady && post.data.status === 'published' ? {
   '@context':'https://schema.org', '@type':'BlogPosting',
@@ -25,10 +31,14 @@ const schema = siteReady && post.data.status === 'published' ? {
   <article class="container article-container">
     <p class="eyebrow"><a href="/">All guides</a> / {post.data.category}</p>
     <h1>{post.data.title}</h1>
-    <p class="article-byline">{siteReady ? 'Mew & Maple · ' : 'Editorial draft · '}{post.data.readingMinutes} min read · en-US</p>
+    <p class="article-byline"><a href="/about/">Mew &amp; Maple</a> · {post.data.readingMinutes} min read {siteReady && post.data.publishedAt && <> · Published <time datetime={post.data.publishedAt.toISOString().slice(0,10)}>{formatDate(post.data.publishedAt)}</time></>}{siteReady && post.data.updatedAt && <> · Updated <time datetime={post.data.updatedAt.toISOString().slice(0,10)}>{formatDate(post.data.updatedAt)}</time></>}</p>
+    <section class="quick-answer" aria-labelledby="quick-answer-title"><h2 id="quick-answer-title">At a glance</h2><ul>{takeaways.map(item=><li>{item}</li>)}</ul></section>
+    <details class="article-toc"><summary>In this guide</summary><ul>{toc.map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></details>
     <figure class="article-hero"><img src={post.data.hero} alt={post.data.heroAlt} width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /><figcaption>{post.data.heroCaption} <span>AI-generated editorial illustration; not a photograph of a tested product.</span></figcaption></figure>
     {post.data.affiliate && <p class="affiliate-notice">We may earn a commission if you buy through links in this article. This does not change your price.</p>}
     <div class="article-prose"><Content /></div>
+    <aside class="reading-panel editorial-card"><h2>About this guide</h2><p>Prepared by Mew &amp; Maple. Sources and illustration notes explain the basis and limits of the guidance.</p><a href="/editorial-policy/">How we develop and review guides →</a></aside>
+    {related.length>0&&<section class="related-guides"><h2>Keep exploring</h2><div class="article-grid">{related.map(item=><ArticleCard post={item}/>)}</div></section>}
     <div class="article-end"><p>Cat behavior and needs vary. For sudden behavioral changes, health concerns, or individualized medical advice, speak with your veterinarian.</p><a href="/">← Explore more guides</a></div>
   </article>
 </BaseLayout>

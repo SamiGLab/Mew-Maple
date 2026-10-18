@@ -93,13 +93,13 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   assert(branding.manifest==='/site.webmanifest'&&!branding.obsoleteText,
     `${label} manifest missing or legacy split-brand header remains`);
   if(label==='safe-home'){
-    assert(await page.locator('.prelaunch-categories a').count()===4,
-      'Draft-safe homepage must show four category links, not unpublished article cards');
+    assert(await page.locator('.starter-card').count()===3,
+      'Homepage must show three working resource paths');
     assert(await page.locator('.article-card').count()===0,
       'Draft-safe homepage must not link to draft articles');
   }
   // Scan the representative templates with axe; exercise every guide for image/layout health.
-  const runAxe=viewport.width===390 && ['home','cat-trees-small-apartments','safe-home'].includes(label);
+  const runAxe=viewport.width===390 && ['home','cat-trees-small-apartments','safe-home','notebook','start-here','small-room','contact'].includes(label);
   const a11y=runAxe ? await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze() : {violations:[]};
   for(const violation of a11y.violations){
     const affected=violation.nodes.map(n=>n.target.join(' ')).slice(0,4).join('; ');
@@ -112,13 +112,13 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
 let dev,preview,browser;
 try{
   browser=await chromium.launch({headless:true,args:['--no-sandbox']});
-  dev=await startServer('npm',['run','dev','--','--host','127.0.0.1','--port','4323'],4323);
+  dev=await startServer(process.execPath,['node_modules/astro/bin/astro.mjs','dev','--host','127.0.0.1','--port','4323'],4323);
   const desktop={width:1440,height:900},mobile={width:390,height:844},tablet={width:768,height:1024};
   for(const viewport of [mobile,tablet,desktop]){
     const context=await browser.newContext({viewport});
     const page=await context.newPage();
     const urls=viewport.width===390
-      ? [['home','/'],['search','/search/'],['category-care','/category/care/'],['privacy','/privacy/'],...articleSlugs.map(x=>[x,'/guides/'+x+'/'])]
+      ? [['home','/'],['start-here','/start-here/'],['notebook','/notebook/'],['small-room','/notebook/small-room-plan/'],['contact','/contact/'],['search','/search/'],['category-care','/category/care/'],['privacy','/privacy/'],...articleSlugs.map(x=>[x,'/guides/'+x+'/'])]
       : viewport.width===768
       ? [['home','/'],['cat-trees-small-apartments','/guides/cat-trees-small-apartments/']]
       : [['home','/'],['search','/search/'],['cat-trees-small-apartments','/guides/cat-trees-small-apartments/'],['cat-friendly-apartment','/guides/cat-friendly-apartment/']];
@@ -139,10 +139,10 @@ try{
     await context.close();
   }
   dev.kill('SIGTERM');
-  preview=await startServer('npm',['run','preview','--','--host','127.0.0.1','--port','4324'],4324);
+  preview=await startServer(process.execPath,['node_modules/astro/bin/astro.mjs','preview','--host','127.0.0.1','--port','4324'],4324);
   const ctx=await browser.newContext({viewport:mobile});
   const p=await ctx.newPage();
-  for(const [name,url] of [['safe-home','/'],['safe-search','/search/']])await inspectPage(p,'http://127.0.0.1:4324',url,name,mobile,true);
+  for(const [name,url] of [['safe-home','/'],['safe-search','/search/'],['notebook','/notebook/'],['start-here','/start-here/'],['small-room','/notebook/small-room-plan/'],['contact','/contact/']])await inspectPage(p,'http://127.0.0.1:4324',url,name,mobile,true);
   const absent=await p.goto('http://127.0.0.1:4324/guides/indoor-cat-enrichment-ideas/',{waitUntil:'domcontentloaded'});
   const body=await absent.text();
   assert(absent.status()!==200 || !body.includes('15 Indoor Cat Enrichment Ideas That'), 'Production-safe preview exposes an editorial draft');

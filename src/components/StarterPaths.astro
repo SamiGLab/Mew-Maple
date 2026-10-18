@@ -1,0 +1,8 @@
+---
+const paths = [
+ {title:'Make a small space work',text:'Plan one room around rest, scratching and clear routes.',url:'/notebook/small-room-plan/',cta:'See the room example'},
+ {title:'Build a gentler routine',text:'Choose optional activities and notice what your cat welcomes.',url:'/notebook/#weekly-planner',cta:'Open the weekly planner'},
+ {title:'Check the everyday details',text:'Walk through your home and choose one useful change.',url:'/notebook/#home-checklist',cta:'Get the home checklist'},
+];
+---
+<div class="starter-grid">{paths.map(path=><a class="starter-card" href={path.url}><h3>{path.title}</h3><p>{path.text}</p><span>{path.cta} →</span></a>)}</div>

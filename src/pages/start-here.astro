@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StarterPaths from '../components/StarterPaths.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import {getCollection} from 'astro:content';
+import {publishable} from '../lib/site';
+const first=(await getCollection('blog')).filter(publishable).find(p=>p.id==='indoor-cat-enrichment-ideas');
+---
+<BaseLayout title="Start here" description="Find a thoughtful starting point for indoor-cat living: a small-room plan, optional play routine and practical home checklist.">
+<section class="container resource-page"><p class="eyebrow">A SMALL PLACE TO BEGIN</p><h1>Start with your cat.<br/>Change one thing.</h1><p class="lead">You do not need a bigger home or a cupboard full of toys. Begin with what your cat already chooses, then make one practical improvement.</p><StarterPaths />
+<div class="reading-panel"><h2>A simple way to use these guides</h2><ol><li><strong>Notice.</strong> Where does your cat rest, scratch, watch and retreat?</li><li><strong>Choose.</strong> Try one small change that fits the room and your cat's mobility.</li><li><strong>Observe.</strong> Keep what is welcomed. Stop or adjust what causes avoidance or frustration.</li></ol><p>Our examples are planning ideas. Check your own room, equipment and cat's needs before copying an arrangement.</p></div>
+{first&&<section><h2>Your first reading stop</h2><div class="article-grid"><ArticleCard post={first}/></div></section>}
+<section class="reading-panel"><h2>What you can expect from Mew &amp; Maple</h2><p>Calm, practical ideas for indoor cats and the people sharing their homes. We use sources for welfare guidance, label illustrations, and explain the limits of examples.</p><a href="/editorial-policy/">Read our editorial approach →</a></section></section></BaseLayout>

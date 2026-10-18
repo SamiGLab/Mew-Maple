@@ -1,0 +1,10 @@
+export const guideNotes: Record<string,string[]> = {
+ 'indoor-cat-enrichment-ideas':['Start with one activity your cat already enjoys, then add variety gradually.','Balance movement, investigation and comfortable places to rest.','Supervise new activities and put string or feather toys away after play.'],
+ 'entertain-cat-while-at-work':['Check access to essentials before adding entertainment.','Choose inspected resting, scratching and observation options for time alone.','Use your cat’s actual behavior to plan a routine around the hours you are home.'],
+ 'cat-trees-small-apartments':['Measure the full footprint, including overhangs and access routes.','Compare stability, platform dimensions and cleaning needs before height.','Follow manufacturer guidance; this is a selection guide, not a hands-on product test.'],
+ 'diy-cat-toys':['Start with simple, clean materials and inspect every finished item.','Remove staples, tape, string and small detachable pieces.','Treat homemade activities as supervised trials, not automatically safe solo toys.'],
+ 'home-for-two-indoor-cats':['Give each cat separated choices for essential resources.','Look for guarded routes and avoid forcing sharing.','Plan rest and retreat across the whole home, not around one shared cat tree.'],
+ 'indoor-cat-play-routine':['Choose a repeatable routine that fits your cat and your day.','Offer chances to stalk, chase and catch without forcing participation.','Adjust to mobility and interest; the example week is not an exercise prescription.'],
+ 'cat-friendly-apartment':['Improve access, retreat and scratching opportunities before adding decor.','Use the room’s existing routes and check stability and household hazards.','Make one change at a time and watch how your cat responds.'],
+ 'window-perch-vs-cat-tree':['Choose by the role you need: quiet observation or several activity options.','Compare actual footprint, access, support and maintenance.','Check window security, mounting instructions and accessory risks independently.'],
+};
