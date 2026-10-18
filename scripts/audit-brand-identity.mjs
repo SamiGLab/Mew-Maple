@@ -42,7 +42,7 @@ for(const [pattern,reason] of [
   [/rel="icon" href="\/brand\/autumn\/cat-silhouette\.webp" type="image\/webp" sizes="96x96"/,'Brand favicon must use the green cat silhouette'],
   [/rel="manifest" href="\/site\.webmanifest"/,'Missing brand web manifest']
 ]) if(!pattern.test(html))errors.push(reason);
-const faviconLinks=[...html.matchAll(/<link\s+rel="icon"\b[^>]*>/g)];
+const faviconLinks=[...html.matchAll(/<link\s+rel="icon"[^>]*>/g)];
 if(faviconLinks.length!==1 || /\/brand\/favicon\.svg/.test(faviconLinks.map(x=>x[0]).join(' ')))
   errors.push('Only one current green-cat favicon link may be active');
 if(/logo-lockup|logo-mark|logo-text|logo-subline|footer-tagline|footer-brand img\{/i.test(html+css))
