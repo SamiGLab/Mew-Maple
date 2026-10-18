@@ -7,9 +7,11 @@ export const checks = [
   ['sitemap','/sitemap.xml'],
   ['search','/search-index.json'],
   ['build','/build-info.json'],
+  ['brandLockup','/brand/autumn/lockup.webp'],
   ['brandMark','/brand/autumn/cat-emblem.webp'],
   ['brandFavicon','/brand/autumn/cat-silhouette.webp'],
   ['brandPattern','/brand/autumn/leaves-pattern.webp'],
+  ['brandManifest','/site.webmanifest'],
   ['draft','/guides/indoor-cat-enrichment-ideas/'],
   ['notFound','/this-route-must-return-404-qa/']
 ];
@@ -52,6 +54,14 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
       /\bname\s*=\s*["']google-site-verification["']/i.test(m[0]) &&
       /\bcontent\s*=\s*["']jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g["']/i.test(m[0]));
     must(gscMeta,'Google Search Console ownership verification tag missing from live homepage');
+    must(body.includes('class="logo-full"')&&body.includes('class="footer-lockup"')&&
+      body.includes('/brand/autumn/lockup.webp'),
+      'Current full horizontal brand logo missing from header or footer');
+    const iconNodes=[...body.matchAll(/<link\b[^>]*\brel=["']icon["'][^>]*>/gi)];
+    must(iconNodes.length===1 && iconNodes[0][0].includes('/brand/autumn/cat-silhouette.webp'),
+      'Homepage must advertise exactly one current green-cat favicon');
+    must(!body.includes('href="/brand/favicon.svg"'),
+      'Legacy SVG favicon still advertised by homepage');
   }
   if(fetched.robots){
     const {response,body}=fetched.robots;
@@ -88,13 +98,24 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
         'Stale Worker deployment: expected '+expectedSha+' but served '+deployedCommit);
     }catch(e){errors.push('Invalid JSON at /build-info.json: '+String(e.message||e));}
   }
-  for(const kind of ['brandMark','brandFavicon','brandPattern']){
+  for(const kind of ['brandLockup','brandMark','brandFavicon','brandPattern']){
     if(fetched[kind]){
       const {response}=fetched[kind];
       must(response.status===200,kind+': brand image must return HTTP 200');
       must(/image\/webp/i.test(response.headers.get('content-type')||''),
         kind+': expected WebP image content type');
     }
+  }
+  if(fetched.brandManifest){
+    const {response,body}=fetched.brandManifest;
+    must(response.status===200,'/site.webmanifest must return HTTP 200');
+    try{
+      const manifest=JSON.parse(body);
+      must(manifest.icons?.length===1 &&
+        manifest.icons[0]?.src==='/brand/autumn/cat-silhouette.webp' &&
+        manifest.icons[0]?.sizes==='96x96' && manifest.icons[0]?.type==='image/webp',
+        'Live brand manifest contains duplicate, incorrect or legacy icons');
+    }catch{errors.push('Live brand manifest is not valid JSON');}
   }
   for(const kind of ['draft','notFound']){
     if(fetched[kind]){
