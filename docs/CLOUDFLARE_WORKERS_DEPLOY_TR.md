@@ -1,5 +1,7 @@
 # Mew & Maple — Cloudflare Workers dağıtım kaydı (18 Ekim 2026)
 
+> **18 Ekim 2026 canlı doğrulama tamamlandı:** Cloudflare ekranında Production sürümü `66c9c552` aktif ve %100 trafik alıyor. [Actions #39118094587](https://github.com/SamiGLab/Mew-Maple/actions/runs/39118094587) gerçek HTTPS üzerinden `/`, `/robots.txt`, `/sitemap.xml`, `/search-index.json` (200) ve taslak rehber ile geçersiz sayfa (404) doğrulamalarını **0 hatayla** tamamladı. `X-Robots-Tag: noindex, nofollow, noarchive` ve meta `noindex` doğrulandı. Bu **yayın onayı değildir**.
+
 Bu proje **Cloudflare Workers Builds**, Cloudflare Pages değil. Kullanıcının verdiği hedef adres:
 `https://mew-maple.samiayten-hu.workers.dev/`.
 
@@ -24,8 +26,8 @@ Bu proje **Cloudflare Workers Builds**, Cloudflare Pages değil. Kullanıcının
 
 ## Cloudflare hesap erişimi olmadan doğrulanamayacaklar
 
-- [ ] Workers Builds'nin son `main` commit'ini otomatik dağıttığı ve build/deploy logunun başarıyla tamamlandığı.
-- [ ] `workers.dev` canlı adreste /, /robots.txt, /search-index.json, /404 ve /guides/.. HTTP durum kodu / response başlıkları.
+- [x] Kullanıcının Cloudflare Production ekranında 18 Ekim 2026'da dağıtım sürümü `66c9c552` aktif ve trafiği %100 olarak görünüyordu. Exact Git SHA ↔ Cloudflare version mapping ayrıca kaydedilmedi.
+- [x] `workers.dev` canlı HTTP kontrolü: 6 yolun 200/404 durumları, meta robots ve response başlıkları Actions #39118094587 ile doğrulandı.
 - [ ] Gerçek domainin satın alınması, DNS doğrulaması ve Custom Domains bağlantısı.
 - [ ] Yayıncı kimliği, Privacy/çerez/affiliate bilgileri ve sonraki `PUBLIC_SITE_READY=true` geçişi.
 
