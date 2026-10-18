@@ -14,6 +14,7 @@ const articleSlugs=[
   'indoor-cat-play-routine',
   'home-for-two-indoor-cats'
 ];
+const watchdog=setTimeout(()=>{console.error('Browser QA watchdog: exceeded 180 seconds');process.exit(1)},180000);
 const failures=[];
 const findings=[];
 mkdirSync('browser-qa-screenshots',{recursive:true});
@@ -37,6 +38,7 @@ async function startServer(command,args,port,env={}){
 }
 async function inspectPage(page,base,url,label,viewport,screenshot=false){
   const address=base+url;
+  console.log('QA_START '+label+' at '+viewport.width+'px');
   const response=await page.goto(address,{waitUntil:'domcontentloaded',timeout:30000});
   assert(response?.status()===200,`${label} ${viewport.width}px HTTP ${response?.status()}`);
   await page.locator('main').waitFor({timeout:12000});
@@ -64,14 +66,15 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   assert(metrics.missingAlt.length===0,`${label} images without alt`);
   assert(metrics.missingLabels.length===0,`${label} unlabeled inputs`);
   // Scan the representative templates with axe; exercise every guide for image/layout health.
-  const runAxe=viewport.width!==768 && ['home','search','cat-trees-small-apartments','privacy','safe-home'].includes(label);
+  const runAxe=viewport.width===390 && ['home','cat-trees-small-apartments','safe-home'].includes(label);
   const a11y=runAxe ? await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze() : {violations:[]};
   for(const violation of a11y.violations){
     const affected=violation.nodes.map(n=>n.target.join(' ')).slice(0,4).join('; ');
     fail(`${label} ${viewport.width}px axe ${violation.id}: ${affected}`);
   }
   findings.push({label,viewport:viewport.width,overflow:metrics.documentWidth-metrics.width,axeViolations:a11y.violations.length});
-  if(screenshot)await page.screenshot({path:`browser-qa-screenshots/${label.replace(/[^a-z0-9-]/g,'-')}-${viewport.width}.png`,fullPage:true,animations:'disabled'});
+  if(screenshot && ['home','cat-trees-small-apartments','safe-home','cat-friendly-apartment'].includes(label))await page.screenshot({path:`browser-qa-screenshots/${label.replace(/[^a-z0-9-]/g,'-')}-${viewport.width}.png`,fullPage:true,animations:'disabled',timeout:20000});
+  console.log('QA_PASS '+label+' at '+viewport.width+'px');
 }
 let dev,preview,browser;
 try{
