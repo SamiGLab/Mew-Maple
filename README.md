@@ -27,11 +27,12 @@ GitHub Actions has now successfully completed **`npm ci`, source checks and `npm
 - Before publishing: verify source material, fix all placeholder editorial/legal information, update each approved article to `status: published` and add genuine `publishedAt` dates. Set Cloudflare build environment `SITE_URL=https://your-real-domain`, `PUBLIC_SITE_READY=true`, and `PUBLISH_APPROVED=YES` only after sign-off. Astro config reads SITE_URL from the build environment; a local `.env` file alone does not configure Astro's `site` option.
 - Ad/affiliate links, purchase buttons, analytics tracking, email subscription and cookies are intentionally NOT wired up yet.
 
-## Live Cloudflare verification — NOT YET CONFIRMED
+## Live Cloudflare preview verification — CONFIRMED (18 Oct 2026)
 
 - Code/CI `wrangler deploy --dry-run` **does not** prove the Worker was deployed or reachable.
 - Run `npm run audit:live:worker` to check actual HTTPS, `noindex`, Worker headers, empty sitemap/search index, draft-article 404 and missing-page 404. For independent GitHub-hosted execution, use **Actions > Live Workers safety check > Run workflow** and supply the actual `workers.dev` URL.
-- Both validations must pass and the Cloudflare Workers Builds deployment/log must be checked before declaring the temporary Worker URL ready.
+- [Live GitHub Actions verification](https://github.com/SamiGLab/Mew-Maple/actions/runs/39118094587) returned **six successful endpoint checks and zero errors**: homepage 200, robots 200, sitemap 200, search index 200, draft guide 404, unknown route 404. Homepage includes both meta noindex and the HTTP X-Robots-Tag. User's Cloudflare production screen shows active deployment version `66c9c552` serving 100% traffic.
+- The manual live verification workflow also runs on pull requests to detect preview safety regressions. Its checks describe **draft-safe hosting only**; it does not prove publication-readiness or a custom domain.
 - This audit tests only the **not-yet-publication-approved** preview. It does not flip `PUBLIC_SITE_READY`, publish articles, change DNS or configure privacy.
 
 ## Cloudflare Workers settings (current)

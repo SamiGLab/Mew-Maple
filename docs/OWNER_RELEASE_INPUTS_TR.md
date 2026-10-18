@@ -12,7 +12,7 @@
 
 > **Public repository confirmed by owner.** GitHub source and Markdown drafts are public by design. Do not commit business/personal secrets. Owner has agreed to public visibility but has **not** confirmed production publication.
 >
-> **Worker DNS verification (18 Oct 2026):** `mew-maple.samiayten-hu.workers.dev` could not be resolved from the current HTTP environment. A separate GitHub Actions manual live-check workflow is now available; its results and Cloudflare deployment screen remain outstanding.
+> **Worker live verification (18 Oct 2026): COMPLETE.** Cloudflare Production screen showed active version `66c9c552` and 100% traffic. [GitHub Actions #39118094587](https://github.com/SamiGLab/Mew-Maple/actions/runs/39118094587) verified 6 real HTTPS paths, their 200/404 codes, noindex HTTP/meta tags and empty draft sitemap/search, with zero errors. This does not verify a custom domain or authorize content publication.
 
 ## Kullanıcı/işletme tarafından doğrulanması gerekenler
 - [ ] **Gerçek sahip olunan domain**: Domain nedir, satın alındı mı, hangi kayıt şirketinde, DNS yönetimi nerede?
@@ -20,14 +20,14 @@
 - [ ] **İletişim**: Yayımlanacak destek e-posta adresi; gereksiz kişisel bilgi kullanmayın.
 - [ ] **Privacy/çerezler**: Kullanılacak sağlayıcılar, veri saklama/işleme bölgeleri, çerez kategorileri, rıza/opt-out koşulları; gerekli hukuki değerlendirme.
 - [ ] **Analitik ve affiliate**: GA4/GSC ya da başka ölçüm kurulacak mı? Hangi onay mekanizması uygulanacak? Affiliate hesapları gerçekten mevcut mu?
-- [ ] **Barındırma**: Cloudflare Workers Builds proje bağlantısı kullanıcı tarafından açıldı; gerçek Workers deploy başarı ekranı ve canlı HTTP cevapları henüz doğrulanmadı. `*.workers.dev` varsayılan olarak erişim koruması değildir. GitHub deposu public olduğundan kaynak taslakları GitHub'da da görülebilir.
+- [x] **Taslak-safe barındırma**: Workers Production sürümü canlı ve gerçek HTTP testleri geçti. `*.workers.dev` herkese açık olabilir; yalnızca taslak-safe sayfalar sunuluyor. GitHub deposu public olduğundan kaynak taslakları GitHub üzerinden ayrıca görülebilir.
 - [x] **Görsel editoryal QA**: 56/56, 5 SVG render önizlemesi dahil tamamlandı; 51 fotoğraf yalnızca uygun uyarılarla editoryal olarak kullanılabilir.
 - [ ] **Makale yayımlama kararı**: Sekiz makalenin `review` statüsünü değiştirmek ve gerçek yayın tarihlerini atamak ancak domain, yayıncı, hukuk ve test gereksinimlerinin tamamlanmasından sonra mümkündür.
 
 ## Geçiş sırası
 1. **Tamamlandı:** Görsel editoryal bulguları düzeltildi; PR #33–36 ve otomatik kaynak/önizleme testleri başarılı.
 2. Domain, yayıncı kimliği, hukuki sayfalar ve gerçek hizmet konfigürasyonunu doğrula.
-3. Sadece erişim kısıtlı Cloudflare Pages önizlemesini ayarla; `PUBLIC_SITE_READY=false` olarak tut, erişim ve robots/noindex kontrolünü yap.
+3. **Tamamlandı (taslak-safe sürüm):** Cloudflare Workers gerçek HTTPS/robots/noindex ve taslak 404 kontrolü geçti. Makalelerin kendisi veya gizli içerikler için ayrıca Cloudflare Access koruması gerekecek; `PUBLIC_SITE_READY=false` olarak kalacak.
 4. Son Lighthouse mobil testi, klavye/ekran okuyucu, social OG, iç linkler, canonical, sitemap, GSC/GA4, privacy rızasını test et.
 5. Yayın öncesi yazılı Go/No-Go kararı; yalnızca ondan sonra gerçek `SITE_URL`, makalelerde `publishedAt`, `status: published`, `PUBLIC_SITE_READY=true`, `PUBLISH_APPROVED=YES`.
 
