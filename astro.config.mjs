@@ -4,4 +4,6 @@ export default defineConfig({
   output: 'static',
   site: process.env.SITE_URL || 'https://preview.invalid',
   trailingSlash: 'always',
+  // Keep the development toolbar from obscuring editorial screenshot reviews.
+  devToolbar: { enabled: false },
 });

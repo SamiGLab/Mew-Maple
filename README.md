@@ -4,7 +4,7 @@ This is the **private Mew & Maple GitHub source repository**, NOT a live website
 
 ## Stack
 - Astro 6 static output; TypeScript content schema; no database or SSR adapter
-- 8 draft Markdown guides and 56 WebP article images
+- 8 draft Markdown guides and 56 editorial illustrations (51 WebP plus 5 standalone SVG diagrams)
 - Responsive CSS; category pages; article template; robots, sitemap and RSS endpoints
 - GitHub Actions source checks; intended host Cloudflare Pages (`npm run build` → `dist`)
 
@@ -40,6 +40,15 @@ Content imported from the eight previously authored article HTML files and 56 We
 - `docs/CONTENT_MANIFEST.json`: the eight article slugs and counts.
 - `docs/CLOUDFLARE_DOMAIN_KURULUM_PLANI_TR.md`: tentative .com purchase checklist, DNS ownership, safe Cloudflare Access and release sequence (no domain assumed purchased).
 
+## Verified browser and illustration QA (18 Oct 2026)
+
+- [Passing browser accessibility and layout CI](https://github.com/SamiGLab/Mew-Maple/actions/runs/39113150022): 20 page/viewport combinations (390px, 768px and 1440px), 0 failures. All eight locally rendered draft guides were checked on mobile for overflow, images, basic semantics, navigation and search; representative screens used axe WCAG 2.0/2.1 A/AA rule scans.
+- The browser test is local-only: it launches `astro dev` on loopback for editorial drafts, then validates that the static `astro preview` has **no guide page leakage** and an empty public search index. Its artifacts expire quickly and are not public publication.
+- All 56 images have an editorial QA disposition, including five locally rendered SVG safety diagrams. They are not product safety certification or professional veterinary endorsement.
+- Third-party Google Fonts requests were removed from the draft site; fallbacks are system/Georgia until properly licensed fonts are self-hosted.
+- Browser QA is not a substitute for final production Lighthouse, full manual assistive-technology testing or owned-domain HTTPS checks.
+- Launch owner/publisher, legal/privacy details, domain, Cloudflare Access and final release approval remain unresolved. See `docs/OWNER_RELEASE_INPUTS_TR.md`.
+
 ## Release-gate QA 17 Oct 2026
 - `npm run test:gates` runs isolated positive/negative release checks without touching actual article content.
 - Production approval requires valid custom URL, finished editorial/legal pages, approved publication dates and no links to unpublished articles.
@@ -56,4 +65,4 @@ Content imported from the eight previously authored article HTML files and 56 We
 - 98 initial source files imported, including 8 articles and 56 illustrations, followed by a committed dependency lockfile.
 - [Source import commit](https://github.com/SamiGLab/Mew-Maple/commit/7f9390519ab876c460b6f6e7c39377c765792d9d).
 - [Passing reproducible CI run](https://github.com/SamiGLab/Mew-Maple/actions/runs/39061370469).
-- Preview-safe build generated 9 static pages; no draft guide was published. Production release is still gated by editorial, legal, domain, accessibility and owner approval.
+- Preview-safe build contains no public guide pages; no draft guide was published. Production release is still gated by editorial, legal, domain, accessibility and owner approval.

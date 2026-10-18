@@ -6,7 +6,8 @@
 - GitHub'da ana kaynak: `SamiGLab/Mew-Maple`; Astro ile statik yapı.
 - Sekiz makale halen `status: review`.
 - `docs/image-qa-status.json`: **56/56 görsel editoryal kullanım için değerlendirildi ve onaylandı.** Güvenlik riski görülen fotoğraflara uyarılar eklendi; 5 çelişkili görsel SVG açıklama şemalarıyla değiştirildi. Bunlar veterinerlik veya ürün güvenliği sertifikası değildir. Gerçek PNG renderları GitHub Actions #39110806927 çıktısında incelendi (bkz. `docs/FINAL_VISUAL_EDITORIAL_QA_2026-10-18.md`).
-- GitHub Actions PR #36 başarılı: kaynak/SEO/görsel güvenliği ve taslak önizleme derlemesi geçti. Bu, gerçek mobil/klavye/browser/Cloudflare ortamını doğrulamaz.
+- GitHub Actions PR #38 başarılı: gerçek Chromium'da 390/768/1440 px toplam 20 kontrol, makalelerin mobil düzeni, görüntü yüklemeleri, arama, keyboard skip-link, temel Axe WCAG A/AA ve taslak sızıntı testi geçti. Gerçek cihaz, prod Lighthouse ve Cloudflare erişim testi ayrıdır.
+- PR #39 Google Fonts harici veri talebini kaldırdı. PR #40 düşük kontrastlı metin renklerini iyileştirdi.
 - Dört temel kaynak kuruluşuna ait dokuz benzersiz referans URL'sinin erişimi ve konu uyumu araştırıldı; her tıbbi/etolojik iddianın yetkili uzman onayı verilmiş değildir.
 
 ## Kullanıcı/işletme tarafından doğrulanması gerekenler

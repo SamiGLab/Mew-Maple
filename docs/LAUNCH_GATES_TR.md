@@ -8,7 +8,8 @@
 - [ ] PUBLIC_SITE_READY=true SADECE final Go/No-Go onayında ayarlandı.
 - [x] Taslak-safe GitHub Actions `npm run check:source`, `npm run build` ve görsel/SEO/robots otomatik testleri başarılı.
 - [ ] Gerçek domain ve prod yapılandırmasıyla yayın öncesi son build ve duman testi tamamlandı.
-- [ ] Mobil Lighthouse, gerçek linkler ve sosyal önizlemeler kontrol edildi.
+- [x] GitHub Actions gerçek Chromium: 390/768/1440 px toplam 20 sayfa/ekran testi, temsilî axe/WCAG A-AA, görseller, arama ve taslak sızıntı testleri başarılı (#39113150022).
+- [ ] Gerçek yayın ortamında mobil Lighthouse, manuel klavye/ekran okuyucu testi, canlı linkler ve sosyal önizlemeler kontrol edildi.
 - [ ] Cloudflare üretim alan adı, HTTPS, 301 yönlendirmesi, sitemap/robots/canonical doğrulandı.
 - [ ] GSC property ve sitemap; GA4 gerçek trafik ve privacy onayı test edildi.
 
