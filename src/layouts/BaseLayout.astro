@@ -70,6 +70,7 @@ const ogImage = canIndex ? new URL(image, Astro.site).toString() : undefined;
     {ogImage && <meta name="twitter:image" content={ogImage} />}
     {ogImage && <meta name="twitter:image:alt" content={imageAlt} />}
     {canIndex && <link rel="alternate" type="application/rss+xml" title="Mew & Maple RSS" href={new URL('/rss.xml', Astro.site).toString()} />}
+    {canIndex && <link rel="sitemap" type="application/xml" href={new URL('/sitemap-index.xml', Astro.site).toString()} />}
     {canonical && <meta property="og:url" content={canonical} />}
     <meta name="theme-color" content="#263C34" />
   </head>
