@@ -17,8 +17,8 @@ const ogImage = canIndex ? new URL(image, Astro.site).toString() : undefined;
     <meta name="description" content={description} />
     <meta name="robots" content={canIndex ? 'index,follow' : 'noindex,nofollow'} />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="icon" href="/brand/autumn/cat-silhouette.webp" type="image/webp" />
     <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/brand/autumn/cat-silhouette.webp" type="image/webp" sizes="any" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Mew & Maple" />
     {preloadHero && <link rel="preload" as="image" href={image} fetchpriority="high" />}
