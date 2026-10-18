@@ -130,11 +130,11 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 
 **Do indoor cats need vertical space?** Many benefit from stable elevated resting and observation places, but height and access should suit their mobility and confidence [3].
 
-## Keep reading
+## Explore related indoor-cat topics
 
-- [How to Keep Your Indoor Cat Entertained While You're at Work](/guides/entertain-cat-while-at-work/)
-- [An Indoor Cat Play Routine You Can Actually Maintain](/guides/indoor-cat-play-routine/)
-- [How to Create a Cat-Friendly Apartment](/guides/cat-friendly-apartment/)
+- [Play and enrichment](/category/play/)
+- [Cat-friendly homes](/category/homes/)
+- [Everyday cat life](/category/care/)
 
 ## Choose the next activity based on what your cat already does
 
