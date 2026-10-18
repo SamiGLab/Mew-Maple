@@ -65,6 +65,23 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   assert(metrics.failedImages.length===0,`${label} failed images: ${metrics.failedImages.join(', ')}`);
   assert(metrics.missingAlt.length===0,`${label} images without alt`);
   assert(metrics.missingLabels.length===0,`${label} unlabeled inputs`);
+  const branding=await page.evaluate(()=>({
+    headerLogo:document.querySelector('.logo-mark')?.getAttribute('src'),
+    headerReady:document.querySelector('.logo-mark')?.naturalWidth>0,
+    footerLogo:document.querySelector('.footer-brand img')?.getAttribute('src'),
+    footerReady:document.querySelector('.footer-brand img')?.naturalWidth>0,
+    lockup:document.querySelector('.logo-text')?.textContent?.trim(),
+    line:document.querySelector('.logo-subline')?.textContent?.trim(),
+    favicon:document.querySelector('link[rel="icon"]')?.getAttribute('href')
+  }));
+  assert(branding.headerLogo==='/brand/avatar-light.svg'&&branding.headerReady,
+    `${label} missing or broken original header cat emblem`);
+  assert(branding.footerLogo==='/brand/avatar-dark.svg'&&branding.footerReady,
+    `${label} missing or broken footer cat emblem`);
+  assert(branding.lockup==='Mew & Maple'&&branding.line==='INDOOR CAT LIVING',
+    `${label} incorrect brand lockup text`);
+  assert(branding.favicon==='/brand/favicon.svg',
+    `${label} wrong brand favicon`);
   // Scan the representative templates with axe; exercise every guide for image/layout health.
   const runAxe=viewport.width===390 && ['home','cat-trees-small-apartments','safe-home'].includes(label);
   const a11y=runAxe ? await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze() : {violations:[]};
