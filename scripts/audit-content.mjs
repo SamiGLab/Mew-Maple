@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 const files = readdirSync('src/content/blog').filter(f => f.endsWith('.md'));
 const slugs = new Set();
+const validCategories = new Set(['Play & Enrichment', 'Cat-Friendly Homes', 'Gear & Buying Guides', 'Everyday Cat Life']);
 let errors = 0;
 let images = 0;
 let published = 0;
@@ -12,6 +13,8 @@ for (const file of files) {
   const slug = file.slice(0, -3);
   if (slugs.has(slug)) { console.error(`Duplicate slug: ${slug}`); errors++; }
   slugs.add(slug);
+  const category = fm.match(/^category:\s*(.+)$/m)?.[1]?.trim();
+  if (!validCategories.has(category)) { console.error(`Invalid category: ${file}: ${category ?? 'missing'}`); errors++; }
   const status = fm.match(/^status:\s*(\S+)/m)?.[1];
   if (!['review','published'].includes(status)) { console.error(`Invalid status: ${file}`); errors++; }
   if (!/^language:\s*en-US\s*$/m.test(fm)) { console.error(`Language mismatch: ${file}`); errors++; }
