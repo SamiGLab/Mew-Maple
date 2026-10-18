@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { runLiveCheck } from './check-live-worker.mjs';
-const html='<html><head><meta name="robots" content="noindex,nofollow"></head><body>Draft landing</body></html>';
+const html='<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g" /></head><body>Draft landing</body></html>';
 const deployedSha='abcdef0123456789abcdef0123456789abcdef01';
 function fixture(opts={}){
   return async (url)=>{
@@ -24,6 +24,13 @@ function fixture(opts={}){
 const url='https://mew-maple.samiayten-hu.workers.dev/';
 let result=await runLiveCheck(url,fixture());
 assert.equal(result.errors.length,0,JSON.stringify(result.errors));
+result=await runLiveCheck(url,async (uri,options)=>{
+  const reply=await fixture()(uri,options);
+  if(new URL(uri).pathname==='/')return new Response(html.replace(/<meta name="google-site-verification"[^>]*>/,''),{status:200,headers:{'x-robots-tag':'noindex, nofollow, noarchive'}});
+  return reply;
+});
+assert.ok(result.errors.some(x=>x.includes('ownership verification tag missing')));
+
 assert.equal(result.deployedCommit,deployedSha);
 result=await runLiveCheck(url,fixture(),deployedSha);
 assert.equal(result.errors.length,0,JSON.stringify(result.errors));

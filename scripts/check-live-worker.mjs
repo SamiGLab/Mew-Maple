@@ -48,6 +48,8 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
     must(robotsMeta(body),'/ missing HTML meta noindex');
     must(/\bnoindex\b/i.test(response.headers.get('x-robots-tag')||''),'/ missing X-Robots-Tag: noindex');
     must(!/rel\s*=\s*["']canonical["']/i.test(body),'Draft homepage has an unexpected canonical URL');
+    must(/<meta\s+name=["']google-site-verification["']\s+content=["']jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g["']\s*\/>/i.test(body),
+      'Google Search Console ownership verification tag missing from live homepage');
   }
   if(fetched.robots){
     const {response,body}=fetched.robots;

@@ -15,6 +15,7 @@ const ogImage = canIndex ? new URL(image, Astro.site).toString() : undefined;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g" />
     <meta name="robots" content={canIndex ? 'index,follow' : 'noindex,nofollow'} />
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />

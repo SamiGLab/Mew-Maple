@@ -31,6 +31,10 @@ for(const [name] of rasterAssets){
   if(buf.length>70000)errors.push('Brand image exceeds 70 KB: '+path);
 }
 const html=readFileSync('src/layouts/BaseLayout.astro','utf8');
+const verificationToken='jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g';
+if((html.match(/name="google-site-verification"/g)||[]).length!==1||
+   !html.includes('name="google-site-verification" content="'+verificationToken+'"'))
+  errors.push('Google Search Console meta verification must appear exactly once in shared head');
 const css=readFileSync('src/styles/global.css','utf8');
 for(const [pattern,reason] of [
   [/src="\/brand\/autumn\/cat-emblem\.webp"/,'Header must display the actual cat emblem'],
