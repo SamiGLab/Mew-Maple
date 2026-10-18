@@ -65,23 +65,33 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   assert(metrics.failedImages.length===0,`${label} failed images: ${metrics.failedImages.join(', ')}`);
   assert(metrics.missingAlt.length===0,`${label} images without alt`);
   assert(metrics.missingLabels.length===0,`${label} unlabeled inputs`);
-  const branding=await page.evaluate(()=>({
-    headerLogo:document.querySelector('.logo-mark')?.getAttribute('src'),
-    headerReady:document.querySelector('.logo-mark')?.naturalWidth>0,
-    footerLogo:document.querySelector('.footer-brand img')?.getAttribute('src'),
-    footerReady:document.querySelector('.footer-brand img')?.naturalWidth>0,
-    lockup:document.querySelector('.logo-text')?.textContent?.trim(),
-    line:document.querySelector('.logo-subline')?.textContent?.trim(),
-    favicon:document.querySelector('link[rel="icon"][type="image/webp"]')?.getAttribute('href')
-  }));
-  assert(branding.headerLogo==='/brand/autumn/cat-emblem.webp'&&branding.headerReady,
-    `${label} missing or broken original header cat emblem`);
-  assert(branding.footerLogo==='/brand/autumn/cat-emblem.webp'&&branding.footerReady,
-    `${label} missing or broken footer cat emblem`);
-  assert(branding.lockup==='Mew & Maple'&&branding.line==='INDOOR CAT LIVING',
-    `${label} incorrect brand lockup text`);
-  assert(branding.favicon==='/brand/autumn/cat-silhouette.webp',
-    `${label} wrong brand favicon`);
+  const branding=await page.evaluate(()=>{
+    const header=document.querySelector('.logo-full');
+    const footer=document.querySelector('.footer-lockup');
+    const iconNodes=[...document.querySelectorAll('link[rel="icon"]')];
+    return {
+      headerLogo:header?.getAttribute('src'),
+      headerReady:header?.naturalWidth>0,
+      headerWidth:Math.round(header?.getBoundingClientRect().width||0),
+      footerLogo:footer?.getAttribute('src'),
+      footerReady:footer?.naturalWidth>0,
+      footerWidth:Math.round(footer?.getBoundingClientRect().width||0),
+      favicon:iconNodes[0]?.getAttribute('href'),
+      faviconCount:iconNodes.length,
+      manifest:document.querySelector('link[rel="manifest"]')?.getAttribute('href'),
+      obsoleteText:!!document.querySelector('.logo-text,.logo-mark,.logo-subline,.footer-tagline')
+    };
+  });
+  assert(branding.headerLogo==='/brand/autumn/lockup.webp'&&branding.headerReady,
+    `${label} missing or broken approved horizontal header logo`);
+  assert(branding.footerLogo==='/brand/autumn/lockup.webp'&&branding.footerReady,
+    `${label} missing or broken approved horizontal footer logo`);
+  assert(branding.headerWidth>=220 && branding.footerWidth>=220,
+    `${label} full brand lockup may be unreadably small: ${JSON.stringify(branding)}`);
+  assert(branding.faviconCount===1&&branding.favicon==='/brand/autumn/cat-silhouette.webp',
+    `${label} incorrect or duplicate browser favicon`);
+  assert(branding.manifest==='/site.webmanifest'&&!branding.obsoleteText,
+    `${label} manifest missing or legacy split-brand header remains`);
   if(label==='safe-home'){
     assert(await page.locator('.prelaunch-categories a').count()===4,
       'Draft-safe homepage must show four category links, not unpublished article cards');
