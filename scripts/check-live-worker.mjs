@@ -113,7 +113,7 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
       const manifest=JSON.parse(body);
       must(manifest.icons?.length===1 &&
         manifest.icons[0]?.src==='/brand/autumn/cat-silhouette.webp' &&
-        manifest.icons[0]?.sizes==='96x96' && manifest.icons[0]?.type==='image/webp',
+        manifest.icons[0]?.sizes==='144x144' && manifest.icons[0]?.type==='image/webp',
         'Live brand manifest contains duplicate, incorrect or legacy icons');
     }catch{errors.push('Live brand manifest is not valid JSON');}
   }
