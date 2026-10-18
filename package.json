@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "audit:content": "node scripts/audit-content.mjs",
     "check:launch": "node scripts/check-launch.mjs",
-    "check:source": "npm run audit:content && npm run audit:seo && npm run audit:citations && npm run audit:images && npm run test:images && npm run check:launch && npm run test:gates && npm run test:live:worker && npm run test:build-info",
+    "check:source": "npm run audit:content && npm run audit:seo && npm run audit:citations && npm run audit:images && npm run test:images && npm run check:launch && npm run test:gates && npm run test:live:worker && npm run test:build-info && npm run audit:weight",
     "test:gates": "node scripts/test-release-gates.mjs",
     "audit:images": "node scripts/audit-visual-assets.mjs",
     "audit:citations": "node scripts/audit-citations.mjs",
@@ -19,7 +19,8 @@
     "audit:workers": "node scripts/check-workers-static.mjs",
     "audit:live:worker": "node scripts/check-live-worker.mjs",
     "test:live:worker": "node scripts/test-live-worker.mjs",
-    "test:build-info": "node scripts/test-build-info.mjs"
+    "test:build-info": "node scripts/test-build-info.mjs",
+    "audit:weight": "node scripts/audit-image-budgets.mjs"
   },
   "dependencies": {
     "astro": "^6.0.0"

@@ -20,13 +20,13 @@ const schema = siteReady && post.data.status === 'published' ? {
   ...(post.data.updatedAt ? { dateModified: post.data.updatedAt.toISOString() } : {}),
 }:null;
 ---
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} imageAlt={post.data.heroAlt} type="article">
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} imageAlt={post.data.heroAlt} type="article" preloadHero>
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <article class="container article-container">
     <p class="eyebrow"><a href="/">All guides</a> / {post.data.category}</p>
     <h1>{post.data.title}</h1>
     <p class="article-byline">{siteReady ? 'Mew & Maple · ' : 'Editorial draft · '}{post.data.readingMinutes} min read · en-US</p>
-    <figure class="article-hero"><img src={post.data.hero} alt={post.data.heroAlt} width="1280" height="720" /><figcaption>{post.data.heroCaption} <span>AI-generated editorial illustration; not a photograph of a tested product.</span></figcaption></figure>
+    <figure class="article-hero"><img src={post.data.hero} alt={post.data.heroAlt} width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /><figcaption>{post.data.heroCaption} <span>AI-generated editorial illustration; not a photograph of a tested product.</span></figcaption></figure>
     {post.data.affiliate && <p class="affiliate-notice">We may earn a commission if you buy through links in this article. This does not change your price.</p>}
     <div class="article-prose"><Content /></div>
     <div class="article-end"><p>Cat behavior and needs vary. For sudden behavioral changes, health concerns, or individualized medical advice, speak with your veterinarian.</p><a href="/">← Explore more guides</a></div>

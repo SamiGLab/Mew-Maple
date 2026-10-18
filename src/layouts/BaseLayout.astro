@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
 import { brand, description as baseDescription, siteReady, validOrigin } from '../lib/site';
-interface Props { title?: string; description?: string; image?: string; imageAlt?: string; type?: 'article' | 'website'; }
-const { title, description = baseDescription, image = '/images/indoor-cat-enrichment-ideas-hero.webp', imageAlt = 'Editorial illustration of an indoor cat', type = 'website' } = Astro.props;
+interface Props { title?: string; description?: string; image?: string; imageAlt?: string; type?: 'article' | 'website'; preloadHero?: boolean; }
+const { title, description = baseDescription, image = '/images/indoor-cat-enrichment-ideas-hero.webp', imageAlt = 'Editorial illustration of an indoor cat', type = 'website', preloadHero = false } = Astro.props;
 const pageTitle = title ? `${title} | ${brand}` : `${brand} | Better days for indoor cats`;
 const canIndex = siteReady && validOrigin;
 const canonical = canIndex ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
@@ -18,6 +18,7 @@ const ogImage = canIndex ? new URL(image, Astro.site).toString() : undefined;
     <meta name="robots" content={canIndex ? 'index,follow' : 'noindex,nofollow'} />
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+    {preloadHero && <link rel="preload" as="image" href={image} fetchpriority="high" />}
     <meta property="og:site_name" content={brand} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content={type} />
