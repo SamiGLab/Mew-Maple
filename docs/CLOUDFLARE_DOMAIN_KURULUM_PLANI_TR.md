@@ -30,7 +30,7 @@ Cloudflare Pages PR/branch preview adresleri **varsayılan olarak herkese açık
 
 - [ ] Kullanıcı, `mewandmaple.com` alan adını gerçekten satın aldı ve hesap erişimini doğruladı.
 - [ ] Tescil/benzer marka riskleri kontrol edildi; yayıncı ve iletişim bilgileri kesinleştirildi.
-- [ ] `docs/image-qa-status.json` içerisindeki 5 replacement ve 23 manual-review sorunu giderildi; toplam 56 görüntü onaylı.
+- [x] Görseller: `docs/image-qa-status.json` 56/56 editoryal onay; 5 SVG alternatifinin gerçek PNG çıktısı incelendi. Bu ürün güvenliği sertifikası değildir.
 - [ ] Sekiz makalenin kaynak/editör onayı ve gerçek yayın tarihi eklendi.
 - [ ] Privacy, Editorial Policy, Affiliate Disclosure ve About gerçek işletime göre tamamlandı.
 - [ ] Analytics/çerez rızası, kullanılacak hizmetlere ve ülkelere göre kontrol edildi.
