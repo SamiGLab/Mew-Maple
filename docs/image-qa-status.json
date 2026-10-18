@@ -18,18 +18,22 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "cat-friendly-apartment-figure-03.webp",
-      "status": "replace-required",
-      "note": "Visual QA finding: Hanging tunnel toy and unattached feather toy on carpet contradict safe, unattended-retreat concept.",
+      "file": "cat-friendly-apartment-figure-03.svg",
+      "status": "updated-pending-review",
+      "note": "Safe standalone SVG editorial diagram replaces previously contradictory visual; review actual rendering, accessibility and content match before final approval.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "replacedUnsafeSource": "cat-friendly-apartment-figure-03.webp",
+      "revisedAt": "2026-10-18"
     },
     {
-      "file": "cat-friendly-apartment-figure-04.webp",
-      "status": "replace-required",
-      "note": "Visual QA finding: Food and water immediately adjacent to litter cabinet, contradicting resource separation guidance.",
+      "file": "cat-friendly-apartment-figure-04.svg",
+      "status": "updated-pending-review",
+      "note": "Safe standalone SVG editorial diagram replaces previously contradictory visual; review actual rendering, accessibility and content match before final approval.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "replacedUnsafeSource": "cat-friendly-apartment-figure-04.webp",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "cat-friendly-apartment-figure-05.webp",
@@ -222,11 +226,13 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "home-for-two-indoor-cats-figure-04.webp",
-      "status": "replace-required",
-      "note": "Visual QA finding: Feeding bowls are side-by-side while article advocates separated feeding stations.",
+      "file": "home-for-two-indoor-cats-figure-04.svg",
+      "status": "updated-pending-review",
+      "note": "Safe standalone SVG editorial diagram replaces previously contradictory visual; review actual rendering, accessibility and content match before final approval.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "replacedUnsafeSource": "home-for-two-indoor-cats-figure-04.webp",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "home-for-two-indoor-cats-figure-05.webp",
@@ -373,12 +379,13 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "window-perch-vs-cat-tree-figure-04.webp",
-      "status": "replace-required",
-      "note": "Visual QA finding: Exposed toy baskets accessible to cats conflict with closed, inaccessible supervised-toy storage.",
+      "file": "window-perch-vs-cat-tree-figure-04.svg",
+      "status": "updated-pending-review",
+      "note": "Safe standalone SVG editorial diagram replaces previously contradictory visual; review actual rendering, accessibility and content match before final approval.",
       "revisedAt": "2026-10-18",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "replacedUnsafeSource": "window-perch-vs-cat-tree-figure-04.webp"
     },
     {
       "file": "window-perch-vs-cat-tree-figure-05.webp",
@@ -389,11 +396,13 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "window-perch-vs-cat-tree-figure-06.webp",
-      "status": "replace-required",
-      "note": "Visual QA finding: Loose feather lure left out on floor near resting cat.",
+      "file": "window-perch-vs-cat-tree-figure-06.svg",
+      "status": "updated-pending-review",
+      "note": "Safe standalone SVG editorial diagram replaces previously contradictory visual; review actual rendering, accessibility and content match before final approval.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "replacedUnsafeSource": "window-perch-vs-cat-tree-figure-06.webp",
+      "revisedAt": "2026-10-18"
     },
     {
       "file": "window-perch-vs-cat-tree-hero.webp",
