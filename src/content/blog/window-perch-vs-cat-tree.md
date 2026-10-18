@@ -6,7 +6,8 @@ category: Gear & Buying Guides
 hero: /images/window-perch-vs-cat-tree-hero.webp
 heroAlt: "Indoor tabby cat looking out of a closed window while resting on a cushioned perch"
 heroCaption: "Comparison illustration only: the hanging pompom visible on the cat tree should not be assumed safe when unattended. Confirm window security, mounting strength and accessory safety independently."
-status: review
+status: published
+publishedAt: 2026-10-18
 readingMinutes: 5
 language: en-US
 ---

@@ -6,7 +6,8 @@ category: Everyday Cat Life
 hero: /images/home-for-two-indoor-cats-hero.webp
 heroAlt: "Two indoor cats using separate areas of a bright living room"
 heroCaption: "Provide separate places to eat, rest, and retreat. Illustration created for Mew & Maple."
-status: review
+status: published
+publishedAt: 2026-10-18
 readingMinutes: 5
 language: en-US
 ---

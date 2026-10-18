@@ -119,8 +119,8 @@ Finally, assess whether an older or mobility-limited cat can access key resource
 ## Related guides
 
 - [15 Indoor Cat Enrichment Ideas](/guides/indoor-cat-enrichment-ideas/)
-- [Explore more Play & Enrichment guides](/category/play/)
-- [Explore Gear & Buying Guides](/category/gear/)
+- [Best Cat Trees for Small Apartments](/guides/cat-trees-small-apartments/)
+- [How to Set Up a Home for Two Indoor Cats](/guides/home-for-two-indoor-cats/)
 
 ## Sources and further reading
 

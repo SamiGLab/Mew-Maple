@@ -6,7 +6,8 @@ category: Play & Enrichment
 hero: /images/entertain-cat-while-at-work-hero.webp
 heroAlt: "Ginger cat relaxing on a secure window perch in a bright apartment"
 heroCaption: "Give your cat a secure place to watch and rest. Illustration created for Mew & Maple."
-status: review
+status: published
+publishedAt: 2026-10-18
 readingMinutes: 5
 language: en-US
 ---
