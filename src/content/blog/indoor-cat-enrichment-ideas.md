@@ -6,7 +6,8 @@ category: Play & Enrichment
 hero: /images/indoor-cat-enrichment-ideas-hero.webp
 heroAlt: "Tabby cat exploring a wooden puzzle feeder on a cozy living-room rug"
 heroCaption: "An enrichment activity can be as simple as a food puzzle. Illustration created for Mew & Maple."
-status: review
+status: published
+publishedAt: 2026-10-18
 readingMinutes: 6
 language: en-US
 ---
