@@ -1,12 +1,13 @@
 # Yayın engelleyiciler (P0)
 - [ ] Marka, alan adı ve gerçek yayıncı bilgisi doğrulandı.
-- [ ] Sekiz makale kaynak, güvenlik ve görsel QA'dan geçti. 
+- [x] Sekiz makale için editoryal kaynak/iddia kontrolü ve 56/56 görselin editoryal güvenlik incelemesi tamamlandı; uzman onayı veya ürün test edilmişliği iddia edilmiyor.
 - [ ] İçerik frontmatter status: published olarak editör onayıyla değiştirildi.
 - [ ] Tüm iletişim, Privacy, Editorial ve Affiliate sayfaları gerçek operasyona göre gözden geçirildi.
 - [ ] Google analytics / izin sistemi ve cookie düzeni gerçek işleyişe göre doğrulandı.
 - [ ] SITE_URL gerçek, sahip olunan domain ile değiştirildi.
 - [ ] PUBLIC_SITE_READY=true SADECE final Go/No-Go onayında ayarlandı.
-- [ ] `npm run build` ve `npm run audit:content` tamam.
+- [x] Taslak-safe GitHub Actions `npm run check:source`, `npm run build` ve görsel/SEO/robots otomatik testleri başarılı.
+- [ ] Gerçek domain ve prod yapılandırmasıyla yayın öncesi son build ve duman testi tamamlandı.
 - [ ] Mobil Lighthouse, gerçek linkler ve sosyal önizlemeler kontrol edildi.
 - [ ] Cloudflare üretim alan adı, HTTPS, 301 yönlendirmesi, sitemap/robots/canonical doğrulandı.
 - [ ] GSC property ve sitemap; GA4 gerçek trafik ve privacy onayı test edildi.
