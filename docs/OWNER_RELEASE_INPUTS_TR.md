@@ -10,6 +10,10 @@
 - PR #39 Google Fonts harici veri talebini kaldırdı. PR #40 düşük kontrastlı metin renklerini iyileştirdi.
 - Dört temel kaynak kuruluşuna ait dokuz benzersiz referans URL'sinin erişimi ve konu uyumu araştırıldı; her tıbbi/etolojik iddianın yetkili uzman onayı verilmiş değildir.
 
+> **Public repository confirmed by owner.** GitHub source and Markdown drafts are public by design. Do not commit business/personal secrets. Owner has agreed to public visibility but has **not** confirmed production publication.
+>
+> **Worker DNS verification (18 Oct 2026):** `mew-maple.samiayten-hu.workers.dev` could not be resolved from the current HTTP environment. A separate GitHub Actions manual live-check workflow is now available; its results and Cloudflare deployment screen remain outstanding.
+
 ## Kullanıcı/işletme tarafından doğrulanması gerekenler
 - [ ] **Gerçek sahip olunan domain**: Domain nedir, satın alındı mı, hangi kayıt şirketinde, DNS yönetimi nerede?
 - [ ] **Yayıncı/işletme kimliği**: Gerçek kişi mi, şirket mi? Hangi ülke hukukuna tabi? Yayıncı adı ve posta/iletişim adresi için kamusal biçim ne olacak?
