@@ -1,5 +1,4 @@
 ---
-import { categorySlug } from '../lib/site';
 const { post } = Astro.props;
 ---
-<a class="article-card" href={`/guides/${post.id}/`}><img src={post.data.hero} alt={post.data.title} loading="lazy" width="640" height="360" /><span class="article-meta">{post.data.category} · {post.data.readingMinutes} min</span><h3>{post.data.title}</h3><p>{post.data.description}</p><span class="card-cta">Read the guide →</span></a>
+<a class="article-card" href={`/guides/${post.id}/`}><img src={post.data.hero} alt="" loading="lazy" decoding="async" width="640" height="360" /><span class="article-meta">{post.data.category} · {post.data.readingMinutes} min</span><h3>{post.data.title}</h3><p>{post.data.description}</p><span class="card-cta">Read the guide →</span></a>
