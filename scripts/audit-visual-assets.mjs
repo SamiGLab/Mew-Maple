@@ -34,11 +34,13 @@ for (const name of files) {
     }
   } else if (name.endsWith('.svg')) {
     const svg = buf.toString('utf8');
+    // Allow only local fragment references to gradients/filters, never external SVG/CSS resources.
+    const withoutLocalFragmentUrls = svg.replace(/url\s*\(\s*['"]?#[A-Za-z][\w-]*['"]?\s*\)/gi, '');
     if (!/^\s*<svg\b[\s\S]*<\/svg>\s*$/.test(svg) ||
         /<\s*(?:script|foreignObject|iframe|image)\b/i.test(svg) ||
         /\bon[a-z]+\s*=/i.test(svg) ||
         /(?:href|src)\s*=\s*['"]\s*(?:https?:|data:|javascript:)/i.test(svg) ||
-        /@import\b|url\s*\(/i.test(svg)) {
+        /@import\b|url\s*\(/i.test(withoutLocalFragmentUrls)) {
       errors.push('Invalid or unsafe standalone SVG illustration: ' + name); continue;
     }
   }
