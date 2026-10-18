@@ -37,6 +37,8 @@ GitHub Actions has now successfully completed **`npm ci`, source checks and `npm
 - The previously successful live run #39118094587 tested routing and draft exclusion, **before** this commit fingerprint feature. New deployed versions must be rechecked with the extended probe.
 - This audit tests only the **not-yet-publication-approved** preview. It does not flip `PUBLIC_SITE_READY`, publish articles, change DNS or configure privacy.
 
+Worker response security: generated `dist/_headers` includes a self-only executable script CSP, iframe restrictions and non-cached `/build-info.json`; see `docs/WORKERS_RESPONSE_SECURITY_TR.md`. Verify real response headers after the next deployment.
+
 ## Cloudflare Workers settings (current)
 - Worker: `mew-maple`; managed through Workers Builds from GitHub `main`.
 - Build command: `npm run build`; deploy command: `npx wrangler deploy`.
