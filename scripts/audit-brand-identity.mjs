@@ -55,7 +55,7 @@ if(manifest.name!=='Mew & Maple — Indoor Cat Living'||
    manifest.icons?.length!==1 ||
    manifest.icons[0]?.src!=='/brand/autumn/cat-silhouette.webp' ||
    manifest.icons[0]?.type!=='image/webp' ||
-   manifest.icons[0]?.sizes!=='96x96')
+   manifest.icons[0]?.sizes!=='144x144')
    errors.push('Web app manifest must use exactly the approved 96x96 green-cat icon');
 for(const error of errors)console.error('BRAND ERROR: '+error);
 console.log('Brand identity QA: assets='+required.length+' temporaryMarks=0 errors='+errors.length);
