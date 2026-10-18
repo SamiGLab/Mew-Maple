@@ -88,7 +88,7 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
     `${label} missing or broken approved horizontal footer logo`);
   assert(branding.headerWidth>=220 && branding.footerWidth>=220,
     `${label} full brand lockup may be unreadably small: ${JSON.stringify(branding)}`);
-  assert(branding.faviconCount===1&&branding.favicon==='/brand/autumn/cat-silhouette.webp',
+  assert(branding.faviconCount===1&&branding.favicon==='/brand/autumn/favicon-64.png',
     `${label} incorrect or duplicate browser favicon`);
   assert(branding.manifest==='/site.webmanifest'&&!branding.obsoleteText,
     `${label} manifest missing or legacy split-brand header remains`);
