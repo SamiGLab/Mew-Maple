@@ -20,8 +20,12 @@ const original=JSON.parse(readFileSync('docs/image-qa-status.json','utf8'));
 try{
   cpSync('public/images',imageDir,{recursive:true});
   cpSync('docs/image-qa-status.json',manifestPath,{recursive:true});
-  exec('Preview build permits pending image reviews',{ready:false,success:true});
-  exec('Production build blocks unapproved images',{ready:true,success:false});
+  exec('Preview build permits a complete approved image manifest',{ready:false,success:true});
+  const intentionallyPending = structuredClone(original);
+  intentionallyPending.images[0].status='manual-review';
+  writeFileSync(manifestPath,JSON.stringify(intentionallyPending));
+  exec('Production build blocks deliberately unapproved image fixture',{ready:true,success:false});
+  writeFileSync(manifestPath,JSON.stringify(original));
   const allApproved=structuredClone(original);
   allApproved.images.forEach(x=>x.status='approved');
   writeFileSync(manifestPath,JSON.stringify(allApproved));
