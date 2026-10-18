@@ -34,6 +34,12 @@ for (const file of pages) {
   if (/<meta\b[^>]*\bproperty=["']og:url["']/i.test(html)) {
     errors.push('Unexpected Open Graph public URL: ' + file);
   }
+  if (/<meta\b[^>]*\b(?:name|property)=["'](?:twitter:image|og:image)["']/i.test(html)) {
+    errors.push('Unexpected public social image metadata in draft mode: ' + file);
+  }
+  if (/<link\b[^>]*\btype=["']application\/rss\+xml["']/i.test(html)) {
+    errors.push('Draft mode must not advertise a public RSS feed: ' + file);
+  }
 }
 const sitemap = join(root, 'sitemap.xml');
 if (!existsSync(sitemap)) errors.push('Missing sitemap XML.');

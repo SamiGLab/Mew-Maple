@@ -20,7 +20,7 @@ const schema = siteReady && post.data.status === 'published' ? {
   ...(post.data.updatedAt ? { dateModified: post.data.updatedAt.toISOString() } : {}),
 }:null;
 ---
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} type="article">
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero} imageAlt={post.data.heroAlt} type="article">
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <article class="container article-container">
     <p class="eyebrow"><a href="/">All guides</a> / {post.data.category}</p>
