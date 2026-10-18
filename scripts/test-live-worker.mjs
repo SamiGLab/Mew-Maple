@@ -15,7 +15,7 @@ function fixture(opts={}){
       '/brand/autumn/cat-emblem.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
       '/brand/autumn/cat-silhouette.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
       '/brand/autumn/leaves-pattern.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
-      '/site.webmanifest':{status:200,body:JSON.stringify({name:'Mew & Maple — Indoor Cat Living',icons: opts.badManifest ? [{src:'/brand/favicon.svg',sizes:'any',type:'image/svg+xml'}] : [{src:'/brand/autumn/cat-silhouette.webp',sizes:'96x96',type:'image/webp'}]})},
+      '/site.webmanifest':{status:200,body:JSON.stringify({name:'Mew & Maple — Indoor Cat Living',icons: opts.badManifest ? [{src:'/brand/favicon.svg',sizes:'any',type:'image/svg+xml'}] : [{src:'/brand/autumn/cat-silhouette.webp',sizes:'144x144',type:'image/webp'}]})},
       '/guides/indoor-cat-enrichment-ideas/':{status:opts.articleLeak?200:404,body:'Page not found'},
       '/this-route-must-return-404-qa/':{status:404,body:'Page not found'}
     }[path];
