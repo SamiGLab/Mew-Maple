@@ -19,6 +19,8 @@ jobs:
       - run: npm run build
       - name: Check built HTML links, anchors and search leakage
         run: node scripts/check-static-navigation.mjs
+      - name: Check preview output does not expose draft content or indexing metadata
+        run: npm run audit:preview
       - name: Verify no draft guide HTML is exported
         run: |
           if [ -d dist/guides ] && find dist/guides -type f -name '*.html' | grep -q .; then
