@@ -38,6 +38,7 @@ Content imported from the eight previously authored article HTML files and 56 We
 - `docs/MONETIZATION_STRATEGY_TR.md`: provisional monetization order and official sources.
 - `docs/LAUNCH_GATES_TR.md`: required GO/NO-GO checks.
 - `docs/CONTENT_MANIFEST.json`: the eight article slugs and counts.
+- `docs/CLOUDFLARE_DOMAIN_KURULUM_PLANI_TR.md`: tentative .com purchase checklist, DNS ownership, safe Cloudflare Access and release sequence (no domain assumed purchased).
 
 ## Release-gate QA 17 Oct 2026
 - `npm run test:gates` runs isolated positive/negative release checks without touching actual article content.
