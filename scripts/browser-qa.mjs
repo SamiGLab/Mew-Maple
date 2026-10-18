@@ -124,4 +124,7 @@ try{
   if(browser)await browser.close();
 }
 console.log(JSON.stringify({pagesChecked:findings.length,failed:failures.length,findings},null,2));
-if(failures.length)process.exitCode=1;
+clearTimeout(watchdog);
+// CI tests are complete. Astro dev may leave a descendant process with open stdio pipes;
+// force termination of this isolated test process after collecting the full report.
+process.exit(failures.length?1:0);
