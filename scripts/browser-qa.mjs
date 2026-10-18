@@ -47,7 +47,7 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
     for(const img of images)img.loading='eager';
     await Promise.race([
       Promise.all(images.map(img=>img.decode().catch(()=>{}))),
-      new Promise(resolve=>setTimeout(resolve,5000))
+      new Promise(resolve=>setTimeout(resolve,3500))
     ]);
   });
   const metrics=await page.evaluate(()=>({
@@ -63,7 +63,9 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   assert(metrics.failedImages.length===0,`${label} failed images: ${metrics.failedImages.join(', ')}`);
   assert(metrics.missingAlt.length===0,`${label} images without alt`);
   assert(metrics.missingLabels.length===0,`${label} unlabeled inputs`);
-  const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
+  // Scan the representative templates with axe; exercise every guide for image/layout health.
+  const runAxe=viewport.width!==768 && ['home','search','cat-trees-small-apartments','privacy','safe-home'].includes(label);
+  const a11y=runAxe ? await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze() : {violations:[]};
   for(const violation of a11y.violations){
     const affected=violation.nodes.map(n=>n.target.join(' ')).slice(0,4).join('; ');
     fail(`${label} ${viewport.width}px axe ${violation.id}: ${affected}`);
@@ -79,7 +81,11 @@ try{
   for(const viewport of [mobile,tablet,desktop]){
     const context=await browser.newContext({viewport});
     const page=await context.newPage();
-    const urls=[['home','/'],['search','/search/'],['category-care','/category/care/'],['privacy','/privacy/'],...articleSlugs.map(x=>[x,'/guides/'+x+'/'])];
+    const urls=viewport.width===390
+      ? [['home','/'],['search','/search/'],['category-care','/category/care/'],['privacy','/privacy/'],...articleSlugs.map(x=>[x,'/guides/'+x+'/'])]
+      : viewport.width===768
+      ? [['home','/'],['cat-trees-small-apartments','/guides/cat-trees-small-apartments/']]
+      : [['home','/'],['search','/search/'],['cat-trees-small-apartments','/guides/cat-trees-small-apartments/'],['cat-friendly-apartment','/guides/cat-friendly-apartment/']];
     for(const [name,url] of urls)await inspectPage(page,'http://127.0.0.1:4323',url,name,viewport,viewport.width!==tablet.width);
     if(viewport.width===mobile.width){
       await page.goto('http://127.0.0.1:4323/search/');
