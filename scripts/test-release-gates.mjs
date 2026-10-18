@@ -36,8 +36,9 @@ try {
   runCase('Preview mode allows static safe build', { PUBLIC_SITE_READY:'false' }, true, 'PREVIEW-SAFE BUILD');
   runCase('Publish gate blocks all-review content', prodEnv, false, 'No guide has status: published');
   adjustAll('published');
+  writeFileSync(join(fixture,'src/pages/about.astro'),'Before launch: add publisher identity.');
   runCase('Publish gate blocks incomplete legal pages', prodEnv, false, 'legal draft material');
-  for(const page of ['about.astro','privacy.astro','editorial-policy.astro','affiliate-disclosure.astro']) writeFileSync(join(fixture,'src/pages',page),'Approved publication text for automated fixture.');
+  for(const page of ['about.astro','privacy.astro','editorial-policy.astro','affiliate-disclosure.astro']) cpSync(join(root,'src/pages',page),join(fixture,'src/pages',page));
   runCase('Publish gate accepts approved fixture', prodEnv, true, 'Release gate passed');
   const legalFixture=join(fixture,'src/pages/editorial-policy.astro');
   writeFileSync(legalFixture,'Pre-launch draft: editor accountability is not yet confirmed.');

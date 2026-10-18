@@ -17,6 +17,22 @@ for(const path of required){
   if(/<\s*(script|foreignObject|iframe|image)\b|\bon[a-z]+\s*=|(?:href|src)\s*=\s*["']\s*(?:http|data:|javascript:)|@import\b|url\s*\(/i.test(source))
     errors.push('Unsafe linked or executable SVG content: '+path);
 }
+const notebookSvg='public/notebook/small-room-plan.svg';
+if(!existsSync(notebookSvg))errors.push('Missing Notebook room plan SVG: '+notebookSvg);
+else {
+  const svg=readFileSync(notebookSvg,'utf8');
+  if(!/^\s*<svg\b[\s\S]*<\/svg>\s*$/.test(svg) ||
+     /<\s*(?:script|foreignObject|iframe|image)\b|\bon[a-z]+\s*=|(?:href|src)\s*=\s*["']\s*(?:http|data:|javascript:)|@import\b/i.test(svg))
+    errors.push('Unsafe or malformed Notebook SVG: '+notebookSvg);
+}
+for(const pdfPath of ['public/downloads/7-day-indoor-cat-planner.pdf','public/downloads/small-home-cat-checklist.pdf']){
+  if(!existsSync(pdfPath))errors.push('Missing Notebook printable PDF: '+pdfPath);
+  else {
+    const pdf=readFileSync(pdfPath);
+    if(pdf.toString('ascii',0,5)!=='%PDF-' || pdf.length<1000 || pdf.length>500000)
+      errors.push('Invalid or out-of-budget Notebook PDF: '+pdfPath);
+  }
+}
 const rasterAssets=[
   ['lockup',360,120],['cat-emblem',256,256],['cat-silhouette',144,144],
   ['maple-leaf',192,192],['botanical-branch',192,192],

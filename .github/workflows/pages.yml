@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SITE_URL: https://mewandmaple.com
-      PUBLIC_SITE_READY: 'false'
+      PUBLIC_SITE_READY: 'true'
+      PUBLISH_APPROVED: 'YES'
       WORKERS_CI_COMMIT_SHA: ${{ github.sha }}
     steps:
       - uses: actions/checkout@v4

@@ -96,3 +96,18 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 7
+      - name: Validate approved staged production build
+        env:
+          SITE_URL: https://mewandmaple.com
+          PUBLIC_SITE_READY: 'true'
+          PUBLISH_APPROVED: 'YES'
+          WORKERS_CI_COMMIT_SHA: ${{ github.sha }}
+        run: |
+          npm run build
+          npm run audit:workers
+          node scripts/check-static-navigation.mjs
+          test -f dist/guides/indoor-cat-enrichment-ideas/index.html
+          if find dist/guides -mindepth 2 -maxdepth 2 -name 'index.html' | grep -v 'indoor-cat-enrichment-ideas' | grep -q .; then
+            echo "Unapproved review guide was exported in staged production build"
+            exit 1
+          fi
