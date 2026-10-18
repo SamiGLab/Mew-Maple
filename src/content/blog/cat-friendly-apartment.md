@@ -86,14 +86,14 @@ Older or mobility-limited cats may prefer low stepped furniture, ramps designed 
 
 ## A low-budget apartment checklist
 
-- [ ] At least one secure hiding spot away from disturbance
-- [ ] A comfortable resting area and safe viewing option
-- [ ] Scratching surface matched to your cat's preferred orientation
-- [ ] Clear path to food, water, and litter
-- [ ] Closed or properly protected windows and balcony access
-- [ ] No reachable toxic plants, loose cords, or unstable stacks
-- [ ] Space for short supervised play sessions
-- [ ] Cleanable surfaces and a practical storage spot for unsafe toys
+- At least one secure hiding spot away from disturbance
+- A comfortable resting area and safe viewing option
+- Scratching surface matched to your cat's preferred orientation
+- Clear path to food, water, and litter
+- Closed or properly protected windows and balcony access
+- No reachable toxic plants, loose cords, or unstable stacks
+- Space for short supervised play sessions
+- Cleanable surfaces and a practical storage spot for unsafe toys
 
 Work through one room at a time. Your goal is not a picture-perfect showroom; it is a home that works for the cat and the humans living there.
 
