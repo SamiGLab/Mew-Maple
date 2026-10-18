@@ -1,0 +1,23 @@
+name: Live Workers safety check
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Public Workers HTTPS origin to verify (no secrets)
+        required: false
+        default: https://mew-maple.samiayten-hu.workers.dev/
+permissions:
+  contents: read
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check actual deployed preview HTTP and indexing behavior
+        env:
+          LIVE_WORKER_URL: ${{ inputs.base_url }}
+        run: node scripts/check-live-worker.mjs

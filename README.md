@@ -27,6 +27,13 @@ GitHub Actions has now successfully completed **`npm ci`, source checks and `npm
 - Before publishing: verify source material, fix all placeholder editorial/legal information, update each approved article to `status: published` and add genuine `publishedAt` dates. Set Cloudflare build environment `SITE_URL=https://your-real-domain`, `PUBLIC_SITE_READY=true`, and `PUBLISH_APPROVED=YES` only after sign-off. Astro config reads SITE_URL from the build environment; a local `.env` file alone does not configure Astro's `site` option.
 - Ad/affiliate links, purchase buttons, analytics tracking, email subscription and cookies are intentionally NOT wired up yet.
 
+## Live Cloudflare verification — NOT YET CONFIRMED
+
+- Code/CI `wrangler deploy --dry-run` **does not** prove the Worker was deployed or reachable.
+- Run `npm run audit:live:worker` to check actual HTTPS, `noindex`, Worker headers, empty sitemap/search index, draft-article 404 and missing-page 404. For independent GitHub-hosted execution, use **Actions > Live Workers safety check > Run workflow** and supply the actual `workers.dev` URL.
+- Both validations must pass and the Cloudflare Workers Builds deployment/log must be checked before declaring the temporary Worker URL ready.
+- This audit tests only the **not-yet-publication-approved** preview. It does not flip `PUBLIC_SITE_READY`, publish articles, change DNS or configure privacy.
+
 ## Cloudflare Workers settings (current)
 - Worker: `mew-maple`; managed through Workers Builds from GitHub `main`.
 - Build command: `npm run build`; deploy command: `npx wrangler deploy`.

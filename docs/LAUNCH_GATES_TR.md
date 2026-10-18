@@ -10,9 +10,10 @@
 - [ ] Gerçek domain ve prod yapılandırmasıyla yayın öncesi son build ve duman testi tamamlandı.
 - [x] GitHub Actions gerçek Chromium: 390/768/1440 px toplam 20 sayfa/ekran testi, temsilî axe/WCAG A-AA, görseller, arama ve taslak sızıntı testleri başarılı (#39113150022).
 - [ ] Gerçek yayın ortamında mobil Lighthouse, manuel klavye/ekran okuyucu testi, canlı linkler ve sosyal önizlemeler kontrol edildi.
+- [ ] Cloudflare Workers Builds son `main` sürümünü gerçekten deploy etti; gerçek HTTP yanıtları doğrulandı. Kontrol: Actions > **Live Workers safety check** > Run workflow. `npm run audit:live:worker` aynı kontrolleri yerel olarak çalıştırır.
 - [ ] Cloudflare üretim alan adı, HTTPS, 301 yönlendirmesi, sitemap/robots/canonical doğrulandı.
 - [ ] GSC property ve sitemap; GA4 gerçek trafik ve privacy onayı test edildi.
 
 ## İşletim
-Plan kodu GitHub'da, hedef statik hosting Cloudflare Pages. `PUBLIC_SITE_READY=false` iken sayfalarda `noindex,nofollow` uygulanır, sitemap boş kalır ve taslak makaleler üretim derlemesine alınmaz. `robots.txt` taramayı engellemez; aksi hâlde arama motoru `noindex` yönergesini göremeyebilir. `robots.txt` ve meta robots tarama/indeksleme kontrolleridir, erişim koruması değildir; özel önizleme ortamında ayrıca erişim kısıtı gerekir. Yayın için `PUBLIC_SITE_READY=true`, `PUBLISH_APPROVED=YES`, doğrulanmış `SITE_URL` ve editoryal/hukuki kontroller birlikte sağlanmalıdır. Gerçek domain doğrulanmadan canonical ve yayına alma kararları verilmez.
+Plan kodu GitHub'da, mevcut statik hosting hedefi Cloudflare Workers Builds. `PUBLIC_SITE_READY=false` iken sayfalarda `noindex,nofollow` uygulanır, sitemap boş kalır ve taslak makaleler üretim derlemesine alınmaz. `robots.txt` taramayı engellemez; aksi hâlde arama motoru `noindex` yönergesini göremeyebilir. `robots.txt` ve meta robots tarama/indeksleme kontrolleridir, erişim koruması değildir; özel önizleme ortamında ayrıca erişim kısıtı gerekir. Yayın için `PUBLIC_SITE_READY=true`, `PUBLISH_APPROVED=YES`, doğrulanmış `SITE_URL` ve editoryal/hukuki kontroller birlikte sağlanmalıdır. Gerçek domain doğrulanmadan canonical ve yayına alma kararları verilmez.
 Değişiklikler GitHub pull request üzerinden gözden geçirilmeli; yayın sonrası geri dönüş commit revert ile yapılmalı.

@@ -12,6 +12,16 @@ Bu proje **Cloudflare Workers Builds**, Cloudflare Pages değil. Kullanıcının
 - Taslak derlemede `dist/_headers` dosyası `X-Robots-Tag: noindex, nofollow, noarchive` üretir. Meta `noindex,nofollow`, boş sitemap ve search-index kontrolü ayrıca devam eder.
 - `noindex` **erişim kontrolü değildir**. Workers URL'sine ulaşan kişi yayımlanmış (taslak-safe) sayfaları görebilir; public GitHub deposundaki Markdown dosyaları da zaten herkese görünür.
 
+> **Bağımsız kontrol notu (18 Ekim 2026):** `mew-maple.samiayten-hu.workers.dev` alan adı bu çalışma ortamındaki HTTP istemcisiyle DNS üzerinden çözümlenemedi. Bu bulgu canlı deploy'un başarısını veya hatasını tek başına kanıtlamaz; gerçek Cloudflare Builds logu ve hesabın doğru workers.dev alt alan adı mutlaka doğrulanmalıdır. Herkese açık bir URL üzerinden özel içerik kontrolü yapılmaz.
+
+## Canlı HTTP kontrolü (Cloudflare hesabı şifresi gerektirmez)
+
+- GitHub > Actions > **Live Workers safety check** > Run workflow yoluyla `https://mew-maple.samiayten-hu.workers.dev/` adresini test edin. URL hesapta farklıysa formdaki `base_url` alanını **gerçek Workers adresiyle** değiştirin.
+- Alternatif: `npm run audit:live:worker` (gerekirse `LIVE_WORKER_URL=https://gercek-host/` ortam değişkenini ayarlayın).
+- Script sırasıyla `/`, `/robots.txt`, `/sitemap.xml`, `/search-index.json`, taslak makale ve geçersiz rota HTTP yanıtlarını denetler. HTTPS, `noindex` meta ve `X-Robots-Tag`, boş sitemap/arama, **gerçek 404** doğrulanmadan deploy doğrulandı denmez.
+- DNS veya HTTP erişimi yoksa "başarısız"/"erişim sağlanamadı" raporlanır; bu durumda Cloudflare > Workers & Pages > `mew-maple` > Deployments (ve Settings > Domains & Routes) ekranlarında son sürüm, hatalar ve etkin `workers.dev` route kontrol edilir.
+- Bu çalışma yalnızca **hazır taslak-safe Worker** için geçerlidir; gerçek siteye makaleleri yayınlama onayı değildir.
+
 ## Cloudflare hesap erişimi olmadan doğrulanamayacaklar
 
 - [ ] Workers Builds'nin son `main` commit'ini otomatik dağıttığı ve build/deploy logunun başarıyla tamamlandığı.
