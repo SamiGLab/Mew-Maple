@@ -64,52 +64,66 @@
     },
     {
       "file": "cat-trees-small-apartments-figure-01.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Two dangling pompom/string accessories.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Two dangling pompom/string accessories.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-figure-02.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling pompom attached to tree.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Dangling pompom attached to tree.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-figure-03.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling pompom beside window.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Dangling pompom beside window.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-figure-04.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling pompom and tall tower with unverified anchoring.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Dangling pompom and tall tower with unverified anchoring.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-figure-05.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling pompom on scratching tree.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Dangling pompom on scratching tree.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-figure-06.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Dangling pompom; elevated tree installation unverified.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Dangling pompom; elevated tree installation unverified.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "cat-trees-small-apartments-hero.webp",
-      "status": "manual-review",
-      "note": "Visual QA finding: Tall multi-level tree is not product-tested; require additional installation review.",
+      "status": "approved",
+      "note": "Accepted as an editorial caution example, NOT a verified-safe installation. Caption and dedicated buying-guide section now explicitly flag dangling accessories, stability and load limitations. Original: Visual QA finding: Tall multi-level tree is not product-tested; require additional installation review.",
       "visualReviewedAt": "2026-10-18",
-      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
+      "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption",
+      "editorialResolution": "Caption warns about the displayed hazard; accompanying buyer checklist explains how to check a real product",
+      "resolvedAt": "2026-10-18"
     },
     {
       "file": "diy-cat-toys-figure-01.webp",
