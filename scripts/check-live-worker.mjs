@@ -6,6 +6,7 @@ export const checks = [
   ['robots','/robots.txt'],
   ['sitemap','/sitemap.xml'],
   ['search','/search-index.json'],
+  ['build','/build-info.json'],
   ['draft','/guides/indoor-cat-enrichment-ideas/'],
   ['notFound','/this-route-must-return-404-qa/']
 ];
@@ -15,7 +16,7 @@ function robotsMeta(html){
     .some(m => /\bname\s*=\s*["']robots["']/i.test(m[0]) &&
       /\bcontent\s*=\s*["'][^"']*\bnoindex\b/i.test(m[0]));
 }
-export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch){
+export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedSha=process.env.LIVE_WORKER_EXPECTED_SHA||''){
   const results=[]; const errors=[];
   let origin;
   try{
@@ -65,6 +66,21 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch){
       must(Array.isArray(j)&&j.length===0,'Draft search index is not empty');
     }catch{errors.push('Search index is not valid JSON');}
   }
+  let deployedCommit=null;
+  if(expectedSha && !/^[a-f0-9]{40}$/i.test(expectedSha))errors.push('Invalid expected Git commit SHA');
+  if(fetched.build){
+    const {response,body}=fetched.build;
+    must(response.status===200,'/build-info.json must return HTTP 200');
+    try{
+      const info=JSON.parse(body);
+      must(info.project==='mew-maple','Build fingerprint project mismatch');
+      must(info.release==='draft-safe','Build fingerprint is NOT draft-safe');
+      must(/^[a-f0-9]{40}$/i.test(info.commit||''),'Build fingerprint missing Git commit SHA');
+      if(/^[a-f0-9]{40}$/i.test(info.commit||''))deployedCommit=info.commit.toLowerCase();
+      if(expectedSha && deployedCommit)must(deployedCommit===expectedSha.toLowerCase(),
+        'Stale Worker deployment: expected '+expectedSha+' but served '+deployedCommit);
+    }catch(e){errors.push('Invalid JSON at /build-info.json: '+String(e.message||e));}
+  }
   for(const kind of ['draft','notFound']){
     if(fetched[kind]){
       const {response,body}=fetched[kind];
@@ -72,7 +88,7 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch){
       if(kind==='draft')must(!body.includes('15 Indoor Cat Enrichment Ideas That'),'Draft article text exposed on public host');
     }
   }
-  return {origin,results,errors};
+  return {origin,deployedCommit,results,errors};
 }
 if(process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href){
   const url=process.env.LIVE_WORKER_URL||defaultLiveUrl;
