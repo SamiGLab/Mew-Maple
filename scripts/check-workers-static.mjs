@@ -1,4 +1,5 @@
 import { readFileSync, existsSync } from 'node:fs';
+import { inlineScriptHashes } from './inline-script-hashes.mjs';
 
 const fail = [];
 const config = JSON.parse(readFileSync('wrangler.jsonc', 'utf8'));
@@ -20,7 +21,7 @@ if (existsSync('dist/_headers')) {
   for (const [name,pattern] of [
     ['frame protection',/X-Frame-Options:\s*DENY/i],
     ['MIME sniffing protection',/X-Content-Type-Options:\s*nosniff/i],
-    ['strict script CSP',/Content-Security-Policy:[^\n]*script-src 'self';[^\n]*object-src 'none';[^\n]*frame-ancestors 'none'/i],
+    ['strict script CSP',/Content-Security-Policy:[^\n]*script-src 'self'[^;\n]*;[^\n]*object-src 'none';[^\n]*frame-ancestors 'none'/i],
   ]) if (!pattern.test(siteHeaders)) fail.push('Missing Workers '+name);
   if (!buildHeaders || !/Cache-Control:\s*no-store,\s*max-age=0/i.test(buildHeaders))
     fail.push('Build identity endpoint requires no-store cache policy');
@@ -42,26 +43,18 @@ if (existsSync('dist/build-info.json')) {
     }
   }
 }
-// A self-only CSP rejects executable inline JavaScript. Astro's <script> should bundle
-// to a local src; fail closed if a new template accidentally introduces inline JS.
-import { readdirSync, statSync } from 'node:fs';
-import { join } from 'node:path';
-function walkHtml(dir) {
-  for (const entry of readdirSync(dir)) {
-    const path = join(dir,entry);
-    if(statSync(path).isDirectory())walkHtml(path);
-    else if(path.endsWith('.html')){
-      const html=readFileSync(path,'utf8');
-      for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
-        const attrs=match[1],body=match[2];
-        const inert=/\btype=["'](?:application\/ld\+json|application\/json)["']/i.test(attrs);
-        if(!inert && !/\bsrc\s*=/i.test(attrs) && body.trim())
-          fail.push('Executable inline script incompatible with strict CSP: '+path);
-      }
-    }
+// Recalculate the exact SHA-256 for executable scripts emitted into each HTML page.
+// Hashes must be present in CSP; broad unsafe-inline is never permitted for scripts.
+if(existsSync('dist/_headers')){
+  const headers=readFileSync('dist/_headers','utf8');
+  const siteHeaders=headers.split(/\n\/build-info\.json\s*\n/)[0];
+  const scriptSources=siteHeaders.match(/Content-Security-Policy:[^\n]*\bscript-src\s+([^;]+)/i)?.[1]||'';
+  if(/'unsafe-inline'/.test(scriptSources)) fail.push('Unsafe-inline execution allowed by CSP');
+  for(const item of inlineScriptHashes()){
+    if(!scriptSources.includes("'"+item.hash+"'"))
+      fail.push('CSP missing expected inline script SHA-256: '+item.path);
   }
 }
-if(existsSync('dist'))walkHtml('dist');
 for (const item of fail) console.error(item);
 console.log('Workers static asset QA: errors=' + fail.length);
 if (fail.length) process.exitCode = 1;
