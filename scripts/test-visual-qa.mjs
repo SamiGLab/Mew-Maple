@@ -42,5 +42,16 @@ try{
   writeFileSync(join(imageDir,files[0]),Buffer.from('fake image bytes'));
   exec('Invalid WebP signature blocks build',{ready:false,success:false});
   writeFileSync(join(imageDir,files[0]),origFirst);
+  const svgFile = original.images.map(x=>x.file).find(name=>name.endsWith('.svg'));
+  if (svgFile) {
+    const svgPath = join(imageDir,svgFile);
+    const svgOriginal = readFileSync(svgPath);
+    writeFileSync(svgPath,'<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>');
+    exec('Unsafe SVG script blocks build',{ready:false,success:false});
+    writeFileSync(svgPath,'<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)"></svg>');
+    exec('Unsafe SVG event handler blocks build',{ready:false,success:false});
+    writeFileSync(svgPath,svgOriginal);
+    exec('Safe SVG passes preview validation',{ready:false,success:true});
+  }
 } finally {rmSync(tmp,{recursive:true,force:true});}
 if(failures)process.exitCode=1;
