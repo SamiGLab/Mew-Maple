@@ -1,0 +1,17 @@
+{
+  "name": "Mew & Maple — Indoor Cat Living",
+  "short_name": "Mew & Maple",
+  "description": "Better days for indoor cats.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F3",
+  "theme_color": "#263C34",
+  "icons": [
+    {
+      "src": "/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
