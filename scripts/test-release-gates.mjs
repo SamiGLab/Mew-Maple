@@ -37,6 +37,14 @@ try {
   runCase('Publish gate blocks incomplete legal pages', prodEnv, false, 'legal draft material');
   for(const page of ['about.astro','privacy.astro','editorial-policy.astro','affiliate-disclosure.astro']) writeFileSync(join(fixture,'src/pages',page),'Approved publication text for automated fixture.');
   runCase('Publish gate accepts approved fixture', prodEnv, true, 'Release gate passed');
+  const legalFixture=join(fixture,'src/pages/editorial-policy.astro');
+  writeFileSync(legalFixture,'Pre-launch draft: editor accountability is not yet confirmed.');
+  runCase('Editorial prelaunch notice blocks publication',prodEnv,false,'legal draft material');
+  writeFileSync(legalFixture,'Approved publication text for automated fixture.');
+  const privacyFixture=join(fixture,'src/pages/privacy.astro');
+  writeFileSync(privacyFixture,'This is not a final legal privacy policy.');
+  runCase('Incomplete privacy notice blocks publication',prodEnv,false,'legal draft material');
+  writeFileSync(privacyFixture,'Approved publication text for automated fixture.');
   const dateFixture=join(fixture,'src/content/blog/indoor-cat-enrichment-ideas.md');
   const approvedArticle=readFileSync(dateFixture,'utf8');
   function checkDateCase(name, replacement, expectedText) {
