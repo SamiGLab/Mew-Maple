@@ -82,6 +82,15 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
     `${label} incorrect brand lockup text`);
   assert(branding.favicon==='/brand/favicon.svg',
     `${label} wrong brand favicon`);
+  if (label==='safe-home') {
+    const teaser=await page.locator('.topic-card').count();
+    assert(teaser===4,'Draft-safe homepage must show four brand-kit topic cards, found '+teaser);
+    const links=await page.locator('.topic-card').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')));
+    assert(links.every(href=>/^\/category\/(play|homes|gear|care)\/$/.test(href||'')),
+      'Draft-safe topic tiles must link only to published-safe category pages');
+    assert(await page.locator('.article-card').count()===0,
+      'Draft-safe homepage must not show article links while 8 guides remain under review');
+  }
   // Scan the representative templates with axe; exercise every guide for image/layout health.
   const runAxe=viewport.width===390 && ['home','cat-trees-small-apartments','safe-home'].includes(label);
   const a11y=runAxe ? await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze() : {violations:[]};
