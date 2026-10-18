@@ -7,6 +7,9 @@ export const checks = [
   ['sitemap','/sitemap.xml'],
   ['search','/search-index.json'],
   ['build','/build-info.json'],
+  ['brandMark','/brand/autumn/cat-emblem.webp'],
+  ['brandFavicon','/brand/autumn/cat-silhouette.webp'],
+  ['brandPattern','/brand/autumn/leaves-pattern.webp'],
   ['draft','/guides/indoor-cat-enrichment-ideas/'],
   ['notFound','/this-route-must-return-404-qa/']
 ];
@@ -80,6 +83,14 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
       if(expectedSha && deployedCommit)must(deployedCommit===expectedSha.toLowerCase(),
         'Stale Worker deployment: expected '+expectedSha+' but served '+deployedCommit);
     }catch(e){errors.push('Invalid JSON at /build-info.json: '+String(e.message||e));}
+  }
+  for(const kind of ['brandMark','brandFavicon','brandPattern']){
+    if(fetched[kind]){
+      const {response}=fetched[kind];
+      must(response.status===200,kind+': brand image must return HTTP 200');
+      must(/image\/webp/i.test(response.headers.get('content-type')||''),
+        kind+': expected WebP image content type');
+    }
   }
   for(const kind of ['draft','notFound']){
     if(fetched[kind]){

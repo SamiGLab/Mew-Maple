@@ -6,10 +6,22 @@ import { publishable, siteReady, localReviewMode } from '../lib/site';
 const posts = (await getCollection('blog')).filter(publishable);
 ---
 <BaseLayout preloadHero>
-  <section class="hero"><div class="container hero-grid"><div><p class="eyebrow">INDOOR CAT LIVING</p><h1>Better days for <em>indoor cats.</em></h1><p class="lead">Thoughtful play ideas, small-space solutions, and practical guides for living well with indoor cats.</p><a class="button" href="#guides">Explore the guides <span aria-hidden="true">↗</span></a></div><div class="hero-image"><img src="/images/indoor-cat-enrichment-ideas-hero.webp" alt="Illustration of an indoor tabby cat exploring a food puzzle" width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /></div></div></section>
-  <section class="container" id="guides"><div class="section-head"><div><p class="eyebrow">THE READING ROOM</p><h2>Guides for everyday cat life</h2></div><p>Practical ideas designed to fit real homes and real routines.</p></div>
+  <section class="hero autumn-hero">
+    <img class="autumn-leaf" src="/brand/autumn/maple-leaf.webp" alt="" width="128" height="128" decoding="async" loading="lazy" aria-hidden="true" />
+    <div class="container hero-grid"><div><p class="eyebrow">INDOOR CAT LIVING</p><h1>Better days for <em>indoor cats.</em></h1><p class="lead">Thoughtful play ideas, small-space solutions, and practical guides for living well with indoor cats.</p><a class="button" href="#guides">Explore the guides <span aria-hidden="true">↗</span></a></div><div class="hero-image"><img src="/images/indoor-cat-enrichment-ideas-hero.webp" alt="Illustration of an indoor tabby cat exploring a food puzzle" width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /></div></div></section>
+  <section class="container autumn-reading" id="guides"><div class="section-head"><div><p class="eyebrow">THE READING ROOM</p><h2>Guides for everyday cat life</h2></div><p>Practical ideas designed to fit real homes and real routines.</p></div>
     <div class="article-grid">{posts.map(post => <ArticleCard post={post} />)}</div>
-    {posts.length === 0 && <p class="note">Our guide library is being prepared. Articles will appear after editorial review.</p>}
+    {posts.length === 0 &&
+      <div class="prelaunch-reading">
+        <p class="note">Our guide library is being prepared. Articles will appear after editorial review.</p>
+        <div class="prelaunch-categories" aria-label="Our editorial categories">
+          <a href="/category/play/">Play &amp; enrichment</a>
+          <a href="/category/homes/">Cat-friendly homes</a>
+          <a href="/category/gear/">Product guides</a>
+          <a href="/category/care/">Everyday care</a>
+        </div>
+      </div>
+    }
     {localReviewMode && <p class="note">Local review only: these draft guides are not approved for publication. Illustrations are AI-generated and do not represent firsthand product testing.</p>}
     {siteReady && <p class="note">Illustrations are editorial AI imagery, not evidence of firsthand product testing.</p>}
   </section>

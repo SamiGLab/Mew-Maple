@@ -20,6 +20,9 @@ function fakeWorker({staleChecks=0,mode='draft-safe',draftLeak=false}={}){
         '/robots.txt':{status:200,body:'User-agent: *\nAllow: /'},
         '/sitemap.xml':{status:200,body:'<urlset></urlset>'},
         '/search-index.json':{status:200,body:'[]'},
+        '/brand/autumn/cat-emblem.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
+        '/brand/autumn/cat-silhouette.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
+        '/brand/autumn/leaves-pattern.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
         '/guides/indoor-cat-enrichment-ideas/':{status:draftLeak?200:404,body:'Not found'},
         '/this-route-must-return-404-qa/':{status:404,body:'Not found'}
       };

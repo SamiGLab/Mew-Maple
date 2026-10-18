@@ -11,6 +11,9 @@ function fixture(opts={}){
       '/sitemap.xml':{status:200,body:'<?xml version="1.0"?><urlset></urlset>'},
       '/search-index.json':{status:200,body:opts.searchLeak?'[{"title":"Draft"}]':'[]'},
       '/build-info.json':{status:200,body:JSON.stringify({project:'mew-maple',commit:opts.staleBuild?'0123456789abcdef0123456789abcdef01234567':deployedSha,release:opts.publishedBuild?'approved-publication':'draft-safe'})},
+      '/brand/autumn/cat-emblem.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
+      '/brand/autumn/cat-silhouette.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
+      '/brand/autumn/leaves-pattern.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
       '/guides/indoor-cat-enrichment-ideas/':{status:opts.articleLeak?200:404,body:'Page not found'},
       '/this-route-must-return-404-qa/':{status:404,body:'Page not found'}
     }[path];
