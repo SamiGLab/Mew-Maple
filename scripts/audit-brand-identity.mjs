@@ -44,7 +44,7 @@ const css=readFileSync('src/styles/global.css','utf8');
 for(const [pattern,reason] of [
   [/<img class="logo-full" src="\/brand\/autumn\/lockup\.webp"/,'Header must use the approved full horizontal logo image'],
   [/<img class="footer-lockup" src="\/brand\/autumn\/lockup\.webp"/,'Footer must use the same full horizontal logo'],
-  [/rel="icon" href="\/brand\/autumn\/cat-silhouette\.webp" type="image\/webp" sizes="96x96"/,'Brand favicon must use the green cat silhouette'],
+  [/rel="icon" href="\/brand\/autumn\/cat-silhouette\.webp" type="image\/webp" sizes="144x144"/,'Brand favicon must use the green cat silhouette'],
   [/rel="manifest" href="\/site\.webmanifest"/,'Missing brand web manifest']
 ]) if(!pattern.test(html))errors.push(reason);
 const faviconLinks=[...html.matchAll(/<link\s+rel="icon"[^>]*>/g)];
@@ -61,7 +61,7 @@ if(manifest.name!=='Mew & Maple — Indoor Cat Living'||
    manifest.icons[0]?.src!=='/brand/autumn/cat-silhouette.webp' ||
    manifest.icons[0]?.type!=='image/webp' ||
    manifest.icons[0]?.sizes!=='144x144')
-   errors.push('Web app manifest must use exactly the approved 96x96 green-cat icon');
+   errors.push('Web app manifest must use exactly the approved 144x144 green-cat icon');
 for(const error of errors)console.error('BRAND ERROR: '+error);
 console.log('Brand identity QA: assets='+required.length+' temporaryMarks=0 errors='+errors.length);
 if(errors.length)process.exitCode=1;
