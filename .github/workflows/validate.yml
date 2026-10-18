@@ -21,6 +21,26 @@ jobs:
         run: node scripts/check-static-navigation.mjs
       - name: Check preview output does not expose draft content or indexing metadata
         run: npm run audit:preview
+      - name: Render editorial SVG illustrations for visual QA
+        if: github.event_name == 'pull_request'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin
+          mkdir -p editorial-svg-previews
+          for image in public/images/*.svg; do
+            [ -f "$image" ] || continue
+            output="editorial-svg-previews/$(basename "$image" .svg).png"
+            rsvg-convert --width 960 --height 608 "$image" --output "$output"
+            test -s "$output"
+          done
+      - name: Save editorial SVG visual QA previews
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: mew-maple-editorial-svg-previews
+          path: editorial-svg-previews/*.png
+          if-no-files-found: error
+          retention-days: 7
       - name: Verify no draft guide HTML is exported
         run: |
           if [ -d dist/guides ] && find dist/guides -type f -name '*.html' | grep -q .; then
