@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import StarterPaths from '../components/StarterPaths.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
-import { publishable, siteReady, localReviewMode } from '../lib/site';
+import { publishable } from '../lib/site';
 const posts = (await getCollection('blog')).filter(publishable);
 ---
 <BaseLayout preloadHero>
@@ -16,8 +16,6 @@ const posts = (await getCollection('blog')).filter(publishable);
     {posts.length === 0 &&
       <div class="prelaunch-reading"><p>Begin with a small plan you can use today: an optional weekly activity sheet or a home walk-through.</p><a href="/notebook/">Explore the free Notebook →</a></div>
     }
-    {localReviewMode && <p class="note">Local review only: these draft guides are not approved for publication. Illustrations are AI-generated and do not represent firsthand product testing.</p>}
-    {siteReady && <p class="note">Illustrations are editorial AI imagery, not evidence of firsthand product testing.</p>}
   </section>
-  <section class="container reading-panel home-story"><p class="eyebrow">WHY MEW &amp; MAPLE</p><h2>Real homes. Individual cats.</h2><p>We favor useful changes that fit the space and routine you have. Our guides explain sources, trade-offs and the limits of editorial illustrations.</p><a href="/about/">Get to know our approach →</a></section>
+  <section class="container reading-panel home-story"><p class="eyebrow">WHY MEW &amp; MAPLE</p><h2>Real homes. Individual cats.</h2><p>We favor useful changes that fit the space and routine you have. Our guides explain sources, trade-offs and practical ways to adapt each idea.</p><a href="/about/">Get to know our approach →</a></section>
 </BaseLayout>
