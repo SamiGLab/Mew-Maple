@@ -20,7 +20,7 @@ You can improve those things without drilling holes in a rental wall or buying a
 
 ![Sunlit apartment with sofa, resting corners and cat furnishings](/images/cat-friendly-apartment-figure-01.webp)
 
-*Plan places for rest, observation, scratching and free movement. AI-generated editorial illustration.*
+*A cat-friendly room needs rest, scratching and open pathways. The pictured plants are unidentified: verify each species is non-toxic to cats and keep unsafe plants out of reach. AI-generated editorial illustration, not proof of plant safety.*
 
 The AAFP/ISFM feline environmental guidelines describe five broad pillars: safe places; multiple separated key resources; opportunities for play and predatory behavior; predictable positive interaction; and respect for cats' sensory environments [1].
 
@@ -30,7 +30,7 @@ For apartment planning, translate these ideas into a simple question: **Can my c
 
 ![Cat using a tall scratching post next to a sofa](/images/cat-friendly-apartment-figure-02.webp)
 
-*Position scratchers near the spaces your cat naturally uses. AI-generated editorial illustration.*
+*The scratching post is shown with a hanging pompom: inspect such attachments for loose string or detachable pieces and avoid leaving hazardous ones accessible. Choose stable scratching surfaces. AI-generated editorial illustration, not a safety-tested product.*
 
 Choose one secure window-adjacent resting place, ideally away from loud appliances. Keep windows closed or properly secured; an ordinary insect screen must not be treated as an assured fall barrier. The ASPCA warns about serious injuries from falls through open or inadequately protected windows [2].
 
@@ -68,7 +68,7 @@ For households with more than one cat, separate boxes are especially important; 
 
 ![Ginger cat resting at a bright apartment window](/images/cat-friendly-apartment-figure-05.webp)
 
-*Secure windows and balconies to prevent falls and escapes. AI-generated editorial illustration.*
+*The depicted window shelf is illustrative, not an approved mounting design. Secure windows and use only a perch installed to verified manufacturer specifications. AI-generated editorial illustration.*
 
 Use a routine that prevents accidental escapes when guests enter. A closed interior door or other physical separation is more dependable than hoping a curious cat will not follow you.
 
@@ -96,6 +96,8 @@ Older or mobility-limited cats may prefer low stepped furniture, ramps designed 
 - [ ] Cleanable surfaces and a practical storage spot for unsafe toys
 
 Work through one room at a time. Your goal is not a picture-perfect showroom; it is a home that works for the cat and the humans living there.
+
+> **Photo-safety note:** This guide's AI illustrations may contain unknown plant species or product attachments. They are not evidence that a specific item is safe for cats. Confirm plant toxicity, fit and installation independently.
 
 ## Audit the apartment from your cat's point of view
 
