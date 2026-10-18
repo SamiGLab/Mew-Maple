@@ -10,6 +10,7 @@ export const checks = [
   ['brandLockup','/brand/autumn/lockup.webp'],
   ['brandMark','/brand/autumn/cat-emblem.webp'],
   ['brandFavicon','/brand/autumn/cat-silhouette.webp'],
+  ['brandPng','/brand/autumn/favicon-64.png'],
   ['brandPattern','/brand/autumn/leaves-pattern.webp'],
   ['brandManifest','/site.webmanifest'],
   ['draft','/guides/indoor-cat-enrichment-ideas/'],
@@ -58,7 +59,7 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
       body.includes('/brand/autumn/lockup.webp'),
       'Current full horizontal brand logo missing from header or footer');
     const iconNodes=[...body.matchAll(/<link\b[^>]*\brel=["']icon["'][^>]*>/gi)];
-    must(iconNodes.length===1 && iconNodes[0][0].includes('/brand/autumn/cat-silhouette.webp'),
+    must(iconNodes.length===1 && iconNodes[0][0].includes('/brand/autumn/favicon-64.png'),
       'Homepage must advertise exactly one current green-cat favicon');
     must(!body.includes('href="/brand/favicon.svg"'),
       'Legacy SVG favicon still advertised by homepage');
@@ -106,14 +107,22 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
         kind+': expected WebP image content type');
     }
   }
+  if(fetched.brandPng){
+    const {response}=fetched.brandPng;
+    must(response.status===200,'brandPng: PNG browser favicon must return HTTP 200');
+    must(/image\/png/i.test(response.headers.get('content-type')||''),
+      'brandPng: expected PNG image content type');
+  }
   if(fetched.brandManifest){
     const {response,body}=fetched.brandManifest;
     must(response.status===200,'/site.webmanifest must return HTTP 200');
     try{
       const manifest=JSON.parse(body);
-      must(manifest.icons?.length===1 &&
-        manifest.icons[0]?.src==='/brand/autumn/cat-silhouette.webp' &&
-        manifest.icons[0]?.sizes==='144x144' && manifest.icons[0]?.type==='image/webp',
+      must(manifest.icons?.length===2 &&
+        manifest.icons[0]?.src==='/brand/autumn/favicon-64.png' &&
+        manifest.icons[0]?.sizes==='64x64' && manifest.icons[0]?.type==='image/png' &&
+        manifest.icons[1]?.src==='/brand/autumn/cat-silhouette.webp' &&
+        manifest.icons[1]?.sizes==='144x144' && manifest.icons[1]?.type==='image/webp',
         'Live brand manifest contains duplicate, incorrect or legacy icons');
     }catch{errors.push('Live brand manifest is not valid JSON');}
   }
