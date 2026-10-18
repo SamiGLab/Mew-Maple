@@ -57,7 +57,7 @@ Check the footprint, base width, anchoring instructions, platform measurements, 
 
 ## What if you have a small apartment?
 
-![Small enrichment corner with a scratcher, low activity shelf and a lidded storage box](/images/window-perch-vs-cat-tree-figure-04.svg)
+![Diagram of a stable scratching post, closed toy chest and cat resting in a clear space](/images/window-perch-vs-cat-tree-figure-04.svg)
 
 *A compact scratcher, closed storage and a quiet resting spot are separate functions. Vector diagram; inspect and secure real installations. [Open full-size diagram](/images/window-perch-vs-cat-tree-figure-04.svg)*
 
@@ -95,7 +95,7 @@ Instead of starting with a brand or a top-ten list, compare your actual constrai
 
 ## A no-regret decision process
 
-![Padded rest area near scratching surfaces and a sheltered cat bed](/images/window-perch-vs-cat-tree-figure-06.svg)
+![Diagram of a cat resting beside a closed window and scratching post without loose feather toys](/images/window-perch-vs-cat-tree-figure-06.svg)
 
 *A quiet rest area and an inspected scratching option can complement a safe view. Diagram is illustrative, not installation certification. [Open full-size diagram](/images/window-perch-vs-cat-tree-figure-06.svg)*
 

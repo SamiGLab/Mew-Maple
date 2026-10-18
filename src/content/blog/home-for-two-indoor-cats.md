@@ -59,7 +59,7 @@ Avoid making a single high platform the only appealing resting option. Some cats
 
 ## Feed with less pressure
 
-![Two cats using separate bowls at a mealtime station](/images/home-for-two-indoor-cats-figure-04.svg)
+![Diagram of two cats at separate feeding stations with a visual divider between their bowls](/images/home-for-two-indoor-cats-figure-04.svg)
 
 *Provide separated feeding stations with more than one route of access where possible. Diagram illustrates a principle rather than fixed floor-plan measurements. [Open full-size diagram](/images/home-for-two-indoor-cats-figure-04.svg)*
 

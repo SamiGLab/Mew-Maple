@@ -40,7 +40,7 @@ Provide at least one private resting spot—a covered bed, a clean box, or a qui
 
 ## Bedroom: Let your cat choose privacy
 
-![Cat resting in a sheltered fabric tunnel and soft bed](/images/cat-friendly-apartment-figure-03.svg)
+![Diagram of a cat resting in a wide, open-ended indoor hideaway without dangling toys](/images/cat-friendly-apartment-figure-03.svg)
 
 *An open hideaway with a clear exit and no dangling accessories offers a simple retreat. Conceptual vector diagram, not a product installation guide. [Open full-size diagram](/images/cat-friendly-apartment-figure-03.svg)*
 
@@ -50,7 +50,7 @@ In homes where doors are closed at night, ensure essential resources remain acce
 
 ## Kitchen and dining area: Protect food and water access
 
-![Cat eating at an accessible feeding station in a tidy room](/images/cat-friendly-apartment-figure-04.svg)
+![Diagram separating a feeding bowl, drinking water and litter tray into three distinct areas](/images/cat-friendly-apartment-figure-04.svg)
 
 *Keep feeding, drinking and toileting in distinct, easily accessible locations. Diagram is conceptual; adapt to your floor plan. [Open full-size diagram](/images/cat-friendly-apartment-figure-04.svg)*
 

@@ -37,6 +37,28 @@ try {
   runCase('Publish gate blocks incomplete legal pages', prodEnv, false, 'legal draft material');
   for(const page of ['about.astro','privacy.astro','editorial-policy.astro','affiliate-disclosure.astro']) writeFileSync(join(fixture,'src/pages',page),'Approved publication text for automated fixture.');
   runCase('Publish gate accepts approved fixture', prodEnv, true, 'Release gate passed');
+  const legalFixture=join(fixture,'src/pages/editorial-policy.astro');
+  writeFileSync(legalFixture,'Pre-launch draft: editor accountability is not yet confirmed.');
+  runCase('Editorial prelaunch notice blocks publication',prodEnv,false,'legal draft material');
+  writeFileSync(legalFixture,'Approved publication text for automated fixture.');
+  const privacyFixture=join(fixture,'src/pages/privacy.astro');
+  writeFileSync(privacyFixture,'This is not a final legal privacy policy.');
+  runCase('Incomplete privacy notice blocks publication',prodEnv,false,'legal draft material');
+  writeFileSync(privacyFixture,'Approved publication text for automated fixture.');
+  const dateFixture=join(fixture,'src/content/blog/indoor-cat-enrichment-ideas.md');
+  const approvedArticle=readFileSync(dateFixture,'utf8');
+  function checkDateCase(name, replacement, expectedText) {
+    writeFileSync(dateFixture,approvedArticle.replace(/^publishedAt:\s*\d{4}-\d{2}-\d{2}\s*$/m, replacement));
+    runCase(name,prodEnv,false,expectedText);
+    writeFileSync(dateFixture,approvedArticle);
+  }
+  checkDateCase('Reject nonexistent Gregorian date','publishedAt: 2026-02-30','genuine Gregorian');
+  checkDateCase('Reject future publication date','publishedAt: 2099-01-01','must not be a future date');
+  checkDateCase('Reject updatedAt before publishedAt',
+    'publishedAt: 2026-10-01\nupdatedAt: 2026-09-29','cannot precede publishedAt');
+  checkDateCase('Reject invalid updatedAt',
+    'publishedAt: 2026-10-01\nupdatedAt: 2026-02-30','updatedAt must be a genuine Gregorian');
+
   runCase('Publish gate rejects example domains',{...prodEnv,SITE_URL:'https://example.com'},false, 'SITE_URL');
   const fname=join(fixture,'src/content/blog/indoor-cat-play-routine.md');
   const f=readFileSync(fname,'utf8').replace('status: published','status: review');

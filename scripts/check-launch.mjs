@@ -9,6 +9,12 @@ if (!ready) {
 }
 
 const errors = [];
+function strictUtcDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return null;
+  const date = new Date(value + 'T00:00:00Z');
+  if (Number.isNaN(date.getTime()) || date.toISOString().slice(0,10) !== value) return null;
+  return date;
+}
 const base = 'src/content/blog';
 const articleFiles = readdirSync(base).filter(f => f.endsWith('.md'));
 const articleInfo = new Map();
@@ -31,17 +37,28 @@ for (const filename of articleFiles) {
   const content = readFileSync(`${base}/${filename}`, 'utf8');
   const frontmatter = content.match(/^---\n([\s\S]*?)\n---\n/)?.[1] || '';
   const status = frontmatter.match(/^status:\s*(\S+)/m)?.[1];
-  const publicationDate = frontmatter.match(/^publishedAt:\s*(\d{4}-\d{2}-\d{2})/m)?.[1];
+  const publicationDate = frontmatter.match(/^publishedAt:\s*(\d{4}-\d{2}-\d{2})\s*$/m)?.[1];
+  const updatedAt = frontmatter.match(/^updatedAt:\s*(\S+)\s*$/m)?.[1];
   const slug = filename.slice(0,-3);
-  articleInfo.set(slug,{status,publicationDate,content});
+  articleInfo.set(slug,{status,publicationDate,updatedAt,content});
 }
 const approved = [...articleInfo].filter(([, entry]) => entry.status === 'published');
 if (approved.length === 0) errors.push('No guide has status: published.');
 for (const [slug, post] of approved) {
-  if (!post.publicationDate || Number.isNaN(new Date(`${post.publicationDate}T00:00:00Z`).valueOf())) {
-    errors.push(`${slug}: a valid publishedAt: YYYY-MM-DD is required.`);
-  } else if (new Date(`${post.publicationDate}T00:00:00Z`) > new Date()) {
+  const published = strictUtcDate(post.publicationDate);
+  if (!published) {
+    errors.push(`${slug}: a genuine Gregorian publishedAt: YYYY-MM-DD is required.`);
+  } else if (published > new Date()) {
     errors.push(`${slug}: publishedAt must not be a future date.`);
+  }
+  if (post.updatedAt) {
+    const updated = strictUtcDate(post.updatedAt);
+    if (!updated) {
+      errors.push(`${slug}: updatedAt must be a genuine Gregorian YYYY-MM-DD date.`);
+    } else {
+      if (updated > new Date()) errors.push(`${slug}: updatedAt must not be in the future.`);
+      if (published && updated < published) errors.push(`${slug}: updatedAt cannot precede publishedAt.`);
+    }
   }
   // A published guide must never link internally to a draft guide, which has no public route.
   for (const match of post.content.matchAll(/\]\(\/guides\/([^/)]+)\/?(?:#[^)]+)?\)/g)) {
@@ -54,7 +71,7 @@ for (const [slug, post] of approved) {
 
 for (const page of ['about.astro', 'privacy.astro', 'editorial-policy.astro', 'affiliate-disclosure.astro']) {
   const html = readFileSync(`src/pages/${page}`, 'utf8');
-  if (/Before launch:|placeholder|not publication-ready|Draft: publisher|draft preview|privacy notice — draft|not a legal privacy policy|At the time of this draft preview/i.test(html)) {
+  if (/Before launch:|pre[- ]launch (?:draft|information)|publication blocker|placeholder|not publication-ready|Draft: publisher|draft preview|privacy notice — draft|not a (?:final )?legal privacy policy|At the time of this draft preview/i.test(html)) {
     errors.push(`${page}: still contains editorial/legal draft material.`);
   }
 }
