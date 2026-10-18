@@ -72,7 +72,7 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
     footerReady:document.querySelector('.footer-brand img')?.naturalWidth>0,
     lockup:document.querySelector('.logo-text')?.textContent?.trim(),
     line:document.querySelector('.logo-subline')?.textContent?.trim(),
-    favicon:document.querySelector('link[rel="icon"]')?.getAttribute('href')
+    favicon:document.querySelector('link[rel="icon"][type="image/webp"]')?.getAttribute('href')
   }));
   assert(branding.headerLogo==='/brand/autumn/cat-emblem.webp'&&branding.headerReady,
     `${label} missing or broken original header cat emblem`);
