@@ -5,8 +5,8 @@ This change applies to **Cloudflare Workers Static Assets** through the generate
 ## Public/static response restrictions
 - `X-Content-Type-Options: nosniff` and `X-Frame-Options: DENY` prevent MIME sniffing and reduce unintended embedding.
 - `Content-Security-Policy` limits executable scripts, connections, images and fonts to local origins, disallows object embedding and cross-origin framing. `style-src 'unsafe-inline'` is retained for Astro's inline CSS; executable inline scripts are **not permitted**.
-- The build audit rejects executable inline JavaScript emitted in HTML, so a future component cannot silently become incompatible with the response CSP.
-- The existing referrer and unnecessary browser permissions policies remain.
+- Astro currently emits a small inline search script. The build computes its exact SHA-256 from generated HTML and inserts only that hash into the executable script CSP; no `unsafe-inline` execution is permitted. The audit recomputes the hashes and fails if a script lacks a corresponding CSP hash. New script changes thus require a freshly generated fingerprint.
+- The existing referrer and unnecessary browser permissions policies remain. Inline styles are presently allowed, but inline JavaScript is permitted only when its exact SHA-256 hash appears in the generated policy.
 - No external ad, analytics, map, font CDN or affiliate script is authorized. Revisit the policy when any explicitly approved third-party integration is added.
 
 ## Version checks must not be cached
