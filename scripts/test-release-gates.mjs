@@ -47,9 +47,9 @@ try {
   checkDateCase('Reject nonexistent Gregorian date','publishedAt: 2026-02-30','genuine Gregorian');
   checkDateCase('Reject future publication date','publishedAt: 2099-01-01','must not be a future date');
   checkDateCase('Reject updatedAt before publishedAt',
-    'publishedAt: 2026-10-01\\nupdatedAt: 2026-09-29','cannot precede publishedAt');
+    'publishedAt: 2026-10-01\nupdatedAt: 2026-09-29','cannot precede publishedAt');
   checkDateCase('Reject invalid updatedAt',
-    'publishedAt: 2026-10-01\\nupdatedAt: 2026-02-30','updatedAt must be a genuine Gregorian');
+    'publishedAt: 2026-10-01\nupdatedAt: 2026-02-30','updatedAt must be a genuine Gregorian');
 
   runCase('Publish gate rejects example domains',{...prodEnv,SITE_URL:'https://example.com'},false, 'SITE_URL');
   const fname=join(fixture,'src/content/blog/indoor-cat-play-routine.md');
