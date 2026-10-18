@@ -1,3 +1,5 @@
+> **Historical QA document (superseded by the final rendered review).** All 56 images now have editorial approval after PR #33–36; five conflicting WebPs were removed and replaced by SVG diagrams, rendered to PNG and visually inspected. The 28/23/5 table and pending notes below are **historical findings**, not current status. See `docs/FINAL_VISUAL_EDITORIAL_QA_2026-10-18.md` and `docs/image-qa-status.json` for current statuses. Physical product safety, veterinary endorsement, domain and production approval have **not** been granted.
+
 > **Update 18 Oct 2026 — replacement implementation:** The five `replace-required` WebP illustrations below were replaced in their article references with original, static, self-contained SVG guidance diagrams and the obsolete WebP files were deleted from the repository. The five new SVGs are **updated-pending-review**, not yet visually approved after rendering. The other 23 manual-review files remain open. Consult `docs/image-qa-status.json` for current release status; the 28/23/5 counts recorded below describe the initial visual audit.
 
 # Mew & Maple: illustrated editorial QA report — 18 October 2026
