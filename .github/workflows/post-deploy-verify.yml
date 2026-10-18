@@ -1,0 +1,27 @@
+name: Verify Cloudflare Worker after main merge
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mew-maple-post-deploy
+  cancel-in-progress: true
+
+jobs:
+  verify-worker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for Workers Builds and verify exact main SHA and draft-safe responses
+        env:
+          LIVE_WORKER_URL: https://mew-maple.samiayten-hu.workers.dev/
+          GITHUB_SHA: ${{ github.sha }}
+        run: node scripts/wait-for-worker-deploy.mjs
