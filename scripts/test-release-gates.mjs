@@ -30,6 +30,8 @@ try {
   mkdirSync(join(fixture, 'src/pages'), {recursive:true});
   cpSync(join(root, 'src/content/blog'), join(fixture, 'src/content/blog'),{recursive:true});
   for(const page of ['about.astro','privacy.astro','editorial-policy.astro','affiliate-disclosure.astro']) cpSync(join(root,'src/pages',page),join(fixture,'src/pages',page));
+  // The all-review test must not depend on the actual staged publication state.
+  adjustAll('review');
   const prodEnv={ PUBLIC_SITE_READY:'true', PUBLISH_APPROVED:'YES', SITE_URL:'https://mew-and-maple.net' };
   runCase('Preview mode allows static safe build', { PUBLIC_SITE_READY:'false' }, true, 'PREVIEW-SAFE BUILD');
   runCase('Publish gate blocks all-review content', prodEnv, false, 'No guide has status: published');
