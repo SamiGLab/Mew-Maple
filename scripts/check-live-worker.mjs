@@ -7,6 +7,10 @@ export const checks = [
   ['sitemap','/sitemap.xml'],
   ['search','/search-index.json'],
   ['build','/build-info.json'],
+  ['brandLight','/brand/avatar-light.svg'],
+  ['brandDark','/brand/avatar-dark.svg'],
+  ['brandFavicon','/brand/favicon.svg'],
+  ['brandManifest','/site.webmanifest'],
   ['draft','/guides/indoor-cat-enrichment-ideas/'],
   ['notFound','/this-route-must-return-404-qa/']
 ];
@@ -45,6 +49,9 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
     must(robotsMeta(body),'/ missing HTML meta noindex');
     must(/\bnoindex\b/i.test(response.headers.get('x-robots-tag')||''),'/ missing X-Robots-Tag: noindex');
     must(!/rel\s*=\s*["']canonical["']/i.test(body),'Draft homepage has an unexpected canonical URL');
+    must(body.includes('/brand/avatar-light.svg') && body.includes('INDOOR CAT LIVING'),
+      'Live homepage is still showing an outdated temporary brand mark');
+    must(!body.includes('logo-symbol'),'Live homepage includes legacy M-star-M CSS logo');
   }
   if(fetched.robots){
     const {response,body}=fetched.robots;
@@ -80,6 +87,23 @@ export async function runLiveCheck(rawUrl=defaultLiveUrl,fetcher=fetch,expectedS
       if(expectedSha && deployedCommit)must(deployedCommit===expectedSha.toLowerCase(),
         'Stale Worker deployment: expected '+expectedSha+' but served '+deployedCommit);
     }catch(e){errors.push('Invalid JSON at /build-info.json: '+String(e.message||e));}
+  }
+  for(const kind of ['brandLight','brandDark','brandFavicon']){
+    if(fetched[kind]){
+      const {response,body}=fetched[kind];
+      must(response.status===200,kind+': brand SVG must be accessible via HTTPS');
+      must(/<svg\b/i.test(body) && body.includes('M 15 93 C -3 76'),
+        kind+': must contain the agreed original cat-and-leaf mark');
+    }
+  }
+  if(fetched.brandManifest){
+    const {response,body}=fetched.brandManifest;
+    must(response.status===200,'/site.webmanifest must return 200');
+    try{
+      const manifest=JSON.parse(body);
+      must(manifest.name==='Mew & Maple — Indoor Cat Living','Brand manifest name mismatch');
+      must(manifest.icons?.some(icon=>icon.src==='/brand/favicon.svg'),'Brand manifest favicon mismatch');
+    }catch{errors.push('Brand web manifest is invalid JSON');}
   }
   for(const kind of ['draft','notFound']){
     if(fetched[kind]){
