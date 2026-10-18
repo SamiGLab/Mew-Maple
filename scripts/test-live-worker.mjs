@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { runLiveCheck } from './check-live-worker.mjs';
-const html='<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g"><link rel="icon" href="/brand/autumn/cat-silhouette.webp" type="image/webp" sizes="96x96"></head><body><img class="logo-full" src="/brand/autumn/lockup.webp"><img class="footer-lockup" src="/brand/autumn/lockup.webp">Draft landing</body></html>';
+const html='<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g"><link rel="icon" href="/brand/autumn/favicon-64.png" type="image/png" sizes="64x64"></head><body><img class="logo-full" src="/brand/autumn/lockup.webp"><img class="footer-lockup" src="/brand/autumn/lockup.webp">Draft landing</body></html>';
 const deployedSha='abcdef0123456789abcdef0123456789abcdef01';
 function fixture(opts={}){
   return async (url)=>{
@@ -14,8 +14,9 @@ function fixture(opts={}){
       '/brand/autumn/lockup.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
       '/brand/autumn/cat-emblem.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
       '/brand/autumn/cat-silhouette.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
+      '/brand/autumn/favicon-64.png':{status:200,body:'PNG!',headers:{'content-type':'image/png'}},
       '/brand/autumn/leaves-pattern.webp':{status:200,body:'RIFF....WEBP',headers:{'content-type':'image/webp'}},
-      '/site.webmanifest':{status:200,body:JSON.stringify({name:'Mew & Maple — Indoor Cat Living',icons: opts.badManifest ? [{src:'/brand/favicon.svg',sizes:'any',type:'image/svg+xml'}] : [{src:'/brand/autumn/cat-silhouette.webp',sizes:'144x144',type:'image/webp'}]})},
+      '/site.webmanifest':{status:200,body:JSON.stringify({name:'Mew & Maple — Indoor Cat Living',icons: opts.badManifest ? [{src:'/brand/favicon.svg',sizes:'any',type:'image/svg+xml'}] : [{src:'/brand/autumn/favicon-64.png',sizes:'64x64',type:'image/png'},{src:'/brand/autumn/cat-silhouette.webp',sizes:'144x144',type:'image/webp'}]})},
       '/guides/indoor-cat-enrichment-ideas/':{status:opts.articleLeak?200:404,body:'Page not found'},
       '/this-route-must-return-404-qa/':{status:404,body:'Page not found'}
     }[path];
