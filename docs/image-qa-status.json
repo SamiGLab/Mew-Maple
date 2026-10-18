@@ -38,11 +38,11 @@
       "resolvedAt": "2026-10-18"
     },
     {
-      "file": "cat-friendly-apartment-figure-04.svg",
+      "file": "cat-friendly-apartment-figure-04.webp",
       "status": "approved",
-      "note": "Redesigned as a coordinated cream, sage and warm terracotta editorial series. All five SVGs rendered locally to 1200×760 PNGs and visually inspected; window/title overlap corrected and re-rendered. Labels, objects and concepts match the existing article captions. Not product, veterinary or installation certification.",
+      "note": "User-selected supplied illustration, visually reviewed against article context: food/water/litter separation, closed toy storage, or closed window and resting cat. Decorative plants are unidentified; existing article plant-safety caveats apply. Conceptual illustration, not product or installation certification.",
       "visualReviewedAt": "2026-10-19",
-      "reviewProvenance": "AI visual inspection of local Sharp-rendered PNGs and existing article alt/caption",
+      "reviewProvenance": "AI inspection of user-provided image and optimized WebP; explicit user selection",
       "replacedUnsafeSource": "cat-friendly-apartment-figure-04.webp",
       "revisedAt": "2026-10-19",
       "renderedReview": {
@@ -444,12 +444,12 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "window-perch-vs-cat-tree-figure-04.svg",
+      "file": "window-perch-vs-cat-tree-figure-04.webp",
       "status": "approved",
-      "note": "Redesigned as a coordinated cream, sage and warm terracotta editorial series. All five SVGs rendered locally to 1200×760 PNGs and visually inspected; window/title overlap corrected and re-rendered. Labels, objects and concepts match the existing article captions. Not product, veterinary or installation certification.",
+      "note": "User-selected supplied illustration, visually reviewed against article context: food/water/litter separation, closed toy storage, or closed window and resting cat. Decorative plants are unidentified; existing article plant-safety caveats apply. Conceptual illustration, not product or installation certification.",
       "revisedAt": "2026-10-19",
       "visualReviewedAt": "2026-10-19",
-      "reviewProvenance": "AI visual inspection of local Sharp-rendered PNGs and existing article alt/caption",
+      "reviewProvenance": "AI inspection of user-provided image and optimized WebP; explicit user selection",
       "replacedUnsafeSource": "window-perch-vs-cat-tree-figure-04.webp",
       "renderedReview": {
         "workflowRun": 39110806927,
@@ -468,11 +468,11 @@
       "reviewProvenance": "AI visual inspection of full-size WebP plus article alt/caption"
     },
     {
-      "file": "window-perch-vs-cat-tree-figure-06.svg",
+      "file": "window-perch-vs-cat-tree-figure-06.webp",
       "status": "approved",
-      "note": "Redesigned as a coordinated cream, sage and warm terracotta editorial series. All five SVGs rendered locally to 1200×760 PNGs and visually inspected; window/title overlap corrected and re-rendered. Labels, objects and concepts match the existing article captions. Not product, veterinary or installation certification.",
+      "note": "User-selected supplied illustration, visually reviewed against article context: food/water/litter separation, closed toy storage, or closed window and resting cat. Decorative plants are unidentified; existing article plant-safety caveats apply. Conceptual illustration, not product or installation certification.",
       "visualReviewedAt": "2026-10-19",
-      "reviewProvenance": "AI visual inspection of local Sharp-rendered PNGs and existing article alt/caption",
+      "reviewProvenance": "AI inspection of user-provided image and optimized WebP; explicit user selection",
       "replacedUnsafeSource": "window-perch-vs-cat-tree-figure-06.webp",
       "revisedAt": "2026-10-19",
       "renderedReview": {

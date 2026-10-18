@@ -43,7 +43,7 @@ Provide at least one private resting spot—a covered bed, a clean box, or a qui
 
 ![Diagram of a cat resting in a wide, open-ended indoor hideaway without dangling toys](/images/cat-friendly-apartment-figure-03.svg)
 
-*An open hideaway with a clear exit and no dangling accessories offers a simple retreat. Conceptual vector diagram, not a product installation guide. [Open full-size diagram](/images/cat-friendly-apartment-figure-03.svg)*
+*An open hideaway with a clear exit and no dangling accessories offers a simple retreat. Conceptual vector diagram, not a product installation guide. [Open full-size illustration](/images/cat-friendly-apartment-figure-03.svg)*
 
 A familiar blanket, washable bed, or accessible quiet nook can become a reliable retreat. If your cat sleeps in the bedroom, keep pathways clear and avoid unstable bedside towers or open windows next to jumping surfaces.
 
@@ -51,9 +51,9 @@ In homes where doors are closed at night, ensure essential resources remain acce
 
 ## Kitchen and dining area: Protect food and water access
 
-![Diagram separating a feeding bowl, drinking water and litter tray into three distinct areas](/images/cat-friendly-apartment-figure-04.svg)
+![Diagram separating a feeding bowl, drinking water and litter tray into three distinct areas](/images/cat-friendly-apartment-figure-04.webp)
 
-*Keep feeding, drinking and toileting in distinct, easily accessible locations. Diagram is conceptual; adapt to your floor plan. [Open full-size diagram](/images/cat-friendly-apartment-figure-04.svg)*
+*Keep feeding, drinking and toileting in distinct, easily accessible locations. User-supplied conceptual illustration; adapt to your floor plan. [Open full-size illustration](/images/cat-friendly-apartment-figure-04.webp)*
 
 Keep your cat's water accessible and away from areas where cleaning chemicals, heat, or heavy foot traffic create risks. Separate water from the litter box; many households also find it practical to position water and food in distinct places, in line with environmental resource recommendations [1].
 
