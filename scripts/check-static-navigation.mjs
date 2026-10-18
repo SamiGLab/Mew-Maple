@@ -45,7 +45,7 @@ for (const file of pages) {
   }
 }
 
-for (const mandatory of ['index.html', '404.html', 'search/index.html', 'search-index.json']) {
+for (const mandatory of ['index.html', '404.html', 'search/index.html', 'category/play/index.html', 'category/homes/index.html', 'category/gear/index.html', 'category/care/index.html', 'search-index.json']) {
   if (!existsSync(join(root, mandatory))) failures.push('Missing required route: ' + mandatory);
 }
 
