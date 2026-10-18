@@ -16,7 +16,7 @@
 - [ ] **İletişim**: Yayımlanacak destek e-posta adresi; gereksiz kişisel bilgi kullanmayın.
 - [ ] **Privacy/çerezler**: Kullanılacak sağlayıcılar, veri saklama/işleme bölgeleri, çerez kategorileri, rıza/opt-out koşulları; gerekli hukuki değerlendirme.
 - [ ] **Analitik ve affiliate**: GA4/GSC ya da başka ölçüm kurulacak mı? Hangi onay mekanizması uygulanacak? Affiliate hesapları gerçekten mevcut mu?
-- [ ] **Barındırma**: Cloudflare hesabı/Pages projesi ve kaynak depo erişim izinleri; `*.pages.dev` önizlemesi gerçek erişim kontrolü olmadan özel sayılmaz.
+- [ ] **Barındırma**: Cloudflare Workers Builds proje bağlantısı kullanıcı tarafından açıldı; gerçek Workers deploy başarı ekranı ve canlı HTTP cevapları henüz doğrulanmadı. `*.workers.dev` varsayılan olarak erişim koruması değildir. GitHub deposu public olduğundan kaynak taslakları GitHub'da da görülebilir.
 - [x] **Görsel editoryal QA**: 56/56, 5 SVG render önizlemesi dahil tamamlandı; 51 fotoğraf yalnızca uygun uyarılarla editoryal olarak kullanılabilir.
 - [ ] **Makale yayımlama kararı**: Sekiz makalenin `review` statüsünü değiştirmek ve gerçek yayın tarihlerini atamak ancak domain, yayıncı, hukuk ve test gereksinimlerinin tamamlanmasından sonra mümkündür.
 
