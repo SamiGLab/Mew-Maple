@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run check:source && astro build",
+    "build": "npm run check:source && astro build && node scripts/write-worker-headers.mjs",
     "preview": "astro preview",
     "audit:content": "node scripts/audit-content.mjs",
     "check:launch": "node scripts/check-launch.mjs",
@@ -15,7 +15,8 @@
     "audit:citations": "node scripts/audit-citations.mjs",
     "test:images": "node scripts/test-visual-qa.mjs",
     "audit:seo": "node scripts/audit-editorial-seo.mjs",
-    "audit:preview": "node scripts/check-preview-exposure.mjs"
+    "audit:preview": "node scripts/check-preview-exposure.mjs",
+    "audit:workers": "node scripts/check-workers-static.mjs"
   },
   "dependencies": {
     "astro": "^6.0.0"

@@ -1,3 +1,5 @@
+> **Hosting update (18 Oct 2026):** The actual hosting setup is **Cloudflare Workers Builds**, not Pages. For build/deployment and access specifics, see `docs/CLOUDFLARE_WORKERS_DEPLOY_TR.md`. The Pages sections below describe an earlier plan and are not the current implementation. Workers custom-domain and Access setup must be checked against Workers documentation.
+
 # Mew & Maple — Domain satın alımı ve Cloudflare Pages kurulum sırası (taslak)
 
 **Tarih:** 18 Ekim 2026. Hedef isim: `mewandmaple.com` (satın alma henüz doğrulanmadı). Bu yönerge alan adının kullanıcı tarafından satın alınmasını, DNS sahipliğini ve Cloudflare hesabını varsaymaz.
