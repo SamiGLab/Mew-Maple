@@ -16,7 +16,7 @@ function fakeWorker({staleChecks=0,mode='draft-safe',draftLeak=false}={}){
         }),{status:200});
       }
       const pages={
-        '/':{status:200,body:'<html><head><meta name="robots" content="noindex,nofollow"></head></html>',headers:{'x-robots-tag':'noindex, nofollow, noarchive'}},
+        '/':{status:200,body:'<html><head><meta name="robots" content="noindex,nofollow"><meta name="google-site-verification" content="jn4f5kUIgYWBpqdnL1ff5O3T5lmJ3iDyBf_Ff9RuY9g" /></head></html>',headers:{'x-robots-tag':'noindex, nofollow, noarchive'}},
         '/robots.txt':{status:200,body:'User-agent: *\nAllow: /'},
         '/sitemap.xml':{status:200,body:'<urlset></urlset>'},
         '/search-index.json':{status:200,body:'[]'},
