@@ -19,8 +19,11 @@ for (const file of readdirSync(dir).filter(f => f.endsWith('.md'))) {
   const body = raw.slice(raw.indexOf('\n---',4)+4);
   const h2 = [...body.matchAll(/^## /gm)].length;
   const localLinks = [...body.matchAll(/\]\(\/guides\/[a-z0-9-]+\/\)/g)].length;
+  const categoryLinks = [...body.matchAll(/\]\(\/category\/(?:play|homes|gear|care)\/\)/g)].length;
   if (h2 < 3) errors.push(file + ': too few section headings (' + h2 + ')');
-  if (localLinks < 2) errors.push(file + ': inadequate contextual internal navigation (' + localLinks + ')');
+  // A single early-release article must link to real live categories, not nonexistent
+  // future guides merely to satisfy an SEO link quota.
+  if (localLinks + categoryLinks < 2) errors.push(file + ': inadequate contextual site navigation (' + (localLinks + categoryLinks) + ')');
   if (/^#\s+/m.test(body)) errors.push(file + ': H1 in markdown would duplicate page-template heading');
   links += localLinks;
 }
