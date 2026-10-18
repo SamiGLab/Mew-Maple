@@ -40,9 +40,9 @@ Provide at least one private resting spot—a covered bed, a clean box, or a qui
 
 ## Bedroom: Let your cat choose privacy
 
-![Cat resting in a sheltered fabric tunnel and soft bed](/images/cat-friendly-apartment-figure-03.webp)
+![Cat resting in a sheltered fabric tunnel and soft bed](/images/cat-friendly-apartment-figure-03.svg)
 
-*The pictured tunnel contains a hanging accessory and a loose feather toy on the floor; do not leave such toys unattended. Image replacement required before publication. AI-generated editorial illustration.*
+*An open hideaway with a clear exit and no dangling accessories offers a simple retreat. Conceptual vector diagram, not a product installation guide.*
 
 A familiar blanket, washable bed, or accessible quiet nook can become a reliable retreat. If your cat sleeps in the bedroom, keep pathways clear and avoid unstable bedside towers or open windows next to jumping surfaces.
 
@@ -50,9 +50,9 @@ In homes where doors are closed at night, ensure essential resources remain acce
 
 ## Kitchen and dining area: Protect food and water access
 
-![Cat eating at an accessible feeding station in a tidy room](/images/cat-friendly-apartment-figure-04.webp)
+![Cat eating at an accessible feeding station in a tidy room](/images/cat-friendly-apartment-figure-04.svg)
 
-*Do not copy this illustrated layout: the food bowls are too close to the litter cabinet. Separate food, water and toileting areas. Image replacement required before publication. AI-generated editorial illustration.*
+*Keep feeding, drinking and toileting in distinct, easily accessible locations. Diagram is conceptual; adapt to your floor plan.*
 
 Keep your cat's water accessible and away from areas where cleaning chemicals, heat, or heavy foot traffic create risks. Separate water from the litter box; many households also find it practical to position water and food in distinct places, in line with environmental resource recommendations [1].
 
