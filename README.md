@@ -32,7 +32,9 @@ GitHub Actions has now successfully completed **`npm ci`, source checks and `npm
 - Code/CI `wrangler deploy --dry-run` **does not** prove the Worker was deployed or reachable.
 - Run `npm run audit:live:worker` to check actual HTTPS, `noindex`, Worker headers, empty sitemap/search index, draft-article 404 and missing-page 404. For independent GitHub-hosted execution, use **Actions > Live Workers safety check > Run workflow** and supply the actual `workers.dev` URL.
 - [Live GitHub Actions verification](https://github.com/SamiGLab/Mew-Maple/actions/runs/39118094587) returned **six successful endpoint checks and zero errors**: homepage 200, robots 200, sitemap 200, search index 200, draft guide 404, unknown route 404. Homepage includes both meta noindex and the HTTP X-Robots-Tag. User's Cloudflare production screen shows active deployment version `66c9c552` serving 100% traffic.
-- The manual live verification workflow also runs on pull requests to detect preview safety regressions. Its checks describe **draft-safe hosting only**; it does not prove publication-readiness or a custom domain.
+- This test now runs **only when manually dispatched** after Workers Builds deploys; PR code checks still run automatically. It avoids incorrectly testing an older live deployment against unmerged changes.
+- Every new Workers build writes a public `/build-info.json` containing its **40-character Git commit SHA** and `draft-safe` or `approved-publication` mode; it never publishes tokens. Cloudflare Workers Builds injects `WORKERS_CI_COMMIT_SHA`. To compare live with `main`, enter the current GitHub commit SHA as `expected_commit` in the manual Actions workflow.
+- The previously successful live run #39118094587 tested routing and draft exclusion, **before** this commit fingerprint feature. New deployed versions must be rechecked with the extended probe.
 - This audit tests only the **not-yet-publication-approved** preview. It does not flip `PUBLIC_SITE_READY`, publish articles, change DNS or configure privacy.
 
 ## Cloudflare Workers settings (current)
