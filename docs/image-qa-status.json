@@ -22,11 +22,11 @@
       "resolvedAt": "2026-10-18"
     },
     {
-      "file": "cat-friendly-apartment-figure-03.svg",
+      "file": "cat-friendly-apartment-figure-03.webp",
       "status": "approved",
-      "note": "Redesigned as a coordinated cream, sage and warm terracotta editorial series. All five SVGs rendered locally to 1200×760 PNGs and visually inspected; window/title overlap corrected and re-rendered. Labels, objects and concepts match the existing article captions. Not product, veterinary or installation certification.",
+      "note": "User-selected illustration visually reviewed: orange cat in an open-ended green tunnel without dangling accessories. Both openings and caption support the clear-exit concept. Decorative plants are unidentified; existing article plant-safety caveats apply. Not product or installation certification.",
       "visualReviewedAt": "2026-10-19",
-      "reviewProvenance": "AI visual inspection of local Sharp-rendered PNGs and existing article alt/caption",
+      "reviewProvenance": "AI inspection of user-provided image and article caption; explicit user selection",
       "replacedUnsafeSource": "cat-friendly-apartment-figure-03.webp",
       "revisedAt": "2026-10-19",
       "renderedReview": {

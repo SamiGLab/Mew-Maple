@@ -41,9 +41,9 @@ Provide at least one private resting spot—a covered bed, a clean box, or a qui
 
 ## Bedroom: Let your cat choose privacy
 
-![Diagram of a cat resting in a wide, open-ended indoor hideaway without dangling toys](/images/cat-friendly-apartment-figure-03.svg)
+![Diagram of a cat resting in a wide, open-ended indoor hideaway without dangling toys](/images/cat-friendly-apartment-figure-03.webp)
 
-*An open hideaway with a clear exit and no dangling accessories offers a simple retreat. Conceptual vector diagram, not a product installation guide. [Open full-size illustration](/images/cat-friendly-apartment-figure-03.svg)*
+*An open hideaway with a clear exit and no dangling accessories offers a simple retreat. User-supplied conceptual illustration, not a product installation guide. [Open full-size illustration](/images/cat-friendly-apartment-figure-03.webp)*
 
 A familiar blanket, washable bed, or accessible quiet nook can become a reliable retreat. If your cat sleeps in the bedroom, keep pathways clear and avoid unstable bedside towers or open windows next to jumping surfaces.
 
