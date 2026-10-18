@@ -10,7 +10,7 @@
 - [ ] Gerçek domain ve prod yapılandırmasıyla yayın öncesi son build ve duman testi tamamlandı.
 - [x] GitHub Actions gerçek Chromium: 390/768/1440 px toplam 20 sayfa/ekran testi, temsilî axe/WCAG A-AA, görseller, arama ve taslak sızıntı testleri başarılı (#39113150022).
 - [ ] Gerçek yayın ortamında mobil Lighthouse, manuel klavye/ekran okuyucu testi, canlı linkler ve sosyal önizlemeler kontrol edildi.
-- [ ] Cloudflare Workers Builds son `main` sürümünü gerçekten deploy etti; gerçek HTTP yanıtları doğrulandı. Kontrol: Actions > **Live Workers safety check** > Run workflow. `npm run audit:live:worker` aynı kontrolleri yerel olarak çalıştırır.
+- [x] Cloudflare Workers Production deployment onaylandı: kullanıcı panelinde aktif sürüm `66c9c552`, trafik %100; GitHub Actions canlı doğrulama #39118094587 ile altı HTTPS uç noktası beklenen 200/404 ve `noindex` sonuçlarını verdi. Bu yalnızca **taslak-safe Workers URL'si** için geçerlidir.
 - [ ] Cloudflare üretim alan adı, HTTPS, 301 yönlendirmesi, sitemap/robots/canonical doğrulandı.
 - [ ] GSC property ve sitemap; GA4 gerçek trafik ve privacy onayı test edildi.
 
