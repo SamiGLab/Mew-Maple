@@ -40,7 +40,16 @@ async function inspectPage(page,base,url,label,viewport,screenshot=false){
   const response=await page.goto(address,{waitUntil:'domcontentloaded',timeout:30000});
   assert(response?.status()===200,`${label} ${viewport.width}px HTTP ${response?.status()}`);
   await page.locator('main').waitFor({timeout:12000});
-  await page.evaluate(()=>Promise.all([...document.images].map(img=>img.complete?null:new Promise(r=>{img.addEventListener('load',r,{once:true});img.addEventListener('error',r,{once:true})}))));
+  // Loading="lazy" images below the viewport never fire load until scrolled into view.
+  // Force them eager for QA; bound the wait so a network error cannot hang the job.
+  await page.evaluate(async()=>{
+    const images=[...document.images];
+    for(const img of images)img.loading='eager';
+    await Promise.race([
+      Promise.all(images.map(img=>img.decode().catch(()=>{}))),
+      new Promise(resolve=>setTimeout(resolve,5000))
+    ]);
+  });
   const metrics=await page.evaluate(()=>({
     width:window.innerWidth,
     documentWidth:document.documentElement.scrollWidth,
