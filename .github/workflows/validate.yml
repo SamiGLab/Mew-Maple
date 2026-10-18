@@ -17,6 +17,10 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run check:source
       - run: npm run build
+      - name: Validate Cloudflare Workers dist and preview headers
+        run: npm run audit:workers
+      - name: Validate Workers deployment bundle without publishing
+        run: npx --yes wrangler@4 deploy --dry-run
       - name: Check built HTML links, anchors and search leakage
         run: node scripts/check-static-navigation.mjs
       - name: Check preview output does not expose draft content or indexing metadata
@@ -49,8 +53,8 @@ jobs:
       - name: Test local draft articles and safe preview in desktop and mobile Chromium
         if: github.event_name == 'pull_request'
         run: node scripts/browser-qa.mjs
-      - name: Save browser QA screenshots (private repo)
-        if: always() && github.event_name == 'pull_request'
+      - name: Save browser QA screenshots only while repository is private
+        if: always() && github.event_name == 'pull_request' && github.event.repository.private == true
         uses: actions/upload-artifact@v4
         with:
           name: mew-maple-browser-qa
@@ -67,7 +71,7 @@ jobs:
         run: |
           node -e "const fs=require('fs');const data=JSON.parse(fs.readFileSync('dist/search-index.json','utf8'));if(!Array.isArray(data)||data.length!==0)process.exit(1);"
       - name: Save private preview-safe site artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.repository.private == true
         uses: actions/upload-artifact@v4
         with:
           name: mew-maple-private-preview-safe
