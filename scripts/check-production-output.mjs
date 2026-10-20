@@ -46,6 +46,9 @@ for (const slug of publishedSlugs) {
   if (!html.includes('"@type":"BreadcrumbList"')) {
     errors.push(`Published guide missing BreadcrumbList JSON-LD: ${slug}`);
   }
+  if (!html.includes('"@type":"FAQPage"')) {
+    errors.push(`Published guide missing FAQPage JSON-LD: ${slug}`);
+  }
   if (!sitemap.includes(`/guides/${slug}/</loc>`)) {
     errors.push(`Published guide missing from sitemap.xml: ${slug}`);
   }

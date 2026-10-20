@@ -49,11 +49,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       results.append(li);
     }
   }
-  form?.addEventListener('submit', event => {event.preventDefault();runSearch();});
-  input?.addEventListener('input', runSearch);
+  let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    clearTimeout(debounceTimer);
+    runSearch();
+  });
+  input?.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(runSearch, 150);
+  });
   async function initialize() {
     try {
-      const response = await fetch('/search-index.json', {cache:'no-store'});
+      const response = await fetch('/search-index.json');
       if (!response.ok) throw new Error('Unavailable');
       const json: unknown = await response.json();
       if (!Array.isArray(json)) throw new Error('Invalid index');
