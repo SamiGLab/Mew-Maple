@@ -63,7 +63,7 @@ Keep caregiver-controlled wand play separate from toys that remain available uns
 | Saturday | Explore a stable low obstacle path | Wash a favorite bed cover |
 | Sunday | Easy play or restful interaction | Review what your cat actually used |
 
-Treat this as a menu rather than an obligation. If your cat is older or has a health concern, modify activities with your veterinary team's guidance.
+Treat this as a menu rather than an obligation. If your cat is older or has a health concern, modify activities with your veterinary team's guidance. If you prefer keeping track of your weekly rotations on paper, you can download our free printable [7-Day Indoor Cat Activity Planner (PDF)](/downloads/7-day-indoor-cat-planner.pdf) or explore our practical home templates in the [Mew & Maple Notebook](/notebook/).
 
 ## Adjust the routine to your cat's personality
 

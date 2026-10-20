@@ -29,7 +29,7 @@ Not every toy is suitable for independent play. Put away string, ribbon, yarn, f
 
 *Window viewing can offer gentle visual enrichment. Keep the window secured. AI-generated editorial illustration.*
 
-Set a secure cat perch or a comfortable bed next to a *closed, secured* window. Watching outdoor movement can make a familiar room more interesting. Never rely on an insect screen as a fall barrier without confirming it is robustly installed and cat-safe.
+Set a secure cat perch or a comfortable bed next to a *closed, secured* window. Watching outdoor movement can make a familiar room more interesting. If you are comparing windowsill perches with freestanding climbers for your space, see our breakdown of [window perches versus cat trees](/guides/window-perch-vs-cat-tree/). Never rely on an insect screen as a fall barrier without confirming it is robustly installed and cat-safe.
 
 ### 2. Rotate a small toy collection
 
@@ -115,7 +115,7 @@ Offer easy puzzle feeders without restricting access to normal meals. Avoid expe
 
 ## Build a routine that fits your cat
 
-Choose one activity from three groups: **movement** (chasing or climbing), **investigation** (puzzles or boxes), and **comfort** (resting spots or hiding). A simple starting routine could be a short interactive play session before work, an inspected independent activity during the day, and another session when you return.
+Choose one activity from three groups: **movement** (chasing or climbing), **investigation** (puzzles or boxes), and **comfort** (resting spots or hiding). A simple starting routine could be a short interactive play session before work, an inspected independent activity during the day, and another session when you return. For a detailed checklist on preparing safe independent activities before leaving the house, see our guide on [keeping an indoor cat entertained while at work](/guides/entertain-cat-while-at-work/).
 
 Do not force participation. If your cat ignores a puzzle or prefers a cardboard box to a costly device, that is useful information about what works for *your* cat.
 
@@ -134,7 +134,9 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 ## Explore related indoor-cat topics
 
 - [An Indoor Cat Play Routine You Can Actually Maintain](/guides/indoor-cat-play-routine/)
+- [How to Keep Your Indoor Cat Entertained While You're at Work](/guides/entertain-cat-while-at-work/)
 - [DIY Cat Toys Using Things You Already Have](/guides/diy-cat-toys/)
+- [Window Perches vs. Cat Trees: Which Is Better for Your Indoor Cat?](/guides/window-perch-vs-cat-tree/)
 - [How to Create a Cat-Friendly Apartment Without Renovating](/guides/cat-friendly-apartment/)
 
 ## Choose the next activity based on what your cat already does

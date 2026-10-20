@@ -23,9 +23,16 @@ The most useful small-apartment cat tree is **stable, easy to access, appropriat
 
 *Comparison only: both depicted trees include dangling ball accessories, which may detach or tangle. Do not assume these are safe unsupervised. Compare base footprint, support and the manufacturer's accessory instructions instead. AI-generated editorial illustration.*
 
-Use painter's tape on the floor to mark the maximum base dimensions. Leave room for doors, walkways, heating vents, and access to litter and water. The footprint includes the full base and any overhanging hammock, bed, or ladder—not only the narrow central post.
+Use painter's tape on the floor to map the full three-dimensional footprint before browsing. When measuring, factor in real apartment clearances:
 
-A common mistake is to buy for height alone. A very tall, narrow tree can be less secure than a shorter model with a broad base and appropriate wall anchoring. Follow manufacturer installation and weight guidance.
+- **Account for upper overhangs:** The footprint is rarely just the bottom base plate. Measure the widest overhanging basket, platform, or hammock listed in the product specifications.
+- **Check door and drawer swings:** Open nearby room doors, closets, and cabinet drawers completely to confirm they will not strike an edge or startle a resting cat.
+- **Clear heat sources and walkways:** Leave adequate clearance from radiators and baseboard heaters, and ensure human walking paths remain unobstructed so you do not brush against the tree in the dark.
+
+A common mistake is to buy for height alone. A cat leaping down from a high perch exerts significantly more dynamic force than its standing body weight. When comparing models, evaluate the cat's adult build against the manufacturer's specified weight limits and base design:
+
+- **Dynamic stability without anchoring:** If your rental agreement forbids drilling anchors into wall studs, look for models with a broad, weighted base and a lower center of mass rather than a slender tower that depends on a wall strap to avoid tipping.
+- **Scratching post ergonomics:** Check the continuous vertical length of the primary sisal post against your cat's body length. An adult cat should be able to reach upward and stretch its back fully while scratching, rather than being interrupted by low intermediate shelves. Follow the manufacturer's assembly and weight guidance closely.
 
 ## Spot safety red flags in product photographs
 

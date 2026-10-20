@@ -62,7 +62,9 @@ Check the footprint, base width, anchoring instructions, platform measurements, 
 
 *A compact scratcher, closed storage and a quiet resting spot are separate functions. User-supplied editorial illustration; inspect and secure real installations. [Open full-size illustration](/images/window-perch-vs-cat-tree-figure-04.webp)*
 
-Think about what you already own. If there is a suitable scratcher and hiding spot, an appropriately installed window perch may add the missing viewing feature without occupying floor space. If your cat has no comfortable vertical resting option and scratches furniture, a well-chosen cat tree might provide more functions per square foot.
+Think about what you already own. If you already have a sturdy scratcher and quiet hiding spots, an appropriately installed window perch adds an outdoor viewing platform while claiming **zero square feet of floor clearance**. This makes perches particularly effective when living room walkways are already tight. However, a window perch does not replace a scratcher or a multi-level retreat.
+
+If your cat lacks a dedicated vertical retreat and scratches sofa corners, a compact cat tree combines climbing, sleeping, and scratching into a single furniture footprint. If you have determined that your room can accommodate a floor footprint, explore our practical guide on choosing the [best cat trees for small apartments](/guides/cat-trees-small-apartments/) to measure clearance and check base stability.
 
 There is no requirement to own both. Your cat's use of the space matters more than the number of accessories.
 

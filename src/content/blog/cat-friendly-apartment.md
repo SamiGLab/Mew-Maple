@@ -61,9 +61,9 @@ Secure household cleaners, medications, sharp tools, and accessible cords. Check
 
 ## Litter area: Accessible, quiet, and easy to clean
 
-Place the litter box in an easy-to-reach location that offers enough privacy without trapping the cat in a corner. Avoid positioning it right next to food or water or in a location where a washing machine might suddenly startle your cat.
+Place the litter box in an easy-to-reach location that offers privacy without cornering the cat. In smaller rental apartments and studios, avoid tucking the box into an unventilated closet: enclosed spaces trap ammonia fumes, which can discourage consistent use. High-sided open boxes often reduce floor scatter while preserving air circulation and clear sightlines so your cat feels safe.
 
-For households with more than one cat, separate boxes are especially important; Cats Protection recommends one litter tray per cat plus one extra where practical, distributed in different places [4].
+Keep the litter area distinctly separated from feeding and drinking stations. For odour management in compact living spaces, daily scooping and unscented clumping litter are significantly more effective than heavily scented litters or aerosol masking sprays, which can overwhelm a cat's sensitive olfactory system. For households with more than one cat, separate boxes are especially important; Cats Protection recommends one litter tray per cat plus one extra where practical, distributed in different places [4].
 
 ## Entryway and balcony: Treat exits as safety zones
 
@@ -102,7 +102,7 @@ Work through one room at a time. Your goal is not a picture-perfect showroom; it
 
 ## Audit the apartment from your cat's point of view
 
-Walk the route from the main sleeping place to the litter box, food and water. Can doors close off access? Does the route pass a washing machine, noisy hallway, or a spot where another pet may block the way? Give your cat alternatives before adding decorative furniture.
+Walk the route from the main sleeping place to the litter box, food and water. Can doors close off access? Does the route pass a washing machine, noisy hallway, or a spot where another pet may block the way? Give your cat alternatives before adding decorative furniture. For an illustrated floor diagram demonstrating how to separate feeding, sleeping, and litter zones in a compact footprint, explore our [Small-Room Cat Living Layout](/notebook/small-room-plan/).
 
 Then check the room at floor level: loose cords, unstable shelves, reachable medicines, cleaners and plants, or small objects that could be swallowed. Review the window and balcony arrangements separately; ordinary insect screens should not be assumed to prevent falls. If you rent, confirm permissible fixing methods and follow the furniture manufacturer's anchoring instructions instead of improvising mountings.
 

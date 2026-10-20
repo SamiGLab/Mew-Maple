@@ -102,6 +102,12 @@ The exact positions depend on your floor plan. Avoid putting resources in noisy,
 
 An adequate count of bowls or litter boxes does not help if one cat can guard a narrow doorway or stare down the other near a resource. Observe each cat separately: can both reach food, water, litter and resting places without being chased, blocked or forced to pass the other cat?
 
+In small apartments, narrow connecting hallways and single doorways are frequent bottleneck points. A confident cat resting in the center of a corridor can quietly control transit simply through posture and direct eye contact, effectively cutting off the other cat's access to a room. To resolve hallway chokepoints:
+
+- **Create a two-level bypass route:** Position a sturdy, low piece of furniture (such as a stable bench or low credenza top) along the hallway so a cat can walk or jump past at an elevated level rather than squeezing by on the floor.
+- **Never place essential resources at dead ends:** Avoid putting a litter tray or water bowl at the blind end of a tight passage where a cat has no second exit route if approached.
+- **Break long sightlines:** Arrange furniture or room dividers so cats in different areas do not maintain an unbroken stare across the entire apartment.
+
 Try placing essential resources in different locations with more than one route of approach or retreat. Avoid lining several bowls or trays together and counting them as independent options. Provide visually separated retreats and do not force cats to share a high-value perch.
 
 Record persistent hiding, guarding, chasing, litter avoidance and changes in appetite. These signs can reflect conflict or health problems and merit veterinary assessment; avoid assuming the cats will simply work it out.
