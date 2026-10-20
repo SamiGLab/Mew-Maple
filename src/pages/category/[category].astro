@@ -3,11 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { categorySlug, categories, publishable, siteReady, validOrigin } from '../../lib/site';
+import { categoryDetails } from '../../lib/category-details';
 export async function getStaticPaths() {
  const posts = (await getCollection('blog')).filter(publishable);
  return categories.map(cat => ({ params:{category:cat.id},props:{cat,posts:posts.filter(p => categorySlug(p.data.category)===cat.id)} }));
 }
 const { cat, posts } = Astro.props;
+const details = categoryDetails[cat.id];
+const otherCategories = categories.filter(c => c.id !== cat.id);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const schema = siteReady && validOrigin ? {
   '@context': 'https://schema.org',
@@ -53,11 +56,36 @@ const schema = siteReady && validOrigin ? {
 <BaseLayout title={cat.title} description={cat.description}>
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   <section class="container category-page">
-    <p class="eyebrow">GUIDE COLLECTION</p>
+    <p class="eyebrow"><a href="/">All collections</a> / {cat.title}</p>
     <h1>{cat.title}</h1>
     <p class="lead">{cat.description}</p>
+    {details && (
+      <div class="reading-panel category-overview">
+        <h2>About this collection</h2>
+        <p>{details.focusIntro}</p>
+        <ul class="category-principles">
+          {details.principles.map(p => <li>{p}</li>)}
+        </ul>
+      </div>
+    )}
+    <div class="category-heading-row">
+      <h2>Published guides in this topic</h2>
+      <p class="meta-note">{posts.length} {posts.length === 1 ? 'guide' : 'guides'} available</p>
+    </div>
     {posts.length
       ? <div class="article-grid">{posts.map(p => <ArticleCard post={p} />)}</div>
       : <div class="note" role="status"><p>This collection is being prepared. New guides will appear after editorial review.</p><a href="/">Explore the guide library</a></div>}
+    
+    <div class="category-crosslinks">
+      <h3>Explore other guide collections</h3>
+      <div class="crosslink-chips">
+        {otherCategories.map(c => (
+          <a class="chip-link" href={`/category/${c.id}/`}>
+            <strong>{c.title}</strong>
+            <span>{c.description.slice(0, 75)}...</span>
+          </a>
+        ))}
+      </div>
+    </div>
   </section>
 </BaseLayout>
