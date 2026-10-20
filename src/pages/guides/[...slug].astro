@@ -5,6 +5,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import {guideNotes} from '../../lib/guide-notes';
 import { categorySlug, publishable, siteReady } from '../../lib/site';
 import { extractFaqs } from '../../lib/faq';
+import { getRelatedGuides } from '../../lib/related';
 export async function getStaticPaths() {
   const posts = (await getCollection('blog')).filter(publishable);
   return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
@@ -12,7 +13,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 const toc=headings.filter(h=>h.depth===2);
-const related=(await getCollection('blog')).filter(publishable).filter(p=>p.id!==post.id).sort((a,b)=>Number(b.data.category===post.data.category)-Number(a.data.category===post.data.category)).slice(0,3);
+const allPublishable = (await getCollection('blog')).filter(publishable);
+const related = getRelatedGuides(post, allPublishable, 3);
 const takeaways=guideNotes[post.id]??[post.data.description];
 const faqs = extractFaqs(post.body ?? '');
 const formatDate=(date:Date)=>date.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
@@ -100,7 +102,14 @@ const schema = siteReady && post.data.status === 'published' ? {
     <h1>{post.data.title}</h1>
     <p class="article-byline"><a href="/about/">Mew &amp; Maple Editorial Care Team</a> · <span class="trust-badge" title="Evidence-based feline care, safety reviewed">Evidence-reviewed</span> · {post.data.readingMinutes} min read {siteReady && post.data.publishedAt && <> · Published <time datetime={post.data.publishedAt.toISOString().slice(0,10)}>{formatDate(post.data.publishedAt)}</time></>}{siteReady && post.data.updatedAt && <> · Updated <time datetime={post.data.updatedAt.toISOString().slice(0,10)}>{formatDate(post.data.updatedAt)}</time></>}</p>
     <section class="quick-answer" aria-labelledby="quick-answer-title"><h2 id="quick-answer-title">At a glance</h2><ul>{takeaways.map(item=><li>{item}</li>)}</ul></section>
-    <details class="article-toc"><summary>In this guide</summary><ul>{toc.map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></details>
+    {toc.length > 0 && (
+      <nav class="article-toc-nav" aria-label="Table of contents">
+        <details class="article-toc" open>
+          <summary><span>In this guide</span><span class="toc-count">{toc.length} sections</span></summary>
+          <ul>{toc.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </details>
+      </nav>
+    )}
     <figure class="article-hero"><img src={post.data.hero} alt={post.data.heroAlt} width="1280" height="720" loading="eager" decoding="async" fetchpriority="high" /><figcaption>{post.data.heroCaption}</figcaption></figure>
     {post.data.affiliate && <p class="affiliate-notice">We may earn a commission if you buy through links in this article. This does not change your price.</p>}
     <div class="article-prose"><Content /></div>
