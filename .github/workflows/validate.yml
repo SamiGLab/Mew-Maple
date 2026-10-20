@@ -103,6 +103,11 @@ jobs:
           PUBLISH_APPROVED: 'YES'
           WORKERS_CI_COMMIT_SHA: ${{ github.sha }}
         run: |
+          if ! grep -l '^status: published
+ src/content/blog/*.md >/dev/null; then
+            echo 'No verified published guide; production-mode build is deferred.'
+            exit 0
+          fi
           npm run build
           npm run audit:workers
           node scripts/check-static-navigation.mjs

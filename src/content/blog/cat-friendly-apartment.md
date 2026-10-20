@@ -6,8 +6,7 @@ category: Cat-Friendly Homes
 hero: /images/cat-friendly-apartment-hero.webp
 heroAlt: "Relaxed tabby cat near a scratching post in a bright, cozy apartment"
 heroCaption: "A calm, uncluttered room can still offer scratching, resting, and observation opportunities. Illustration created for Mew & Maple."
-status: published
-publishedAt: 2026-10-18
+status: review
 readingMinutes: 5
 language: en-US
 ---

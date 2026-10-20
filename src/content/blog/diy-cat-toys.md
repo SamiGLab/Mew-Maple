@@ -6,8 +6,7 @@ category: Play & Enrichment
 hero: /images/diy-cat-toys-hero.webp
 heroAlt: "Indoor cat investigating a clean cardboard box and paper play items"
 heroCaption: "Start with clean, simple materials and inspect them often. Illustration created for Mew & Maple."
-status: published
-publishedAt: 2026-10-18
+status: review
 readingMinutes: 5
 language: en-US
 ---

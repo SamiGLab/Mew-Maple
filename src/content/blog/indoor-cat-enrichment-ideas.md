@@ -6,8 +6,7 @@ category: Play & Enrichment
 hero: /images/indoor-cat-enrichment-ideas-hero.webp
 heroAlt: "Tabby cat exploring a wooden puzzle feeder on a cozy living-room rug"
 heroCaption: "An enrichment activity can be as simple as a food puzzle. Illustration created for Mew & Maple."
-status: published
-publishedAt: 2026-10-18
+status: review
 readingMinutes: 6
 language: en-US
 ---
@@ -133,9 +132,9 @@ A sudden change in activity, appetite, grooming, litter-box behavior, or willing
 
 ## Explore related indoor-cat topics
 
-- [An Indoor Cat Play Routine You Can Actually Maintain](/guides/indoor-cat-play-routine/)
-- [DIY Cat Toys Using Things You Already Have](/guides/diy-cat-toys/)
-- [How to Create a Cat-Friendly Apartment Without Renovating](/guides/cat-friendly-apartment/)
+- [Explore play and enrichment ideas](/category/play/)
+- [Plan a cat-friendly home](/category/homes/)
+- [Compare cat furniture and perches](/category/gear/)
 
 ## Choose the next activity based on what your cat already does
 

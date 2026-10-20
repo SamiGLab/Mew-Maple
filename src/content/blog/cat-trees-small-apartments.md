@@ -6,8 +6,7 @@ category: Gear & Buying Guides
 hero: /images/cat-trees-small-apartments-hero.webp
 heroAlt: "Tabby cat sitting on a tall multi-platform cat tree in a bright apartment"
 heroCaption: "This illustrated multi-level tree is not product-tested or certified for weight and installation. Verify anchoring, base stability and accessory safety against manufacturer instructions."
-status: published
-publishedAt: 2026-10-18
+status: review
 readingMinutes: 5
 language: en-US
 ---

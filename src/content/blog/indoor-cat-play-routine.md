@@ -6,8 +6,7 @@ category: Play & Enrichment
 hero: /images/indoor-cat-play-routine-hero.webp
 heroAlt: "Ginger tabby cat reaching for a wand toy held by a person during supervised play"
 heroCaption: "Wand play is interactive and should be supervised; store string and feather toys when finished. Illustration created for Mew & Maple."
-status: published
-publishedAt: 2026-10-18
+status: review
 readingMinutes: 5
 language: en-US
 ---
