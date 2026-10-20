@@ -51,7 +51,7 @@ const schema = siteReady && post.data.status === 'published' ? {
       },
       author: {
         '@type': 'Organization',
-        name: 'Mew & Maple Editorial Care Team',
+        name: 'Mew & Maple Editorial Team',
         url: new URL('/about/', Astro.site).toString(),
       },
       mainEntityOfPage: pageUrl,
@@ -100,7 +100,7 @@ const schema = siteReady && post.data.status === 'published' ? {
   <article class="container article-container">
     <p class="eyebrow"><a href="/">All guides</a> / <a href={`/category/${catSlug}/`}>{post.data.category}</a></p>
     <h1>{post.data.title}</h1>
-    <p class="article-byline"><a href="/about/">Mew &amp; Maple Editorial Care Team</a> · <span class="trust-badge" title="Evidence-based feline care, safety reviewed">Evidence-reviewed</span> · {post.data.readingMinutes} min read {siteReady && post.data.publishedAt && <> · Published <time datetime={post.data.publishedAt.toISOString().slice(0,10)}>{formatDate(post.data.publishedAt)}</time></>}{siteReady && post.data.updatedAt && <> · Updated <time datetime={post.data.updatedAt.toISOString().slice(0,10)}>{formatDate(post.data.updatedAt)}</time></>}</p>
+    <p class="article-byline"><a href="/about/">Mew &amp; Maple Editorial Team</a> · <a href="/editorial-policy/" class="byline-policy" title="How we source and research our guides">Source-referenced</a> · {post.data.readingMinutes} min read {siteReady && post.data.publishedAt && <> · Published <time datetime={post.data.publishedAt.toISOString().slice(0,10)}>{formatDate(post.data.publishedAt)}</time></>}{siteReady && post.data.updatedAt && <> · Updated <time datetime={post.data.updatedAt.toISOString().slice(0,10)}>{formatDate(post.data.updatedAt)}</time></>}</p>
     <section class="quick-answer" aria-labelledby="quick-answer-title"><h2 id="quick-answer-title">At a glance</h2><ul>{takeaways.map(item=><li>{item}</li>)}</ul></section>
     {toc.length > 0 && (
       <nav class="article-toc-nav" aria-label="Table of contents">
